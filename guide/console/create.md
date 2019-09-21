@@ -1,13 +1,13 @@
 {{indexmenu_n>1}}
 
-====== 创建任务 ======
+# 创建任务
 
-Step1: 进入UAI-Train产品页面 \\
+## Step1: 进入UAI-Train产品页面
 
--  登录UCloud官方网站，点击右上角“控制台”选项，进入控制台页面。控制台页面显示账户的基本信息，点击左上角“产品与服务”选项，获取Ucloud产品列表。选择“人工智能”列表下的“AI训练服务 UAI-Train”选项，进入UAI-Train产品页面。 \\
+-  登录UCloud官方网站，点击右上角“控制台”选项，进入控制台页面。控制台页面显示账户的基本信息，点击左上角“产品与服务”选项，获取Ucloud产品列表。选择“人工智能”列表下的“AI训练服务 UAI-Train”选项，进入UAI-Train产品页面。
 {{:ai:uai-train:set-up:how-to-use:ai产品.jpg?nolink|}}
 
-Step2: 创建AI训练任务
+## Step2: 创建AI训练任务
 
 - 点击“创建AI训练任务”选项。
 {{ :ai:uai-train:use:productpage_edit.png?nolink|}}
@@ -22,3 +22,4 @@ Step2: 创建AI训练任务
 
 - 训练任务的详细信息包括实时日志、付费信息等。
 {{ :ai:uai-train:use:job-info.png?nolink|}}
+

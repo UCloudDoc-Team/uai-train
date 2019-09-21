@@ -1,8 +1,9 @@
 {{indexmenu_n>3}}
 
-=====自定义数据=====
+# 自定义数据
 该章节讲述如何构建自己的训练数据集。如果你使用[[ai:uai-train:cases:crnn:data|原始数据准备]]中的数据集，则可以跳过该章节。
-====数据图片格式====
+
+## 数据图片格式
 
 你的数据图片应该符合下列格式要求：
   * 每张图片上只有一行字符；
@@ -16,14 +17,14 @@
 
 这两张图片对应的标签为“1 import numpy”，“tensorflow”.
 
-
-====建立sample.txt文件====
+## 建立sample.txt文件
 
 你需要分别建立两个sample.txt文件，分别放置于Test和Train文件夹下，Test/sample.txt中放置了测试图像的相对路径和标签，Train/sample.txt中放置了训练图像的相对路径和标签。下面将对sample.txt中的内容进行详细介绍。
 
 假设你将你的图像数据放置于/data/image/路径下,我们假设其中两张图像的图像名分别为test1\_image.jpg和test2\_image.jpg，其对应标签分别为label1和label2：
 <code>
 \_ data\
+
    |_ image\
      |_ test1_image.jpg
      |_ test2_image.jpg
@@ -36,17 +37,19 @@
 则这两张图像在sample.txt中的相应存放内容为：
 <code>
 /image/test1_image.jpg  label1
+
 /image/test2_image.jpg  label2
 </code>
 注意这里的图像路径为图像相对于Test或Train的相对路径。
 
-====建立字典文件====
+## 建立字典文件
 我们需要建立两个字典文件char\_dict.json和ord\_map.json，用于对网络输入和输出的字符进行编码和解码。
 
 在[[ai:uai-train:cases:crnn:intro|]]提供的github地址中已经给出了两个建立好的字典文件。
 **注意：** 根据提供的字典文件对应可以识别的字符列表如下：
 
-^ 可识别字符                                                ^
+| 可识别字符                                                |
+
 | 数字0，1，2，3，4，5，6，7，8，9                                |
 | "%",  "'",  "*",  "+",  ",",  "-",  ".",  "/",  ":"  ，" "|
 | a--z 共26个英文字符                                        |

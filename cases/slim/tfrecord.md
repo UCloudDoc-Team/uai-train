@@ -1,9 +1,8 @@
 {{indexmenu_n>2}}
 
+# 生成tfrecord文件
 
-====== 生成tfrecord文件 ======
-
-====FER2013数据集介绍====
+## FER2013数据集介绍
 FER2013数据集是一个人脸表情识别数据集，该数据集中的图片共有七种类别，分别是angry、disgust、fear、happy、neutral、sad、surprise。该数据集中共有35886张图片，每张图片的大小为48×48×1。FER2013数据集的存放结构如下所示：
 <code>
 |_ fer/pic/
@@ -17,7 +16,7 @@ FER2013数据集是一个人脸表情识别数据集，该数据集中的图片�
   |_ sad\
   |_ surprise\
 </code>
-==== 生成docker镜像 ====
+## 生成docker镜像
 我们需要生成一个docker镜像用于后续的（1）生成tfrecord文件（2）训练模型（3）模型评估。
 
 你可以根据以下步骤生成一个docker镜像，也可以跳过此步骤，使用本文提供的镜像。
@@ -28,7 +27,6 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/slim:latest
 sudo docker tag uhub.service.ucloud.cn/uai_demo/slim:latest uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/slim
 </code>
 
- 
 ** - 1 TF-Slim代码准备** 
 
 我们可以在[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/slim|UCloud-github]]中获得所需代码。
@@ -53,7 +51,7 @@ COPY ./slim/ /data/
 <code>
 sudo docker build -t uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim -f slim.Dockerfile .
 </code>
-==== 生成tfrecord文件 ====
+## 生成tfrecord文件
 我们需要将fer2013的图片文件转化为tfrecord文件，方便我们进行后续的模型训练。
 
 我们将会生成两个tfrecord文件，分别为fer\_test.tfrecord、fer\_train.tfrecord，其中fer\_test.tfrecord包含了原数据集30%的图片，fer\_train.tfrecord包含了原数据集70%的图片。

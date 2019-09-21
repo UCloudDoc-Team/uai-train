@@ -1,9 +1,9 @@
 {{indexmenu_n>4}}
 
-=====打包镜像=====
+# 打包镜像
 接下来我们需要使用UAI-SDK提供的打包工具来打包Mnist的训练镜像。
 
-==== 获取TensorFlow 镜像打包工具 ====
+## 获取TensorFlow 镜像打包工具
 TensorFlow镜像打包工具为 uai-sdk/uaitrain\_tool/tf/tf\_tool.py，我们将该工具也放入/data/mnist。
 <code>
 $ cd /data/mnist
@@ -18,7 +18,7 @@ $ cp ~/uai-sdk/uaitrain_tool/tf/tf_tool.py ./
 |  |_ tf_tool.py
 </code>
 
-==== 打包Mnist镜像 ====
+## 打包Mnist镜像
 我们使用tf\_tool.py 打包mnist镜像，具体的参数说明在[[ai:uai-train:guide:tensorflow:packing]]。
 <code>
 $ sudo python tf_tool.py pack \
@@ -37,37 +37,37 @@ $ sudo python tf_tool.py pack \
 			--train_params=<PARAMS>
 </code>
 
-=== public_key & private_key ===
+### public_key & private_key
 这里的公私钥是UCloud用户账号的唯一标识，可以依据[[ai:uai-train:basic:key]]的方法获取你账号的公私钥参数
 
-=== code_path ===
+### code_path
 代码所在的路径，我们需要将该路径下的所有代码都拷贝至docker镜像中，通过 \-\-code\_path参数指定，本案例中参数为 \-\-code\_path=./code/
 
-=== mainfile_path ===
+### mainfile_path
 训练任务的入口程序，即main的入口python程序，在本案例中为 mainfile\_path.py
 
-=== uhub_username, uhub_password, uhub_registry ===
+### uhub_username, uhub_password, uhub_registry
 uhub的用户名密码为UCloud console图形界面登录时所用的邮箱和密码。在本案例中我们使用 uai_demo，实际操作中uhub\_registry就是uhub镜像库的名字。
 
-=== uhub_imagename ===
+### uhub_imagename
 自定义的docker镜像名字，在本案例中我们使用tf-mnist-train
 
-=== internal_uhub ===
+### internal_uhub
 如果是使用ucloud云主机操作打包工具，则选择true，如果是使用公网执行打包操作，则选择false
 
-=== ai_arch_v  ===
+### ai_arch_v 
 训练框架的版本，这里我们选择tensorflow-1.1.0，这样就可以以tensorflow-1.1.0为基础镜像打包mnist的训练镜像。其他TensorFlow 基础镜像选择方法请参见[[ai:uai-train:guide:tensorflow:packing]]
 
-=== test_data_path ===
+### test_data_path
 本地测试数据路径，本案例中我们填写 /data/mnist/data/
 
-=== test_output_path ===
+### test_output_path
 本地测试输出路径，本案例中我们填写 /data/mnist/output/
 
-=== train_params ===
+### train_params
 训练参数，我们设定--max\_step=2000
 
-=== 执行打包Mnist镜像命令 ===
+## 执行打包Mnist镜像命令
 我们执行如下命令就可以生成mnist训练镜像。
 <code>
 $ sudo python tf_tool.py pack \

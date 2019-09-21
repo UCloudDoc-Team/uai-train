@@ -1,11 +1,11 @@
 {{indexmenu_n>5}}
 
-====== 模型训练 ======
+# 模型训练
 转换后的数据将被用于训练模型，以提升模型进行物体识别的能力。
 
 我们提供了可以在AI Train平台上训练目标检测算法的基础镜像：uhub.ucloud.cn/uai\_demo/tf-objdetect-train-gpu-tf16:latest，可以直接用该镜像进行训练（如果已申请UCloud云主机，可以通过uhub.service.ucloud.cn/uai\_demo/tf-objdetect-train-gpu-tf16:latest下载该镜像）
 
-==== 训练前准备 ====
+## 训练前准备
 我们基于faster\_rcnn\_resnet初始模型，用UFile中已生成的record数据训练识别模型。复制以下链接至浏览器下载初始模型：
 
 storage.googleapis.com/download.tensorflow.org/models/object\_detection/faster\_rcnn\_resnet101\_coco\_11\_06\_2017.tar.gz
@@ -71,7 +71,7 @@ uai/object-prep-output/faster_rcnn_resnet101.config
 
 检查是否已包含tf-record文件（obj\_train.record\*, obj\_val.record\*），类别标签文件（label\_map.pbtxt），初始模型文件（model.ckpt.*），以及模型配置文件（faster\_rcnn\_resnet101.config），并完全与以上命名一致，否则训练任务无法启动。
 
-==== 使用AI Train平台训练 ====
+## 使用AI Train平台训练
 数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/object-prep-output/，即数据转换一节中记录的数据输出源），并确认模型、数据和配置文件均在此根目录下。记录数据输出源（此处为uai/object-train-output/）以进行在线服务。
 
   - 获取uhub.ucloud.cn/uai\_demo/tf-objdetect-train-gpu-tf16:latest镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/tf-objdetect-train-gpu-tf16:latest， 并提交至uhub。
@@ -104,3 +104,4 @@ uai/object-train-output/checkpoint
 这些为训练后的模型文件。更多关于在线训练的信息参阅：
 
 [[ai:uai-train:tutorial:tf-mnist:train|创建在线训练指南]]
+

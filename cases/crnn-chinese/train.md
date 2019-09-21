@@ -1,12 +1,12 @@
 {{indexmenu_n>5}}
 
-=====模型训练=====
+# 模型训练
 我们使用[[ai:uai-train:case:crnn-chinese:imagepre|]]中生成的镜像进行模型训练。
 
-====训练====
+## 训练
 我们可以先在本地进行训练，测试训练能否正常进行，再在UAI-Train平台上进行训练。
 
-===本地训练===
+### 本地训练
 
 我们需要把训练需要的数据文件映射到uhub.service.ucloud.cn/uai\_demo/crnn\_cpu:latest。
 <code>
@@ -14,8 +14,7 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output  uhub.
 </code>
 我们可以在/data/output中查看相应的训练输出。
 
-
-===平台训练===
+### 平台训练
 **上传训练数据**
 
 我们需要将/data/data下的文件上传到UFile或者UFS中，这里我们以UFile平台为例。

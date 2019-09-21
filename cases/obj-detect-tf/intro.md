@@ -1,6 +1,6 @@
 {{indexmenu_n>1}}
 
-====== 案例介绍 ======
+# 案例介绍
 {{ ai:uai-train:case:oxford_pet.png?nolink&600 |}}
 
 从图片中识别物体是机器学习中一个热门的主题。本章节以物体识别项目为例，介绍如何从数据开始，通过机器学习训练模型，并启动UAI-Inference在线推理服务。本文档中的案例学习仅为UAI-Train和UAI-Inference平台的快速上手，不涉及机器学习的知识。

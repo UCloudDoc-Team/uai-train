@@ -1,22 +1,21 @@
 {{indexmenu_n>3}}
 
-
-===== 模型训练 =====
+# 模型训练
 
 我们在UAI-Train平台上进行模型的训练，并基于UFS平台进行数据的存储。
 
-==== docker镜像上传 ====
+## docker镜像上传
 
 我们需要将[[ai:uai-train:case:slim:tfrecord|]]中生成的docker镜像上传到UHub中：
 <code>
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 </code>
 
-==== 基于UFS的数据储存 ====
+## 基于UFS的数据存储
 
-你可以通过[[https://cms.docs.ucloudadmin.com/storage_cdn/ufs/index|UFS产品文档]]了解UFS的使用。这里我们将[[ai:uai-train:case:slim:tfrecord|]]生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
+你可以通过[[https://docs.ucloud.cn/storage_cdn/ufs/index|UFS产品文档]]了解UFS的使用。这里我们将[[ai:uai-train:case:slim:tfrecord|]]生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
 
-==== 基于UAI-Train平台的模型训练 ====
+## 基于UAI-Train平台的模型训练
 
 **单节点的模型训练**
 
@@ -49,8 +48,7 @@ rm resnet_v2_101_2017_04_14.tar.gz
 /data/train_image_classifier.py --data_dir=/data/data/ --output_dir=/data/output/ --num_gpus=1 --model_name=resnet_v2_101 -checkpoint_exclude_scopes=resnet_v2_101/logits --trainable_scopes=resnet_v2_101/logits
 </code>
 
-
-===== 模型评估 =====
+## 模型评估
 
 对得到的模型，我们可以在测试数据集上计算模型准确率、召回率等。
 通过以下命令可以计算模型的准确率和召回率，其中model\_name应该与训练时使用的model\_name相同，这里的/mnt/slim/fer/checkpoint保存了训练得到的模型。

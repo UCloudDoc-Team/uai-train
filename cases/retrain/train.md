@@ -1,5 +1,5 @@
 {{indexmenu_n>4}}
-====== 模型训练 ======
+# 模型训练
 我们使用Tensorflow\_hub提供的重训练Python脚本训练模型（参阅：[[https://github.com/tensorflow/hub/blob/master/examples/image_retraining/retrain.py|Tensorflow_hub - retrain.py]]）。我们已经将脚本打包为可在UAI-Train上运行的容器镜像，并保存在镜像库中：
 
 	uhub.ucloud.cn/uai_demo/retrain-train-v2:test

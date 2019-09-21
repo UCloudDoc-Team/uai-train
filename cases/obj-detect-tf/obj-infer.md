@@ -1,11 +1,12 @@
 {{indexmenu_n>7}}
 
-====== 在线服务 ======
+# 在线服务
 训练后的模型可以用于接收输入并进行推理(物体识别）。本例中模型接收图片作为输入，并返回图片上识别出的物体（如宠物猫种类）和在图片上的位置为结果。
 
 使用在线推理服务需将代码和模型打包为镜像。在线服务器从镜像中获得代码和模型并分别执行。在uhub共享镜像库我们提供了开源的Docker镜像可以进行在线推理服务：uhub.ucloud.cn/uai\_demo/tf-object-detect-infer-cpu:latest， (UCloud云主机可以通过uhub.service.ucloud.cn/uai\_demo/tf-object-detect-infer-cpu:latest 下载）。
 
-==== 启动推理服务 ====
+## 启动推理服务
+
   - 获取uhub.ucloud.cn/uai\_demo/tf-object-detect-infer-cpu:latest镜像，并重新docker tag成你自己uhub 镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/tf-object-detect-infer-cpu:latest， 并提交至uhub。
   - 进入UCloud控制台，创建新的在线服务：[[ai:uai-inference:use:new:console]]
   - 选取弹性服务，设置服务名称为：object-detect，选取8核8G机型，点击确定

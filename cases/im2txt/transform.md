@@ -1,10 +1,10 @@
 {{indexmenu_n>4}}
 
-====== 文件格式转换 ======
+# 文件格式转换
 
 模型训练接收tf-record格式的图片数据作为输入，因此我们需将准备好的图片文字数据转换为tfrecord格式。此前我们已经安装了tensorflow, numpy, nltk工具，并下载或自行准备了图片文字数据。从uai-sdk工具包中获取文件转脚本[[https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/build_mscoco_data.py|github - uaisdk 文件转换工具]]，并放在数据目录下：
 
-	
+
 	# /data/im2txt/data
 	|_ build_mscoco_data.py
 	|_ train2014
@@ -26,7 +26,7 @@ python build_mscoco_data.py --train_image_dir /data/im2txt/data/train2014 --val_
     train-00000-of-00256 train-00001-of-00256 ... train-00255-of-00256
     test-00000-of-00008 test-00001-of-00008 ... test-00007-of-00008
     val-00000-of-00004 val-00001-of-00004 ... val-00001-of-00004
-    
+
 共计268个文件。其中，train文件为训练所用文件，test和val文件为验证和测试所用数据文件。 除图片文字数据外，还需要inception v3版物体分类模型来初始化图片文字标注模型。用wget工具下载原始模型并解压：
 
 <code>
@@ -38,9 +38,9 @@ tar -xvf inception_v3_2016_08_28.tar.gz
 
 	# cd /data/im2txt/data/
 	# ls
-      inception_v3.ckpt
-      train-00000-of-00256 train-00001-of-00256 ... train-00255-of-00256
-      test-00000-of-00008 test-00001-of-00008 ... test-00007-of-00008
-      val-00000-of-00004 val-00001-of-00004 ... val-00001-of-00004
-      
+	  inception_v3.ckpt
+	  train-00000-of-00256 train-00001-of-00256 ... train-00255-of-00256
+	  test-00000-of-00008 test-00001-of-00008 ... test-00007-of-00008
+	  val-00000-of-00004 val-00001-of-00004 ... val-00001-of-00004
+
 此时数据已准备好进行训练。

@@ -1,8 +1,8 @@
 {{indexmenu_n>6}}
 
-====== 打包镜像 ======
+# 打包镜像
 在线推理服务基于镜像。本节介绍如何将训练好的模型文件与代码一并打包为镜像。
-==== 转换训练生成模型的格式 ====
+## 转换训练生成模型的格式
 如果通过在线训练获得了识别模型，可以自行打包为镜像并上传至Uhub以启动在线推理。转至UFile并查找模型训练一节中记录的模型输出源（本例中为uai/object-train-output/），检查训练后的模型文件（以训练200000轮的模型文件为例）：
 
 <code>
@@ -36,8 +36,7 @@ uai/object-train-output/checkpoint
 
 [[https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md|Object Detection - Exporting Models]]
 
-
-==== 打包自定义模型在线服务镜像 ====
+## 打包自定义模型在线服务镜像
 
 生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-train:tutorial:tf-mnist:coding|]]）。下载Object Detection推理代码包：
 

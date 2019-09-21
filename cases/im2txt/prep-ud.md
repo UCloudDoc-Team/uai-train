@@ -1,6 +1,6 @@
 {{indexmenu_n>3}}
 
-====== 自定义数据 ======
+# 自定义数据
 
  本节介绍如何自行准备图片原始数据。如果自行准备数据，则无需使用前一节[[ai:uai-train:cases:im2txt:prepare|]]中下载的数据。需要注意的是训练出相对理想的模型需要极大量的、质量较高的原始数据，因此如果你没有足够多的（约数十万至数百万张）图片以及对应文字标注，本节的数据仅能供测试和体验流程所用。
 
@@ -65,9 +65,9 @@ boy-play-football.jpg
 
 分别为train和val图片目录建立好以上的标注文件，分别命名为captions_train.json和captions_val.json，并放在im2txt工作目录的annotations子目录下（例子中为/data/im2txt/data/）。此时原始数据文件目录应含以下文件：
 
-
 <code>
-# /data/im2txt/data/
+#/data/im2txt/data/
+
 |_ train
 |_ val
 |_ annotations
@@ -75,3 +75,4 @@ boy-play-football.jpg
 |  |_ captions_val.json
 </code>
 此时原始数据已准备好进行数据格式转换。
+

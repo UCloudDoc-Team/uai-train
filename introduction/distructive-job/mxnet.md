@@ -1,10 +1,11 @@
 {{indexmenu_n>3}}
 
-======MXNet分布式训练======
+# MXNet分布式训练
 UAI Train MXNet的分布式训练环境实现基于 MXNet的分布式训练系统实现。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式参见[[ai:uai-train:introduction:distructive-job:intro]]。
 
-==== MXNet 分布式训练简介 ====
+## MXNet 分布式训练简介
 MXNet 分布式训练基于DMLC分布式机器学习框架来运行实现。在参数中指定kv_store为分布式形式(dist_sync或dist_async)后，MXNet系统会自动选择DMLC进行分布式训练。DMLC 执行分布式训练时包括三个部分：
+
   * scheduler，调度器，负责调度Parameter Server和Worker
   * server，Parameter Server，作为参数服务器
   * worker，Worker Server，作为计算节点
@@ -17,8 +18,9 @@ DMLC的kvstore系统通过一系列**DMLC**环境变量来配置分布式训练�
   * DMLC\_PS\_ROOT\_PORT: scheduler节点监听的端口
 worker和ps server根据环境变量配置来向scheduler注册自己，并获取分布式训练的拓扑信息。scheduler在获取所有worker和ps server的信息之后就会发起训练任务，并同步控制流信息。
 
-==== UAI Train 分布式训练简介 ====
+## UAI Train 分布式训练简介
 UAI Train系统将自动为分布式训练任务生成DMLC环境变量，系统在启动时会先创建scheduler容器进程，然后再创建ps server容器进程和worker容器进程，UAI Train 分布式训练系统在执行MXNet分布式任务时有如下约定：
+
   * Scheduler、PS server 和 Worker Server的执行逻辑均使用Docker容器封装，且**Scheduler、PS Server和Worker Server使用相同的Docker镜像执行**。
   * Parameter Server 和 Worker Server **代码执行逻辑的入口相同**，MXNet的分布式训练系统会自行根据DMLC的环境变量执行对应逻辑。
   * **UAI Train 系统将自动为分布式任务的Scheduler、PS和Worker节点生成DMLC配置信息。**
@@ -33,3 +35,4 @@ UAI Train系统在执行MXNet分布式训练scheduler、ps server和worker serve
 
 **注意事项：**
 请不要改变PS_VERBOSE=1环境变量参数，这会导致分布式训练无法刷新日志并导致分布式训练系统无法执行。
+

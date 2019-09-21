@@ -1,6 +1,6 @@
 {{indexmenu_n>5}}
 
-===== 打包镜像 =====
+# 打包镜像
 
 训练获得模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-train:set-up:tf-mnist:coding|]]）。下载Retrain推理代码包：
 
@@ -43,3 +43,4 @@ sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/retrain-detect-infer:test
 等待上传完毕。镜像已经上传至镜像库，参阅[[ai:uai-train:cases:retrain:infer|启动在线服务]]使用该镜像进行推理。
 
 更多关于镜像打包的信息参阅[[ai:uai-train:set-up:tf-mnist:self-pack|使用自定义镜像打包]]
+

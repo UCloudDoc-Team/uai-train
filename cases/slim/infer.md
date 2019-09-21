@@ -1,12 +1,11 @@
 {{indexmenu_n>4}}
 
-
-====== 在线服务 ======
+# 在线服务
 训练后的模型可以用于接收输入并进行推理(表情分类）。本例中模型接收图片作为输入，并返回图片上识别出的表情类别为结果。
 
 我们使用Docker进行代码和模型的封装,你可以下载本文提供的镜像，也可以自己生成镜像。
 
-====下载镜像====
+## 下载镜像
 你可以跳过下面的“自己生成镜像”步骤。
 
 下载镜像：
@@ -14,9 +13,10 @@
 sudo docker pull uhub.service.ucloud.cn/uai_demo/slim_infer:latest
 </code>
 你需要将该镜像重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/slim_infer:latest
-====自己生成镜像====
 
-===文件准备===
+## 自己生成镜像
+
+### 文件准备
 我们使用Docker进行代码和模型的封装，需要准备如下数据文件：
 <code>
 |_ slim/
@@ -77,13 +77,13 @@ CMD cd /ai-ucloud-client-django && gunicorn -c gunicorn.conf.py httpserver.wsgi
   * 指定UAI Inference server在启动时使用/ai-ucloud-client-django/conf.json 配置文件
   * 启动http server
 
-===生成镜像===
+### 生成镜像
 准备好以上文件之后，我们可以通过slim\_infer.Dockerfile生成Docker镜像。
 <code>
 sudo docker build -t uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim_infer -f slim_infer.Dockerfile .
 </code>
 
-====本地测试====
+## 本地测试
 得到镜像之后，我们可以在本地进行测试。
 <code>
 sudo docker run -it -p 8080:8080 uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim_infer
@@ -94,7 +94,7 @@ curl -X POST http://localhost:8080/service -T /data/fer/pic/angry/00000_1.jpg
 </code>
 命令行中会输出该图像的表情类别。
 
-====UAI-Inference平台测试====
+## UAI-Inference平台测试
 可以在[[ai:uai-inference:tutorial:tf-mnist:inference|]]上查看部署在线服务的具体操作步骤。
 当部署完毕之后，我们可以在详细页面获取在线服务的URL地址。
 

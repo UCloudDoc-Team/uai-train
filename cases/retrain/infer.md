@@ -1,12 +1,13 @@
 {{indexmenu_n>6}}
-====== 在线推理服务 ======
+# 在线推理服务
 上一节中训练得到的模型可直接用于推理。我们已对resnet\_v1\_101\_224识别模型，用本例中的宠物图片数据进行重训练，并打包了在线推理镜像在UHub镜像库中：
 
 <code>
 uhub.ucloud.cn/uai_demo/retrain-resnet-pets-infer-cpu:latest
 </code>
 
-==== 启动推理服务 ====
+## 启动推理服务
+
   - 获取uhub.ucloud.cn/uai\_demo/retrain-resnet-pets-infer-cpu:latest镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/retrain-resnet-pets-infer-cpu:latest， 并提交至uhub。
   - 进入UCloud控制台，创建新的在线服务：[[ai:uai-inference:use:new:console]]
   - 选取弹性服务，设置服务名称为：retrain-detect-pets，选取8核8G机型，点击确定
@@ -22,3 +23,4 @@ curl -X POST http://[将访问地址黏贴在此]/service -T Persian_testcase.jp
 在控制台查看返回结果。可以多次测试检查准确度，并相应调整数据集或训练轮数。较大的训练数据集、较大和较清晰的图片以及较大的训练轮数往往能提高准确度。
 
 如果希望测试其他模型以及自定义数据集训练好的模型，参照[[ai:uai-train:cases:retrain:pack|打包自定义镜像]]打包镜像，再回到本节进行推理。
+

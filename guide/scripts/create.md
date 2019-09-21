@@ -1,7 +1,6 @@
 {{indexmenu_n>1}}
 
-
-===== 创建训练任务（Create）=====
+# 创建训练任务（Create）
 使用该命令可以创建新的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py create --args
@@ -12,8 +11,9 @@ python mxnet/mxnet_tool.py create --args
 python pytorch/pytorch_tool.py create --args
 </code>
 
-====命令参数说明====
-^ 参数                   ^  说明                                         ^  是否必需  ^  默认值         ^
+## 命令参数说明
+| 参数 | 说明 | 是否必需 | 默认值 |
+| ---- | ---- | -------- | ------ |
 | public\_key          | 用户的公钥                                       | 是      |  无           |
 | private\_key         | 用户的私钥                                       | 是      |  无           |
 | job\_name            | 任务名字                                        | 是      |  无           |
@@ -26,22 +26,24 @@ python pytorch/pytorch_tool.py create --args
 | node\_num            | 用于分布式训练。分布式训练任务所需的节点数量                      | 否      |  无           |
 | dist\_ai\_frame      | 用于分布式训练。分布式训练任务使用的AI框架（支持tensorflow、mxnet）  | 否      |  无           |
 | project\_id          | 项目组id                                       | 否      |  用户默认项目组     |
-| region               | 训练任务执行所在地域                                  | 否      |  默认地域（北京）    |
-| zone                 | 训练任务所在可用区                                   | 否      |  默认可用区（北京二）  |
+| region               | 训练任务执行所在地域                                  | 否      |  默认地域（北京二）   |
+| zone                 | 训练任务所在可用区                                   | 否      |  默认可用区  |
 | job\_memo            | 任务说明                                        | 否      |  空           |
 | business\_group      | 业务组（如果填写，该业务组必须存在）                          | 否      |  空           |
 
 **注：node\_type具体说明**
-^ node\_type ^ 说明 ^ 
+
+| node\_type | 说明 |
+| ---------- | ---- |
 | 1-P40 | 1机1卡P40 |
 | 2-P40 | 1机2卡P40 |
 | 4-P40 | 1机4卡P40 |
 
-====返回值说明====
+## 返回值说明
 **返回值为 JOB\_ID，该ID为训练任务的唯一标示**
 
-====命令操作案例====
-单节点训练 \\
+## 命令操作案例
+单节点训练
 <code>
 python tf_tool.py create --public_key='<PUB_KEY>' \
     --private_key='<PRI_KEY>' \
@@ -55,7 +57,7 @@ python tf_tool.py create --public_key='<PUB_KEY>' \
     --output_ufile_path='<UFILE_OUTPUT_PATH>'
 </code>
 
-分布式训练 \\
+分布式训练
 <code>
 python tf_tool.py create --public_key='<PUB_KEY>' \
     --private_key='<PRI_KEY>' \

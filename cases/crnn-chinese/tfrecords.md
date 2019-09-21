@@ -1,15 +1,16 @@
 {{indexmenu_n>4}}
 
-====生成tfrecords文件====
+# 生成tfrecords文件
 我们借助[[ai:uai-train:cases:crnn-chinese:imgprep|]]中的镜像来生成tfrecords文件。
-===本地生成tfrecords文件===
+## 本地生成tfrecords文件
 我们可以将数据按照如下文件结构进行放置。
+
   * char\_dict.json、index\_2\_ord\_map.json和ord\_2\_index\_map.json需要放置在data/data/char\_dict文件夹下(这三个文件描述了字符的编码和训练中index的关系)；
   * Test和Train中放置了我们准备好的用于训练和测试的sample.txt文件；
   * ./pic中放置了生成的图像文件；
 <code>
 /_ data/
-  |_ data/
+    |_ data/
     |_ char_dict/
       |_ char_dict.json
       |_ index_2_ord_map.json
