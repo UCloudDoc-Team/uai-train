@@ -6,11 +6,13 @@
 
   * 可能是网络问题，可以通过刷新尝试
   * 可能由于docker执行的python程序自动buffer stdout导致，可以通过在训练启动命令 处增加 -u 参数解决：
+
 <code>
 例如：
-    /data/mnist_summary.py xxx
-    修改为：
-    -u /data/mnist_summary.py xxx
+
+​    /data/mnist_summary.py xxx
+修改为：
+​    -u /data/mnist_summary.py xxx
 </code>
 
 ## 2. 启动后遇到 /usr/bin/python: can't open file 'python': [Errno 2] No such file or directory

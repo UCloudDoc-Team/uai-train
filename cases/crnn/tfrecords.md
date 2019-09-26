@@ -18,9 +18,11 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-generate-tfrecords:v1.0
   * 注意：char\_dict.json和ord\_map.json需要放置在data/data/文件夹下(这两个文件描述了字符的编码和训练中index的关系)；
   * 注意：如果你要训练自己的图像文件，需要将图像放置于/data/data/目录下，并在sample.txt中填写图像的相对路径；
   * 注意：如果你要使用本章提供的镜像，则可以忽略/data/code和/data/crnn-generate-tfrecords.Dockerfile文件的准备；
+
 <code>
 /_ data/
-  *   |_ data/
+
+|_ data/
 |_ char_dict.json
 |_ ord_map.json
     |_ Test/

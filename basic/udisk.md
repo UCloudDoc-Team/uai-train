@@ -7,9 +7,13 @@ UFS 是面向UCloud云主机提供持久化存储空间的块设备硬盘。其�
 在使用UDisk存储作为AI Train平台的数据源之前，您需要在UDisk的产品界面(https://console.ucloud.cn/uhost/udisk)申请UDisk存储,需要经过以下几个步骤：
 
 1. 创建云硬盘[[storage_cdn:udisk:userguide:create]] 
+
 2. 挂载云硬盘[[storage_cdn:udisk:userguide:mount]] 
+
 3. 格式化云硬盘[[storage_cdn:udisk:userguide:format]] 
+
 4. 卸载云硬盘[[storage_cdn:udisk:userguide:umount]] 
+
 说明：UAI Train使用的云硬盘必须是**格式化过，并且没有挂载在任何云主机上**的
 
 ## UDisk 路径格式说明

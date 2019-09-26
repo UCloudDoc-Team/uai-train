@@ -8,9 +8,10 @@ UFS 是面向UCloud云主机提供简单、可扩展、高可靠、高性能的�
 
 ## UFS 路径格式说明
 UAI Train中使用的UFS路径包括两部分：
-1）UFS 挂载点IP，格式为 ip:/xxx
-2）所使用的数据所在的UFS文件系统中的路径，格式为/aaa/bbb/
-所以最终的填写入UFS路径的地址为：ip:/xxx/aaa/bbb/
+
+1. UFS 挂载点IP，格式为 ip:/xxx
+2. 所使用的数据所在的UFS文件系统中的路径，格式为/aaa/bbb/
+   所以最终的填写入UFS路径的地址为：ip:/xxx/aaa/bbb/
 
 ## UFS 的使用限制
 

@@ -20,9 +20,10 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
   * train\_feature.tfrecords、test\_feature.tfrecords、validation\_feature.tfrecords是我们在[[ai:uai-train:cases:crnn:tfrecords|]]中生成的文件；
   * char\_dict.json和ord\_map.json需要放置在data/data/文件夹下；
   * code中放置了相应的训练代码；
+
 <code>
 |_ data/
-  *   |_ data/
+
  |_ train_feature.tfrecords
  |_ test_feature.tfrecords
      |_ validation_feature.tfrecords

@@ -88,9 +88,11 @@ $ cp -fr ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1/code/ /data/mnist
   - 基础环境：docker
   - UAI-SDK环境：uai-sdk
   - 代码和数据
+
 <code>
 |_ data
-  - |  |_ mnist
+
+|  |_ mnist
 |  |  |_ code
 |  |  |  |_ mnist_summary.py
 |  |  |_ data

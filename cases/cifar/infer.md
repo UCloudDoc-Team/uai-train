@@ -30,6 +30,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/cifar_infer_simple:latest
 其中checkpoint_dir保存了[[ai:uai-train:cases:cifar:train|]]中得到模型文件。
 
 #### cifar.conf介绍
+
 <code>
 {                                                                               
 	"http_server" : {                                                                                              

@@ -51,6 +51,7 @@ AI交互式训练任务过程一共分三大部分，一共九个步骤：
 
 ## UAI Train 交互式训练常见操作
 [[ai:uai-train:guide:console:createinterjob|]] 
+
 [[ai:uai-train:guide:console:jupyter|]] 
 [[ai:uai-train:guide:console:saveinterjobimg|]] 
 [[ai:uai-train:guide:console:stopinterjob|]] 

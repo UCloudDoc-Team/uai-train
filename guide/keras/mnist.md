@@ -44,6 +44,7 @@ flags = tf.app.flags
 </code>
 
 案例中修改代码如下\(L31\)：
+
 <code>
 \# input image dimensions
 img_rows, img_cols = 28, 28

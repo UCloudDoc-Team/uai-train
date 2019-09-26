@@ -53,6 +53,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-poem-infer:latest
   * 其中tensorflow.model\_dir定义了模型的相对路径 
 
 ### ocr.Dockerfile介绍
+
 <code>
 FROM uhub.service.ucloud.cn/uaishare/cpu_uaiservice_ubuntu-16.04_python-3.6.2_tensorflow-1.3.0:v1.2
 

@@ -15,6 +15,7 @@
 ## UAI Train Docker镜像准备
 用户可以根据如下指南开发对应AI框架的训练代码+容器：
 [[ai:uai-train:guide:tensorflow]] 
+
 [[ai:uai-train:guide:caffe]] 
 [[ai:uai-train:guide:keras]] 
 [[ai:uai-train:guide:mxnet]] 
@@ -22,6 +23,8 @@
 
 ## 自定义Docker 镜像打包工具
 用户可以根据以上准则开发自定义的 **训练容器**
+
 [[:ai:uai-train:guide:scripts:self-pack]] 
+
 用户可以在**免费资源/基础Docker镜像**中找到安装了基础环境的Docker镜像
 [[:ai:uai-train:resource:docker]] 

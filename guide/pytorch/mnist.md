@@ -17,13 +17,15 @@
 
 首先导入uaitrain.arch.pytorch包的uargs模块，该模块定义了代码中需要使用的命令行参数，然后将参数添加到argparse中。
 添加代码引入uargs.py：(L11)
+
 <code>
-#import UAI argument defines
+\# import UAI argument defines
 from uaitrain.arch.pytorch import uargs''
 </code>
 arg parser 增加uai相关参数:(L32)
+
 <code>
-# Add uai specific arguments
+\# Add uai specific arguments
 uargs.add_uai_args(parser)
 </code>
 这样mnist.py运行时就能够使用uargs.py里面定义的参数。
