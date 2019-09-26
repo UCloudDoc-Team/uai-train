@@ -6,6 +6,7 @@
 <code>
 gpu镜像：
 sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_gpu_train:v1.0
+
 cpu镜像：
 sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
 </code>
@@ -21,9 +22,9 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
   * code中放置了相应的训练代码；
 <code>
 |_ data/
-      |_ data/
-     |_ train_feature.tfrecords
-     |_ test_feature.tfrecords
+  *   |_ data/
+ |_ train_feature.tfrecords
+ |_ test_feature.tfrecords
      |_ validation_feature.tfrecords
      |_ char_dict.json
      |_ ord_map.json
@@ -36,7 +37,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
       |_ output/
       |_ ocr-cpu.Dockerfile 
       |_ ocr-gpu.Dockerfile
-</code>
+    </code>
 
 ### Dockerfile介绍
 我们可以生成gpu或者cpu的Docker镜像，下面以cpu的Docker镜像为例进行介绍。
@@ -44,8 +45,10 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
 我们以uhub.service.ucloud.cn/uaishare/cpu\_uaitrain\_ubuntu-16.04\_python-3.6.2\_tensorflow-1.3.0:v1.0作为基础镜像，将code文件夹复制到了镜像中的/data/code文件夹。
 <code>
 From uhub.service.ucloud.cn/uaishare/cpu_uaitrain_ubuntu-16.04_python-3.6.2_tensorflow-1.3.0:v1.0
+
 ADD /data/code /data/code
 </code>
+
 ### 生成镜像
 通过以下命令生成名为uhub.service.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/ocr\_cpu\_train:v1.0的镜像.
 <code>

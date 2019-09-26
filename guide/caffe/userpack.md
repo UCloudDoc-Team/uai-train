@@ -16,6 +16,7 @@
 我们打开uaitrain.Dockerfile 可以看到如下内容：
 <code>
 From uhub.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-14.04_python-2.7.6_caffe-1.0.0:v1.0
+
 ADD ././code/ /data/
 </code>
 
@@ -31,7 +32,7 @@ ADD ././code/  /data/
 <code>
 RUN pip install -U nltk -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 </code>
-用以安装了nltk软件包 \\
+用以安装了nltk软件包
 
 ### 修改CPU Dockerfile
 

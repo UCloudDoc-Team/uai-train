@@ -40,7 +40,7 @@ sudo apt-get -y install docker-ce
 sudo docker run hello-world
 </code>
 
-### 如何安装Nvidia-Docker
+### 如何安装NVidia-Docker
 详细教程请参考：https://github.com/NVIDIA/nvidia-docker
 
 **安装方法：**

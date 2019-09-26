@@ -20,6 +20,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/cifar_infer_simple:latest
 我们使用Docker进行代码和模型的封装，需要准备如下数据文件：
 <code>
 |_ code/
+
 |_ inference/
    |_ cifar_inference.py 
    |_ checkpoint_dir/
@@ -50,7 +51,8 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/cifar_infer_simple:latest
 #### cifar\_infer.Dockerfile介绍
 <code>
 FROM uhub.service.ucloud.cn/uaishare/cpu_uaiservice_ubuntu-14.04_python-2.7.6_tensorflow-1.4.0:v1.2
-EXPOSE 8080                                                                                                     
+EXPOSE 8080
+
 ADD ./inference/ /ai-ucloud-client-django/
 ADD ./code/ /ai-ucloud-client-django/
 ADD ./cifar.conf  /ai-ucloud-client-django/conf.json
@@ -92,30 +94,32 @@ def load_model(self):
 
 该函数从data获取batching的请求数据，并转化为numpy list；通过sess.run请求推理操作；将请求结果合并成ret（ret也是一个list，和data list是一一对应的关系）
 <code>
-def execute(self, data, batch_size):	
-   sess = self.output['sess']
+def execute(self, data, batch_size):
+
+sess = self.output['sess']
    x = self.output['x']
    y_ = self.output['y_']
    ret = []
    for i in range(batch_size):
-	'''
-	1 load data 
-	'''
-	image = Image.open(data[i])
-	image = cv2.cvtColor(np.asarray(image),cv2.COLOR_RGB2BGR)
-	image = cv2.resize(image, (24, 24))
-	mean=np.mean(image)
-	std=np.std(image)
-	image=(image-mean)/max(std,1/np.sqrt(image.size))
-	image = np.expand_dims(image, axis=0).astype(np.float32)
-	'''
-	2 inference
-	'''
-	preds = sess.run(y_, feed_dict={x: image})
-	pred_label=label_dict[preds[0]]
-	ret.append(pred_label)
+​	'''
+​	1 load data 
+​	'''
+​	image = Image.open(data[i])
+​	image = cv2.cvtColor(np.asarray(image),cv2.COLOR_RGB2BGR)
+​	image = cv2.resize(image, (24, 24))
+​	mean=np.mean(image)
+​	std=np.std(image)
+​	image=(image-mean)/max(std,1/np.sqrt(image.size))
+​	image = np.expand_dims(image, axis=0).astype(np.float32)
+​	'''
+​	2 inference
+​	'''
+​	preds = sess.run(y_, feed_dict={x: image})
+​	pred_label=label_dict[preds[0]]
+​	ret.append(pred_label)
    return ret
 </code>
+
 ### 生成镜像
 准备好以上文件之后，我们可以通过cifar\_infer.Dockerfile生成Docker镜像。
 <code>
@@ -125,13 +129,16 @@ sudo docker build -t uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/cifar_infer_sim
 ### 本地测试
 得到镜像之后，我们可以在本地进行测试。
 <code>
-sudo docker run -it -p 8080:8080 uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/cifar_infer_simple:latest
+sudo docker run -it -p 8080:8080 
+
+uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/cifar_infer_simple:latest
 </code>
 我们在./test\_images/放置了用于测试的图像，进入放置了测试图像的文件夹：
 <code>
 curl -X POST http://localhost:8080/service -T deer.png
 </code>
 命令行输出该图像中的物体类别deer，则测试成功。
+
 ### UAI-Inference平台测试
 可以在[[ai:uai-inference:tutorial:tf-mnist:inference|]]上查看部署在线服务的具体操作步骤。
 当部署完毕之后，我们可以在详细页面获取CNN在线服务的URL地址。

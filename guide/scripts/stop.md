@@ -4,6 +4,7 @@
 使用该命令可以停止正在执行的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py stop --args
+
 python tf/tf_tool.py stop --args
 python caffe/caffe_tool.py stop --args
 python keras/keras_tool.py stop --args
@@ -28,7 +29,8 @@ python pytorch/pytorch_tool.py stop --args
 ## 命令操作案例
 <code>
 python tf_tool.py stop --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
 </code>
 

@@ -27,6 +27,7 @@ brew install s3fs
 从UCloud控制台界面获取公钥、私钥，具体参见[[ai:uai-train:basic:key]] 
 <code bash>
 echo 公钥:私钥 > ${HOME}/.passwd-s3fs
+
 chmod 600 ${HOME}/.passwd-s3fs
 </code>
 

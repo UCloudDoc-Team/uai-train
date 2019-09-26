@@ -37,7 +37,7 @@ UAI-Train在线平台可以在UFile平台上读取和写入数据，可运行Uhu
   - 填写以下信息：
     * 训练任务名称：object-detect-preprocess
     * 节点类型：单点式单卡
-    * 代码镜像：object-detect-preprocess:latest \\	
+    * 代码镜像：object-detect-preprocess:latest
     * 公私钥：您的UCloud账号公私钥
     * 数据输入源：UFile：<YOUR\_UFILE\_PATH>/uai/object-prep/
     * 数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/object-prep-output/
@@ -49,6 +49,7 @@ UAI-Train在线平台可以在UFile平台上读取和写入数据，可运行Uhu
 
 <code>
 uai/object-prep-output/[路径]
+
 uai/object-prep-output/obj_train.record-00000-of-00010
 uai/object-prep-output/obj_train.record-00001-of-00010
 ...

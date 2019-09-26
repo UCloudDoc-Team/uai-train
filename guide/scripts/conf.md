@@ -6,6 +6,7 @@
 使用该命令可以查询训练任务的详细信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py conf --args
+
 python tf/tf_tool.py conf --args
 python caffe/caffe_tool.py conf --args
 python keras/keras_tool.py conf --args
@@ -31,6 +32,7 @@ JOB\_NAME: 任务名字; JOB\_ID: 任务ID; CODE\_IMAGE: Uhub镜像地址; DATA\
 查询某任务的配置信息
 <code>
 python tf_tool.py conf --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
 </code>

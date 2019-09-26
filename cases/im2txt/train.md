@@ -19,9 +19,9 @@
 数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/im2txt/data），并确认模型、数据和字典文件均在此根目录下。
 
   - 获取uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REP>/im2txt-train-gpu:test， 并提交至uhub。
-  - 进入UAI-Train控制台，创建新训练任务。\\
+  - 进入UAI-Train控制台，创建新训练任务。
 
-	[[https://console.ucloud.cn/uaitrain/manage|UCloud - UAI训练]]\\
+	[[https://console.ucloud.cn/uaitrain/manage|UCloud - UAI训练]]
 
   - 填写以下信息：
     *   训练任务名称：im2txt-train
@@ -32,7 +32,7 @@
     *   数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/im2txt/output/
   - 训练启动命令：
 
-公私钥信息获取请参考：[[ai:uai-train:basic:key|]]\\ 
+公私钥信息获取请参考：[[ai:uai-train:basic:key|]] 
 
 <code>
 /data/train.py --input_file_pattern=/data/data/train-?????-of-00256 --inception_checkpoint_file=/data/data/inception_v3.ckpt --train_dir=/data/output/ --number_of_steps=1000000
@@ -64,6 +64,7 @@ uai/im2txt/output/checkpoint
 
 <code>
 uai/im2txt/output/[路径]
+
 uai/im2txt/output/model.ckpt-3000000.data-00000-of-00001
 uai/im2txt/output/model.ckpt-3000000.meta
 uai/im2txt/output/model.ckpt-3000000.index

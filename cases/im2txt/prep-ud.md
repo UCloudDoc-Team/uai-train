@@ -31,13 +31,14 @@ a boy play football on green grass .
 
 <code>
 {"images" : [{"id" : 1, "file_name" : "boy-play-skateboard.jpg"},
-		{"id" : 2, "file_name" : "man-ski-on-ocean.jpg"}, 
-		...
-		], 
+
+​		{"id" : 2, "file_name" : "man-ski-on-ocean.jpg"}, 
+​		...
+​		], 
 "annotations" : [{"image_id" : 1, "caption" : "a boy play skateboard on playground."}, 
-		{"image_id" : 2, "caption" : "a man ski on ocean beside boat."}, 
-		...
-		]
+​		{"image_id" : 2, "caption" : "a man ski on ocean beside boat."}, 
+​		...
+​		]
 }
 </code>
 
@@ -48,16 +49,17 @@ a boy play football on green grass .
 boy-play-football.jpg
 
 <code>
-{"images" : [	...,	
-		...,
-		{"id" : 101, "file_name" : "boy-play-football.jpg"}, 
-		...
-		], 
+{"images" : [	...,
+
+​		...,
+​		{"id" : 101, "file_name" : "boy-play-football.jpg"}, 
+​		...
+​		], 
 "annotations" : [...,
-		{"image_id" : 101, "caption" : "a boy play football on green grass."}, 
-		{"image_id" : 101, "caption" : "a boy in black shirt and a boy in blue shirt play football on grass."}, 
-		...
-		]
+​		{"image_id" : 101, "caption" : "a boy play football on green grass."}, 
+​		{"image_id" : 101, "caption" : "a boy in black shirt and a boy in blue shirt play football on grass."}, 
+​		...
+​		]
 }
 </code>
 

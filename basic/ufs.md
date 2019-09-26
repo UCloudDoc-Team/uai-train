@@ -8,12 +8,12 @@ UFS 是面向UCloud云主机提供简单、可扩展、高可靠、高性能的�
 
 ## UFS 路径格式说明
 UAI Train中使用的UFS路径包括两部分：
-1）UFS 挂载点IP，格式为 ip:/xxx；
-2）所使用的数据所在的UFS文件系统中的路径，格式为/aaa/bbb/。
-所以最终的填写入UFS路径的地址为：ip:/xxx/aaa/bbb/。
+1）UFS 挂载点IP，格式为 ip:/xxx
+2）所使用的数据所在的UFS文件系统中的路径，格式为/aaa/bbb/
+所以最终的填写入UFS路径的地址为：ip:/xxx/aaa/bbb/
 
 ## UFS 的使用限制
 
-  * UFS的单个文件不能大于8GB。
+  * UFS的单个文件不能大于8GB
   * UFS针对大量小文件的文件夹访问性能比较弱（比如含有大量图片文件的文件夹），因此请尽量避免在AI训练数据为图片的情况下使用UFS作为数据输入的存储。请将图片文件转化为AI框架可以使用的数据文件，例如tensorflow使用的tfrecord，MXNet的Rec
 

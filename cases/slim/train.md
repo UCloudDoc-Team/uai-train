@@ -17,14 +17,14 @@ sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 
 ## 基于UAI-Train平台的模型训练
 
-**单节点的模型训练**
+### 单节点的模型训练
 
 训练命令如下，我们可以通过修改参数model\_name来修改图片分类模型，你可以通过文末的表格参考模型选择。
 <code>
 /data/train_image_classifier.py --batch_size=64 --model_name=mobilenet_v2_035 --num_gpus=1
 </code>
 
-** 分布式训练**
+### 分布式训练
 
 在UAI-Train平台中选择Tensorflow-分布式训练，运行如下训练命令即可进行分布式训练。
 <code>
@@ -33,7 +33,7 @@ sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 
 根据在UAI-Train平台上设置的UFS输出路径，我们可以查看得到的模型。
 
-**基于已有的checkpoint进行Fine-tuning**
+### 基于已有的checkpoint进行Fine-tuning
 
 我们也可以基于预训练的模型进行Fine-tuning，在[[https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models|Pre-trained Models]]中可以进行模型下载。下面以resnet\_v2\_101模型为例进行模型训练.
   * 模型下载
@@ -57,5 +57,37 @@ sudo nvidia-docker run -it -v /data/fer/tfrecord:/data/tfrecord -v /mnt/slim/fer
 </code>
 
 TF-Slim中的图片分类模型列表如下：
-^ TF-Slim中的卷积神经网络模型                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
-| 'alexnet_v2'\\                 'cifarnet'\\                 'overfeat'\\                 'vgg\_a'\\                 'vgg\_16'\\                 'vgg\_19'\\                 'inception\_v1'\\                 'inception\_v2'\\                 'inception\_v3'\\                 'inception\_v4'\\                 'inception\_resnet\_v2'\\                 'lenet'\\                 'resnet\_v1\_50'\\                 'resnet\_v1\_101'\\                 'resnet\_v1\_152'\\                 'resnet\_v1\_200'\\                 'resnet\_v2\_50'\\                 'resnet\_v2\_101'\\                 'resnet\_v2\_152'\\                 'resnet\_v2\_200'\\                 'mobilenet\_v1'\\                 'mobilenet\_v1\_075'\\                 'mobilenet\_v1\_050'\\                 'mobilenet\_v1\_025'\\                 'mobilenet\_v2'\\                 'mobilenet\_v2\_140'\\                 'mobilenet\_v2\_035'\\                 'nasnet\_cifar'\\                 'nasnet\_mobile'\\                 'nasnet\_large'\\                 'pnasnet\_large'\\                 'pnasnet\_mobile'  |
+| TF-Slim中的卷积神经网络模型 |
+|---------------- |
+| 'alexnet_v2'|
+|'cifarnet'|
+|'overfeat'|
+|'vgg\_a'|
+|'vgg\_16'|
+|'vgg\_19'|
+|'inception\_v1'|
+|'inception\_v2'|
+|'inception\_v3'|
+|'inception\_v4'|
+|'inception\_resnet\_v2'|
+|'lenet'|
+|'resnet\_v1\_50'|
+|'resnet\_v1\_101'|
+|'resnet\_v1\_152'|
+|'resnet\_v1\_200'|
+|'resnet\_v2\_50'|
+|'resnet\_v2\_101'|
+|'resnet\_v2\_152'|
+|'resnet\_v2\_200'|
+|'mobilenet\_v1'|
+|'mobilenet\_v1\_075'|
+|'mobilenet\_v1\_050'|
+|'mobilenet\_v1\_025'|
+|'mobilenet\_v2'|
+|'mobilenet\_v2\_140'|
+|'mobilenet\_v2\_035'|
+|'nasnet\_cifar'|
+|'nasnet\_mobile'|
+|'nasnet\_large'|
+|'pnasnet\_large'|
+|'pnasnet\_mobile' |

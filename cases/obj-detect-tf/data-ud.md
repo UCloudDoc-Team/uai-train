@@ -10,13 +10,14 @@
 为每一张图片生成一个xml文件储存事实数据。xml的文件名记录了图片的类别，xml的文件内容记录图片名称、大小和物体位置。本例中所用文件格式：
 <code>
 <annotation>
-        <filename>Persian_01.jpg</filename>
-	<size>
-		<width>600</width>
-		<height>400</height>
-		<depth>3</depth>
-	</size>
-	<segmented>0</segmented>
+
+​        <filename>Persian_01.jpg</filename>
+​	<size>
+​		<width>600</width>
+​		<height>400</height>
+​		<depth>3</depth>
+​	</size>
+​	<segmented>0</segmented>
 	<object>
 		<name>cat</name>
 		<pose>Frontal</pose>
@@ -43,6 +44,7 @@
 创建文档并命名为trainval.txt，指示图片集中的哪些图片被用于训练。每行记录一张图片的前缀。例如：
 <code>
 Persian_01
+
 Persian_02
 basset_hound_01
 </code>
@@ -52,6 +54,7 @@ basset_hound_01
 
 <code>
 item {
+
   id: 1
   name: 'Persian'
 }
@@ -66,6 +69,7 @@ item {
 将数据保存在统一根目录下（此处为/object-prep/）并记录根目录路径，以进行下一步预处理。
 <code>
 /object-prep/[路径]
+
 /object-prep/label_map.pbtxt
 /object-prep/annotations/[路径]
 /object-prep/annotations/trainval.txt

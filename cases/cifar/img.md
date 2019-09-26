@@ -16,6 +16,7 @@ sudo dokcer pull uhub.service.ucloud.cn/uai_demo/cifar_gpu_train_simple:latest
 我们使用Dockerfile直接打包，首先建立如下文件结构。
 <code>
 /_ data/
+
   |_ code/
   |_ cifar-cpu.Dockerfile
   |_ cifar-gpu.Dockerfile
@@ -26,7 +27,8 @@ sudo dokcer pull uhub.service.ucloud.cn/uai_demo/cifar_gpu_train_simple:latest
 我们以uhub.service.ucloud.cn/uaishare/gpu\_uaitrain\_ubuntu-14.04\_python-2.7.6\_tensorflow-1.4.0:v1.0 作为基础镜像，将/code下的代码文件添加到/data/code/文件夹下。
 
 <code>
-FROM uhub.service.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-14.04_python-2.7.6_tensorflow-1.4.0:v1.0 
+FROM uhub.service.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-14.04_python-2.7.6_tensorflow-1.4.0:v1.0
+
 ADD ./code/ /data/code/
 </code>
 
@@ -54,3 +56,4 @@ sudo docker push uhub.service.ucloud.cn/YOUR_UHUB_REGISTRY/cifar_cpu_train_simpl
 <code>
 sudo docker push uhub.service.ucloud.cn/YOUR_UHUB_REGISTRY/cifar_gpu_train_simple:latest
 </code>
+

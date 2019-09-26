@@ -14,9 +14,10 @@ UFS 是面向UCloud云主机提供持久化存储空间的块设备硬盘。其�
 
 ## UDisk 路径格式说明
 UAI Train中使用的UDisk路径包括两部分：
-1）UDisk云盘资源ID，格式为 bs-xxxx；
-2）所使用的数据所在的UDisk文件系统中的路径，格式为/aaa/bbb/。
-所以最终的填写入UDisk路径的地址为：bs-xxxx/xxx/aaa/bbb/。
+
+1. UDisk云盘资源ID，格式为 bs-xxxx；
+2. 所使用的数据所在的UDisk文件系统中的路径，格式为/aaa/bbb/
+      所以最终的填写入UDisk路径的地址为：bs-xxxx/xxx/aaa/bbb/
 
 ## UDisk 的使用限制
 

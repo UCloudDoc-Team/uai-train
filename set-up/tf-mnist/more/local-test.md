@@ -4,6 +4,7 @@
 我们可以在云主机中测试Mnist镜像的正确性，当前的目录结构如下：
 <code>
 |_ /data/mnist
+
 |  |_ code
 |  |_ data
 </code>
@@ -11,6 +12,7 @@
 我们再创建一个output目录用来存储训练的输出：
 <code>
 |_ /data/mnist
+
 |  |_ code
 |  |_ data
 |  |_ output

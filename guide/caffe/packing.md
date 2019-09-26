@@ -9,6 +9,7 @@ UAI-Train为用户提供了镜像打包工具，用户只需将所需代码文�
 安装UAI SDK的方法如下：
 <code>
 git clone https://github.com/ucloud/uai-sdk
+
 cd uai-sdk
 sudo python setup.py install
 </code>
@@ -18,6 +19,7 @@ sudo python setup.py install
 ## Step1: 找到UAI-Train Caffe操作工具所在目录
 <code>
 $ls ~/uai-sdk/uaitrain_tool/caffe
+
 caffe_tool.py
 </code>
 
@@ -26,6 +28,7 @@ caffe_tool.py
 例如，我们要将~/uai\-sdk/examples/caffe/train/mnist下面的训练代码进行打包，该文件路径结构如下：
 <code>
 $ cd ~/uai-sdk/examples/caffe/train/mnist
+
 $ ls 
 data  code
 </code>
@@ -48,23 +51,24 @@ data/ code/ caffe_tool.py
 
 caffe\_tool.py pack命令执行方法如下：
 <code>
-sudo python caffe_tool.py pack [-h] --public_key PUBLIC_KEY 
-                        --private_key PRIVATE_KEY 
-                        [--project_id PROJECT_ID] 
-                        --code_path CODE_PATH 
-                        --mainfile_path MAINFILE_PATH
-                        --uhub_username UHUB_USERNAME
-                        --uhub_password UHUB_PASSWORD 
-                        --uhub_registry UHUB_REGISTRY
-                        --uhub_imagename UHUB_IMAGENAME
-                        [--uhub_imagetag UHUB_IMAGETAG]
-                        [--internal_uhub false/true]
-                        --ai_arch_v AI_ARCH_V
-                        --test_data_path TEST_DATA_PATH
-                        --test_output_path TEST_OUTPUT_PATH
-                        [--train_params TRAIN_PARAMS]
-                        --solver PATH_TO_SOLVER
-                        [--snapshot PATH_TO_SNAPSHOT]
+sudo python caffe_tool.py pack [-h] --public_key PUBLIC_KEY
+
+​                        --private_key PRIVATE_KEY 
+​                        [--project_id PROJECT_ID] 
+​                        --code_path CODE_PATH 
+​                        --mainfile_path MAINFILE_PATH
+​                        --uhub_username UHUB_USERNAME
+​                        --uhub_password UHUB_PASSWORD 
+​                        --uhub_registry UHUB_REGISTRY
+​                        --uhub_imagename UHUB_IMAGENAME
+​                        [--uhub_imagetag UHUB_IMAGETAG]
+​                        [--internal_uhub false/true]
+​                        --ai_arch_v AI_ARCH_V
+​                        --test_data_path TEST_DATA_PATH
+​                        --test_output_path TEST_OUTPUT_PATH
+​                        [--train_params TRAIN_PARAMS]
+​                        --solver PATH_TO_SOLVER
+​                        [--snapshot PATH_TO_SNAPSHOT]
 </code>
 
 | 参数 | 说明 | 是否必需 |
@@ -95,7 +99,7 @@ sudo python caffe_tool.py pack [-h] --public_key PUBLIC_KEY
 
 | Caffe | 操作系统 | Python | 命令组合 |
 | ----- | -------- | ------ | -------- |
-| caffe-1.0.0 + py2  | ubuntu\-14.04.05  | python\-2.7.6  | \-\-ai\_arch\_v=caffe-1.0.0|                                                  
+| caffe-1.0.0 + py2  | ubuntu\-14.04.05  | python\-2.7.6  | \-\-ai\_arch\_v=caffe-1.0.0|
 **命令样例**
 使用mnist中的训练程序为案例。
 test\_data\_path和test\_data\_path不要求一定在训练代码路径下，如我们可以在/data/test目录下创建了两个子目录：
@@ -109,6 +113,7 @@ test\_data\_path和test\_data\_path不要求一定在训练代码路径下，如
 
 <code>
 $ ls /data/test/data/
+
 mnist_test_lmdb/ mnist_train_lmdb/ lenet_solver.prototxt lenet_train_test.prototxt
 $ cd ~/uai-sdk/examples/caffe/train/mnist
 $ ls
@@ -137,7 +142,8 @@ $ sudo python caffe_tool.py pack \
 成功执行后，界面显示样例如下，会给出部署时所需的CMD命令以及本地测试的cmd命令:
 <code>
 CMD Used for deploying:
- /data/train.py --solver=/data/data/lenet_solver.prototxt
+
+/data/train.py --solver=/data/data/lenet_solver.prototxt
 CMD for CPU local test:
 sudo docker run -it -v /data/test/data:/data/data -v /data/test/output:/data/output caffe-mnist-cpu:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/train.py --solver=/data/data/lenet_solver.prototxt --use_cpu=True --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output/log" 
 CMD for GPU local test:
@@ -153,6 +159,7 @@ sudo nvidia-docker run -it -v /data/test/data:/data/data -v /data/test/output:/d
 在本地镜像仓库可以看到生成了两个docker镜像，分别为cpu版本和gpu版本。如下：
 <code>
 $ sudo docker images
+
 REPOSITORY						  TAG		IMAGE ID	CREATED		SIZE
 caffe-mnist-cpu						uaitrain	xxxxxx		xxxx ago	xxx GB
 uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/caffe-mnist	uaitrain	xxxxxx		xxxx ago	xxx GB

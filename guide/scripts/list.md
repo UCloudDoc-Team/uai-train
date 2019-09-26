@@ -4,6 +4,7 @@
 使用该命令可以查询训练任务的详细信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py list --args
+
 python tf/tf_tool.py list --args
 python caffe/caffe_tool.py list --args
 python keras/keras_tool.py list --args
@@ -37,14 +38,16 @@ JOB\_NAME: 任务名字; JOB\_ID: 任务ID; BUSINESS\_ID: 任务业务组; STATU
 查询当个任务信息
 <code>
 python tf_tool.py list --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
 </code>
 
 查询最近20条任务信息
 <code>
 python tf_tool.py list --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --limit=20
+
+​    --private_key='<PRI_KEY>' \
+​    --limit=20
 </code>
 

@@ -9,6 +9,7 @@ UAI-Train为用户提供了镜像打包工具，用户只需将所需代码文�
 安装UAI SDK的方法如下：
 <code>
 git clone https://github.com/ucloud/uai-sdk
+
 cd uai-sdk
 sudo python setup.py install
 </code>
@@ -25,13 +26,16 @@ tf_tool.py
 例如，我们要将~/uai\-sdk/examples/tensorflow/train/mnist\_summary\_1.1下面的训练代码进行打包，该文件路径结构如下：
 <code>
 $ cd ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1
+
 $ ls
 data  code
 </code>
 我们需要做如下准备工作：
+
   - 准备好训练的代码，案例中训练代码在mnist\_summary\_1.1/code下, 名为 **mnist\_summary.py**
   - 将tf\_tool.py 工具放入和训练代码目录同级的目录下，即mnist\_summary\_1.1/ 目录下
   - Ready To Pack
+
 <code>
 $ cd ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1
 $ ls
@@ -45,23 +49,24 @@ data/ code/ tf_tool.py
 ## Step3: 执行pack命令，完成镜像的打包
 tf\_tool.py pack命令执行方法如下：
 <code>
-sudo python tf_tool.py pack [-h] --public_key PUBLIC_KEY 
-                        --private_key PRIVATE_KEY 
-                        [--project_id PROJECT_ID] 
-                        --code_path CODE_PATH 
-                        --mainfile_path MAINFILE_PATH
-                        --uhub_username UHUB_USERNAME
-                        --uhub_password UHUB_PASSWORD 
-                        --uhub_registry UHUB_REGISTRY
-                        --uhub_imagename UHUB_IMAGENAME
-                        [--uhub_imagetag UHUB_IMAGETAG]
-                        [--internal_uhub false/true]
-                        --ai_arch_v AI_ARCH_V
-                        --test_data_path TEST_DATA_PATH
-                        --test_output_path TEST_OUTPUT_PATH
-                        --train_params TRAIN_PARAMS
-                        [--python_version PYTHON_VERSION]
-                        [--os OS_VERSION]
+sudo python tf_tool.py pack [-h] --public_key PUBLIC_KEY
+
+​                        --private_key PRIVATE_KEY 
+​                        [--project_id PROJECT_ID] 
+​                        --code_path CODE_PATH 
+​                        --mainfile_path MAINFILE_PATH
+​                        --uhub_username UHUB_USERNAME
+​                        --uhub_password UHUB_PASSWORD 
+​                        --uhub_registry UHUB_REGISTRY
+​                        --uhub_imagename UHUB_IMAGENAME
+​                        [--uhub_imagetag UHUB_IMAGETAG]
+​                        [--internal_uhub false/true]
+​                        --ai_arch_v AI_ARCH_V
+​                        --test_data_path TEST_DATA_PATH
+​                        --test_output_path TEST_OUTPUT_PATH
+​                        --train_params TRAIN_PARAMS
+​                        [--python_version PYTHON_VERSION]
+​                        [--os OS_VERSION]
 </code>
 
 | 参数 | 说明 | 是否必需 |
@@ -96,6 +101,7 @@ train\_params为训练代码中使用到的任意训练参数，本例中为"\-\
 
 <code>
 $ cd ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1
+
 $ ls
 data/ code/ tf_tool.py 
 $ sudo python tf_tool.py pack \
@@ -148,6 +154,7 @@ $ sudo python tf_tool.py pack \
 <code>
 CMD Used for deploying:
 /data/mnist_summary.py --max_step=2000
+
 CMD for CPU local test:
 sudo docker run -it -v /data/test/data:/data/data -v /data/test/output:/data/output tf-mnist-cpu:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist_summary.py --max_step=2000 --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output/log"
 CMD for GPU local test:
@@ -162,6 +169,7 @@ sudo nvidia-docker run -it -v /data/test/data:/data/data -v /data/test/output:/d
 在本地镜像仓库可以看到生成了两个docker镜像，分别为cpu版本和gpu版本。如下：
 <code>
 $ sudo docker images
+
 REPOSITORY						  TAG		IMAGE ID	CREATED		SIZE
 tf-mnist-cpu						uaitrain	xxxxxx		xxxx ago	xxx GB
 uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/tf-mnist	uaitrain	xxxxxx		xxxx ago	xxx GB

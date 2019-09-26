@@ -54,6 +54,7 @@ num_steps = 200000 -> 自定义训练轮数
 
 <code>
 uai/object-prep-output/[路径]
+
 uai/object-prep-output/label_map.pbtxt
 uai/object-prep-output/obj_train.record-00000-of-00010
 uai/object-prep-output/obj_train.record-00001-of-00010
@@ -93,6 +94,7 @@ uai/object-prep-output/faster_rcnn_resnet101.config
 训练完成后，可在UFile输出目录（此处为uai/object-train-output/）找到训练完毕的模型：
 <code>
 uai/object-train-output/[路径]
+
 uai/object-train-output/model.ckpt-200000.data-00000-of-00001
 uai/object-train-output/model.ckpt-200000.meta
 uai/object-train-output/model.ckpt-200000.index

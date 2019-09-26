@@ -34,27 +34,29 @@ from uaitrain.arch.mxnet import uargs
 我们修改了train\_mnist.py 的输入数据路径，由从网络下载改为使用本地数据，修改如下\(L33\):
 <code>
 def read_data(label, image, data_dir):
-    """
-    download and read data into numpy
-    """
-    with gzip.open(os.path.join(data_dir,label)) as flbl:
-        magic, num = struct.unpack(">II", flbl.read(8))
-        label = np.fromstring(flbl.read(), dtype=np.int8)
-    with gzip.open(os.path.join(data_dir,image), 'rb') as fimg:
-        magic, num, rows, cols = struct.unpack(">IIII", fimg.read(16))
-        image = np.fromstring(fimg.read(), dtype=np.uint8).reshape(len(label), rows, cols)
-    return (label, image)
+
+​    """
+​    download and read data into numpy
+​    """
+​    with gzip.open(os.path.join(data_dir,label)) as flbl:
+​        magic, num = struct.unpack(">II", flbl.read(8))
+​        label = np.fromstring(flbl.read(), dtype=np.int8)
+​    with gzip.open(os.path.join(data_dir,image), 'rb') as fimg:
+​        magic, num, rows, cols = struct.unpack(">IIII", fimg.read(16))
+​        image = np.fromstring(fimg.read(), dtype=np.uint8).reshape(len(label), rows, cols)
+​    return (label, image)
 </code>
 本地路径通过os.path.join(data\_dir, label)来拼接，**其中data\_dir则从外部传入**，实际为UAI Train特定的输入参数：**args.data\_dir**，其修改如下\(L52\):
 <code>
 def get_mnist_iter(args, kv):
-    """
-    create data iterator with NDArrayIter
-    """
-    (train_lbl, train_img) = read_data(
-            'train-labels-idx1-ubyte.gz', 'train-images-idx3-ubyte.gz', args.data_dir)
-    (val_lbl, val_img) = read_data(
-            't10k-labels-idx1-ubyte.gz', 't10k-images-idx3-ubyte.gz', args.data_dir)
+
+​    """
+​    create data iterator with NDArrayIter
+​    """
+​    (train_lbl, train_img) = read_data(
+​            'train-labels-idx1-ubyte.gz', 'train-images-idx3-ubyte.gz', args.data_dir)
+​    (val_lbl, val_img) = read_data(
+​            't10k-labels-idx1-ubyte.gz', 't10k-images-idx3-ubyte.gz', args.data_dir)
 </code>
 
 ### common/fit.py

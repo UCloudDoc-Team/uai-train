@@ -23,6 +23,7 @@ python tf/tf_tool.py url --args
 查看tensorflow任务的tensorboard的url地址
 <code>
 python tf_tool.py url --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
 </code>

@@ -9,6 +9,7 @@ UAI-Train为用户提供了镜像打包工具，用户只需将所需代码文�
 安装UAI SDK的方法如下：
 <code>
 git clone https://github.com/ucloud/uai-sdk
+
 cd uai-sdk
 sudo python setup.py install
 </code>
@@ -25,6 +26,7 @@ pytorch_tool.py
 例如，我们要将~/uai\-sdk/examples/pytorch/train/mnist 下面的训练代码进行打包，该文件路径结构如下：
 <code>
 $ cd ~/uai-sdk/examples/pytorch/train/mnist
+
 $ ls
 data  code
 </code>
@@ -47,21 +49,22 @@ data/ code/ pytorch_tool.py
 ### Step3: 执行pack命令，完成镜像的打包
 pytorch\_tool.py pack命令执行方法如下：
 <code>
-sudo python pytorch_tool.py pack [-h] --public_key PUBLIC_KEY 
-                        --private_key PRIVATE_KEY 
-                        [--project_id PROJECT_ID] 
-                        --code_path CODE_PATH 
-                        --mainfile_path MAINFILE_PATH
-                        --uhub_username UHUB_USERNAME
-                        --uhub_password UHUB_PASSWORD 
-                        --uhub_registry UHUB_REGISTRY
-                        --uhub_imagename UHUB_IMAGENAME
-                        [--uhub_imagetag UHUB_IMAGETAG]
-                        [--internal_uhub false/true]
-                        --ai_arch_v AI_ARCH_V
-                        --test_data_path TEST_DATA_PATH
-                        --test_output_path TEST_OUTPUT_PATH
-                        --train_params TRAIN_PARAMS
+sudo python pytorch_tool.py pack [-h] --public_key PUBLIC_KEY
+
+​                        --private_key PRIVATE_KEY 
+​                        [--project_id PROJECT_ID] 
+​                        --code_path CODE_PATH 
+​                        --mainfile_path MAINFILE_PATH
+​                        --uhub_username UHUB_USERNAME
+​                        --uhub_password UHUB_PASSWORD 
+​                        --uhub_registry UHUB_REGISTRY
+​                        --uhub_imagename UHUB_IMAGENAME
+​                        [--uhub_imagetag UHUB_IMAGETAG]
+​                        [--internal_uhub false/true]
+​                        --ai_arch_v AI_ARCH_V
+​                        --test_data_path TEST_DATA_PATH
+​                        --test_output_path TEST_OUTPUT_PATH
+​                        --train_params TRAIN_PARAMS
 </code>
 
 | 参数 | 说明 | 是否必需 |
@@ -97,6 +100,7 @@ test\_output\_path为/home/ubuntu/uai-sdk/examples/pytorch/train/mnist/output
 使用命令时，需要使用sudo，保证docker镜像打包命令有足够权限。
 <code>
 $ cd ~/uai-sdk/examples/pytorch/train/mnist
+
 $ ls
 data/ code/ pytorch_tool.py 
 $ sudo python pytorch_tool.py pack \
@@ -118,7 +122,8 @@ $ sudo python pytorch_tool.py pack \
 #### 标准输出
 成功执行后，界面显示样例如下，会给出部署时所需的CMD命令以及本地测试的cmd命令:
 <code>
-CMD Used for deploying: /data/mnist.py 
+CMD Used for deploying: /data/mnist.py
+
 CMD for CPU local test: sudo docker run -it -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/data:/data/data -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/output:/data/output pytorch-mnist-cpu:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist.py  --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output"
 CMD for GPU local test: sudo nvidia-docker run -it -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/data:/data/data -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/output:/data/output uhub.service.ucloud.cn/fanrongtest/pytorch-mnist:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist.py  --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output"
 </code>
@@ -131,6 +136,7 @@ CMD for GPU local test: sudo nvidia-docker run -it -v /home/ubuntu/uai-sdk/examp
 在本地镜像仓库可以看到生成了两个docker镜像，分别为cpu版本和gpu版本。如下：
 <code>
 $ sudo docker images
+
 REPOSITORY						  TAG		IMAGE ID	CREATED		SIZE
 pytorch-mnist-cpu						uaitrain	xxxxxx		xxxx ago	xxx GB
 uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/pytorch-mnist	uaitrain	xxxxxx		xxxx ago	xxx GB
@@ -142,3 +148,4 @@ uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/pytorch-mnist	uaitrain	xxxxxx		xxxx ago	xxx
 ### Step5: 自定义软件包安装
 如果训练代码依赖特殊的软件包，例如nltk 等，可以通过Docker命令将软件包放至Docker容器中，然后通过docker commit将其保存为镜像即可。
 **注：输入数据无需存储在容器中，可上传至ufile**
+

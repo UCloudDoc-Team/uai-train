@@ -29,6 +29,7 @@
 
 <code>
 $ cd ~
+
 $ wget http://tools.ufile.ucloud.com.cn/filemgr-linux64.tar.gz
 $ tar -zxf filemgr-linux64.tar.gz
 $ cd filemgr-linux64
@@ -55,7 +56,7 @@ $ vim config.cfg
 我们可以在https://console.ucloud.cn/uaitrain/manage界面创建训练任务：
 {{:ai:uai-train:tutorial:tf-mnist:train-step1.png?600|}}
 
-我们首先选择训练节点（1 P40），然后填写好公私钥（用于数据访问授权），具体请您参考[[ai:uai-train:basic:key|]]。
+我们首先选择训练节点（1* P40），然后填写好公私钥（用于数据访问授权），具体请您参考[[ai:uai-train:basic:key|]]。
 {{:ai:uai-train:tutorial:tf-mnist:train-step2.png?600|}}
 
 之后选择训练相关的参数：
@@ -66,7 +67,7 @@ $ vim config.cfg
 {{:ai:uai-train:tutorial:tf-mnist:train-step3.png?600|}}
 
 ### 如何获取输入数据源的地址
-我们可以在ufile的界面获取输入数据的ufile地址，操作如下：
+我们可以在UFile的界面获取输入数据的ufile地址，操作如下：
 
 1.进入[[https://console.ucloud.cn/ufile/ufile]]，点击你的ufile bucket（本例子为uai-demo）
 2.点击获取地址 

@@ -7,6 +7,7 @@
 
 <code>
 uai/object-train-output/model.ckpt-200000.data-00000-of-00001
+
 uai/object-train-output/model.ckpt-200000.meta
 uai/object-train-output/model.ckpt-200000.index
 uai/object-train-output/pipeline.config
@@ -46,6 +47,7 @@ uai/object-train-output/checkpoint
 
 <code>
 /data/object-detect/[路径]
+
 /data/object-detect/object-detect-cpu.Dockerfile
 /data/object-detect/object-detect.conf
 /data/object-detect/code/[路径]

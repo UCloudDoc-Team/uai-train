@@ -14,6 +14,7 @@
 我们打开uaitrain.Dockerfile 可以看到如下内容：
 <code>
 From uhub.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-14.04_python-2.7.6_mxnet-0.11.0:v1.0
+
 ADD ././code/ /data/
 </code>
 
@@ -35,6 +36,7 @@ RUN pip install -U nltk -i http://pypi.douban.com/simple/ --trusted-host pypi.do
 我们打开uaitrain-cpu.Dockerfile 可以看到如下内容：
 <code>
 From uhub.ucloud.cn/uaishare/cpu_uaitrain_ubuntu-14.04_python-2.7.6_mxnet-0.11.0:v1.0
+
 ADD ././code/ /data/
 </code>
 

@@ -46,6 +46,7 @@ sudo docker run hello-world
 我们需要从github上面下载uai-sdk：
 <code>
 $ cd ~
+
 $ git clone https://github.com/ucloud/uai-sdk.git
 $ cd uai-sdk
 $ sudo python setup.py install
@@ -56,6 +57,7 @@ $ sudo python setup.py install
 
 <code>
 $ cd /data/
+
 $ mkdir mnist/
 </code>
 
@@ -64,6 +66,7 @@ $ mkdir mnist/
 
 <code>
 $ mkdir /data/mnist/data/
+
 $ cd /data/mnist/data/
 $ wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
 $ wget http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
@@ -87,7 +90,7 @@ $ cp -fr ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1/code/ /data/mnist
   - 代码和数据
 <code>
 |_ data
-|  |_ mnist
+  - |  |_ mnist
 |  |  |_ code
 |  |  |  |_ mnist_summary.py
 |  |  |_ data

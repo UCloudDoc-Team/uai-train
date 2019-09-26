@@ -2,9 +2,9 @@
 
 # Ubuntu云主机申请
 
-  - 注册UCloud公司账号，具体注册方法请联系我们的销售：400-018-8113
+  - 注册UCloud公司账号，具体注册方法可联系销售：400-018-8113
   - 在UCloud平台申请一台普通Ubuntu 14.04云主机
-	  - 首先在你的浏览器地址上输入网址https://www.ucloud.cn/进入UCloud官网首页，然后点击页面右上方的登陆按钮。
+	  - 访问https://www.ucloud.cn/进入UCloud官网首页，然后点击页面右上方的登陆按钮。
 ----
 		{{ai:uai-service:base:登录.jpg?600 |}}
 ----

@@ -7,12 +7,14 @@
 TensorFlow镜像打包工具为 uai-sdk/uaitrain\_tool/tf/tf\_tool.py，我们将该工具也放入/data/mnist。
 <code>
 $ cd /data/mnist
+
 $ cp ~/uai-sdk/uaitrain_tool/tf/tf_tool.py ./
 </code>
 
 目前的目录结构如下：
 <code>
 |_ /data/mnist
+
 |  |_ code
 |  |_ data
 |  |_ tf_tool.py
@@ -22,19 +24,20 @@ $ cp ~/uai-sdk/uaitrain_tool/tf/tf_tool.py ./
 我们使用tf\_tool.py 打包mnist镜像，具体的参数说明在[[ai:uai-train:guide:tensorflow:packing]]。
 <code>
 $ sudo python tf_tool.py pack \
-                        --public_key=<YOUR_PUBLIC_KEY> \
-			--private_key=<YOUR_PRIVATE_KEY> \
-			--code_path=<CODE_PATH> \
-			--mainfile_path=<MAIN_FUNC_FILE> \
-			--uhub_username=<YOUR_UHUB_USER_NAME> \
-			--uhub_password=<YOUR_UHUB_PASSWORD> \
-			--uhub_registry=<YOUR_UHUB_REFDISTRY> \
-			--uhub_imagename=<YOUR_UHUB_IMAGENAME> \
-                        --internal_uhub=<true/false> \
-			--ai_arch_v=<TF_ARCH> \
-			--test_data_path=<LOCAL_DATA_PATH> \
-			--test_output_path=<LOCAL_OUTPUT_PATH> \
-			--train_params=<PARAMS>
+
+​            --public_key=<YOUR_PUBLIC_KEY> \
+​			--private_key=<YOUR_PRIVATE_KEY> \
+​			--code_path=<CODE_PATH> \
+​			--mainfile_path=<MAIN_FUNC_FILE> \
+​			--uhub_username=<YOUR_UHUB_USER_NAME> \
+​			--uhub_password=<YOUR_UHUB_PASSWORD> \
+​			--uhub_registry=<YOUR_UHUB_REFDISTRY> \
+​			--uhub_imagename=<YOUR_UHUB_IMAGENAME> \
+​            --internal_uhub=<true/false> \
+​			--ai_arch_v=<TF_ARCH> \
+​			--test_data_path=<LOCAL_DATA_PATH> \
+​			--test_output_path=<LOCAL_OUTPUT_PATH> \
+​			--train_params=<PARAMS>
 </code>
 
 ### public_key & private_key
@@ -71,19 +74,20 @@ uhub的用户名密码为UCloud console图形界面登录时所用的邮箱和�
 我们执行如下命令就可以生成mnist训练镜像。
 <code>
 $ sudo python tf_tool.py pack \
-                        --public_key=<YOUR_PUBLIC_KEY> \
-			--private_key=<YOUR_PRIVATE_KEY> \
-			--code_path=./code/ \
-			--mainfile_path=mnist_summary.py \
-			--uhub_username=<YOUR_UHUB_USER_NAME> \
-			--uhub_password=<YOUR_UHUB_PASSWORD> \
-			--uhub_registry=uai_demo \
-			--uhub_imagename=tf-mnist-train \
-                        --internal_uhub=true \
-			--ai_arch_v=tensorflow-1.1.0 \
-			--test_data_path=/data/mnist/data \
-			--test_output_path=/data/mnist/output \
-			--train_params="--max_step=2000"
+
+​            --public_key=<YOUR_PUBLIC_KEY> \
+​			--private_key=<YOUR_PRIVATE_KEY> \
+​			--code_path=./code/ \
+​			--mainfile_path=mnist_summary.py \
+​			--uhub_username=<YOUR_UHUB_USER_NAME> \
+​			--uhub_password=<YOUR_UHUB_PASSWORD> \
+​			--uhub_registry=uai_demo \
+​			--uhub_imagename=tf-mnist-train \
+​            --internal_uhub=true \
+​			--ai_arch_v=tensorflow-1.1.0 \
+​			--test_data_path=/data/mnist/data \
+​			--test_output_path=/data/mnist/output \
+​			--train_params="--max_step=2000"
 </code>
 
 最终我们将获得两个镜像：
@@ -96,9 +100,11 @@ CMD Used for deploying:
 /data/mnist_summary.py --max_step=2000
 CMD for CPU local test:
 sudo docker run -it -v /data/mnist/data:/data/data -v /data/mnist/output:/data/output tf-mnist-train-cpu:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist_summary.py --max_step=2000 --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output/log"
+
 CMD for GPU local test:
 sudo nvidia-docker run -it -v /data/mnist/data:/data/data -v /data/mnist/output:/data/output uhub.service.ucloud.cn/uai_demo/tf-mnist-train:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist_summary.py --max_step=2000 --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output/log"
 </code>
+
   * **CMD Used for deploying**: 该输出的内容为创建训练任务时，**训练启动命令**框中需要填写的内容(参见[[ai:uai-train:set-up:how-to-use:create]])。可以直接复制黏贴到命令框中。
   * **CMD for CPU local test**: 该输出的内容为本地通过CPU来测试训练能否正常执行。在本地没有GPU的情况下可以使用该命令测试训练代码能否正常执行。
   * **CMD for GPU local test**：该输出的内容为本地通过GPU来测试训练能否正常执行。在本地有GPU的情况下可以使用该命令测试训练代码能否正常执行。本案例中我们的使用的是CPU镜像，因此无法进行GPU测试）

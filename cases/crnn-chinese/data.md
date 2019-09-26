@@ -54,6 +54,6 @@ sudo docker run -it -v /data/data:/data/data uhub.service.ucloud.cn/uai_demo/crn
 ## 使用自己的数据集
 如果你要使用自己的数据集，你有以下注意事项：
 
-1 你需要修改/data/code/global\_configuration/config.py中的C.TRAIN.CLASSES_NUMS参数：
-  C.TRAIN.CLASSES\_NUMS=chinese.txt中的字符个数+1
-2 标签长度不能超过25.
+1. 你需要修改/data/code/global\_configuration/config.py中的C.TRAIN.CLASSES_NUMS参数：
+     C.TRAIN.CLASSES\_NUMS=chinese.txt中的字符个数+1
+2. 标签长度不能超过25.

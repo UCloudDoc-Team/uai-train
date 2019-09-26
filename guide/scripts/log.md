@@ -4,6 +4,7 @@
 使用该命令可以查询训练任务的详细信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py log --args
+
 python tf/tf_tool.py log --args
 python caffe/caffe_tool.py log --args
 python keras/keras_tool.py log --args
@@ -30,7 +31,8 @@ python pytorch/pytorch_tool.py log --args
 查看某任务的实时日志
 <code>
 python tf_tool.py log --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
-    --log_topic_id=’<LOG_TOPIC_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
+​    --log_topic_id=’<LOG_TOPIC_ID>’
 </code>

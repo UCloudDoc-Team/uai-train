@@ -18,6 +18,7 @@
 
 <code>
 item {
+
   id: 1
   name: 'Abyssinian'
 }
@@ -32,6 +33,7 @@ item {
 
 <code>
 /object-prep/[路径]
+
 /object-prep/label_map.pbtxt
 /object-prep/annotations/[路径]
 /object-prep/annotations/trainval.txt

@@ -54,8 +54,9 @@ UAI Train 分布式训练系统在执行分布式任务时有如下约定：
 UAI Train系统将自动为分布式训练任务生成TF\_CONFIG环境变量，假设我们有执行一个4节点分布式训练，IP分别为 ip0, ip1, ip2, ip3，系统自动生成网络拓扑信息**xluster**:
 <code>
  cluster = {"master": ["ip0:port-worker"],
-            "ps": ["ip0:port-ps", "ip1:port-ps", "ip2:port-ps", "ip3:port-ps"],
-            "worker": ["ip1:port-worker", "ip2:port-worker", "ip3:port-worker"]}
+
+​            "ps": ["ip0:port-ps", "ip1:port-ps", "ip2:port-ps", "ip3:port-ps"],
+​            "worker": ["ip1:port-worker", "ip2:port-worker", "ip3:port-worker"]}
 </code>
 其中第一个IP ip0为设置为master，其他为worker。使用**Estimators** API，系统将自动识别该拓扑信息。 如果使用**tf.train.Server**，请自行解析该拓扑信息，并将master对应的ip:port 设定为**chief** 节点。
 

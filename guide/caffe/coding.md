@@ -10,6 +10,7 @@ git clone https://github.com/ucloud/uai-sdk.git
 ## Caffe相关文件路径
 <code>
 uai-sdk/
+
   examples/
     caffe/
        train/
@@ -25,7 +26,7 @@ uai-sdk/
 ## 简介
 
 ### uaitrain/arch/caffe/train.py
-uaitrain/arch/caffe/train.py 是Caffe训练的特定入口文件，由于AI Training平台统一采用python的接口启动训练任务，因此我们需要该train.py 文件作为入口 
+uaitrain/arch/caffe/train.py 是Caffe训练的特定入口文件，由于UAI-Train平台统一采用python的接口启动训练任务，因此我们需要该train.py 文件作为入口 
 
 train.py 有如下参数：
 #### 可变参数

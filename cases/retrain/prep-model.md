@@ -28,6 +28,7 @@ export TFHUB_CACHE_DIR=/data/checkpoint_dir
 
 <code>
 vim cache_module.py
+
 输入：
 import tensorflow_hub as hub
 m = hub.Module("https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classification/1")
@@ -37,6 +38,7 @@ m = hub.Module("https://tfhub.dev/google/imagenet/mobilenet_v1_100_224/classific
 
 <code>
 |_ data
+
 |  |_ pets
 |  |  |_ Abyssinian
 |  |  |  |_ Abyssinian_01.jpg

@@ -49,7 +49,7 @@
 **注意：** 根据提供的字典文件对应可以识别的字符列表如下：
 
 | 可识别字符                                                |
-
+|----------|
 | 数字0，1，2，3，4，5，6，7，8，9                                |
 | "%",  "'",  "*",  "+",  ",",  "-",  ".",  "/",  ":"  ，" "|
 | a--z 共26个英文字符                                        |
@@ -93,3 +93,4 @@ add_str(args.add_str,args.char_dict,args.ord_map)
 <code>
 python  add.py --add_str='&' --char_dict='/data/char_dict.json'  --ord_map='/data/ord_map.json'
 </code>
+

@@ -4,6 +4,7 @@
 使用该命令可以查询训练任务的简单状态，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py info --args
+
 python tf/tf_tool.py info --args
 python caffe/caffe_tool.py info --args
 python keras/keras_tool.py info --args
@@ -22,12 +23,13 @@ python pytorch/pytorch_tool.py info --args
 | zone                 | 训练任务所在可用区                                    | 否              |        默认可用区   |
 
 ## 返回值说明
-**返回值显示任务相关的执行和计费信息**，返回格式如下：\
+**返回值显示任务相关的执行和计费信息**，返回格式如下：
 JOB\_ID: 任务ID; ExecTime: 执行时间（秒）; Total Cost: 总开销（元，精确到0.01元）
 
 ## 命令操作案例
 <code>
 python tf_tool.py info --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_id=’<JOB_ID>’
+
+​    --private_key='<PRI_KEY>' \
+​    --job_id=’<JOB_ID>’
 </code>

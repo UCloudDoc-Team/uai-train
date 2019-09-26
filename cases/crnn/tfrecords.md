@@ -23,7 +23,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-generate-tfrecords:v1.0
   *   |_ data/
 |_ char_dict.json
 |_ ord_map.json
-  |_ Test/
+    |_ Test/
       |_ sample.txt
     |_ Train/
       |_ sample.txt
@@ -34,7 +34,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-generate-tfrecords:v1.0
       |_ code/
 	|_ crnnmodel/
     |_ data_provoder/
-  |_ global_configuration/
+    |_ global_configuration/
     |_ local_utils/
     |_ tools/
       |_ output/
@@ -45,6 +45,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-generate-tfrecords:v1.0
 Docker镜像build的时候会基于uhub.service.ucloud.cn/uaishare/gpu\_uaitrain\_ubuntu-16.04\_python-3.6.2\_tensorflow-1.3.0:v1.0的基础镜像，然后将code/下面的代码拷贝到docker镜像的/data/code/目录下，具体的crnn-generate-tfrecords.Dockerfile文件的代码如下：
 <code>
 From uhub.service.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-16.04_python-3.6.2_tensorflow-1.3.0:v1.0
+
 ADD ./code/ /data/code/
 </code>
 
@@ -63,18 +64,19 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output uhub.s
 </code>
 然后我们可以在本地/data/output中找到生成的tfrecords文件。
 ### UAI-Train平台生成tfrecords文件
-1 首先我们需要把生成tfrecords文件所需的/data/data下的数据上传至UFile或是UFS平台上，这里我们以UFile平台为例。
+1. 首先我们需要把生成tfrecords文件所需的/data/data下的数据上传至UFile或是UFS平台上，这里我们以UFile平台为例。
 
 我们使用事先下载的UFile工具，进入filemgr-linux64.elf文件夹，通过UFile平台的数据上传命令将/data/data下的数据上传至UFile中，并以/crnn/train\_data/作为前缀，你可以自由地修改上传数据的前缀；
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/ --prefix /crnn/train_data/ 
 </code>
-2 如果你使用的是本文开头提供的镜像，则需要重新docker tag成你自己uhub 镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/crnn-generate-tfrecords:v1.0， 并通过下列命令提交至uhub。 
-如果你使用的是自己生成的镜像，可以通过下列命令直接上传到镜像容器库中。
-<code>
-sudo docker push uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/crnn-generate-tfrecords:v1.0
-</code>
-3 生成tfrecords文件
+
+2. 如果你使用的是本文开头提供的镜像，则需要重新docker tag成你自己uhub 镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/crnn-generate-tfrecords:v1.0， 并通过下列命令提交至uhub。 
+   如果你使用的是自己生成的镜像，可以通过下列命令直接上传到镜像容器库中。
+   <code>
+   sudo docker push uhub.service.ucloud.cn/<YOUR_UHUB_REGISTRY>/crnn-generate-tfrecords:v1.0
+   </code>
+   3 生成tfrecords文件
 
 进入UAI-Train训练平台，选择训练相关的参数：
 

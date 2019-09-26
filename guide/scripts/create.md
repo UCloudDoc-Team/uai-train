@@ -4,6 +4,7 @@
 使用该命令可以创建新的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py create --args
+
 python tf/tf_tool.py create --args
 python caffe/caffe_tool.py create --args
 python keras/keras_tool.py create --args
@@ -46,29 +47,31 @@ python pytorch/pytorch_tool.py create --args
 单节点训练
 <code>
 python tf_tool.py create --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_name='test'  \
-    --job_memo='test' \
-    --node_type='1-P40' \
-    --code_uhub_path='<UHUB_IMG_PATH>'  \
-    --docker_cmd="/data/mnist_summary.py --learning_rate=0.002 --max_step=10" \
-    --max_exec_time=6  \
-    --data_ufile_path='<UFILE_DATA_PATH>'  \
-    --output_ufile_path='<UFILE_OUTPUT_PATH>'
+
+​    --private_key='<PRI_KEY>' \
+​    --job_name='test'  \
+​    --job_memo='test' \
+​    --node_type='1-P40' \
+​    --code_uhub_path='<UHUB_IMG_PATH>'  \
+​    --docker_cmd="/data/mnist_summary.py --learning_rate=0.002 --max_step=10" \
+​    --max_exec_time=6  \
+​    --data_ufile_path='<UFILE_DATA_PATH>'  \
+​    --output_ufile_path='<UFILE_OUTPUT_PATH>'
 </code>
 
 分布式训练
 <code>
 python tf_tool.py create --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --job_name='test'  \
-    --job_memo='test' \
-    --node_type='4-P40' \
-    --code_uhub_path='<UHUB_IMG_PATH>'  \
-    --docker_cmd="/data/mnist_summary.py --learning_rate=0.002 --max_step=10" \
-    --max_exec_time=6  \
-    --data_ufile_path='<UFILE_DATA_PATH>'  \
-    --output_ufile_path='<UFILE_OUTPUT_PATH>'
-    --node_num=4
-    --dist_ai_frame=tensorflow
+
+​    --private_key='<PRI_KEY>' \
+​    --job_name='test'  \
+​    --job_memo='test' \
+​    --node_type='4-P40' \
+​    --code_uhub_path='<UHUB_IMG_PATH>'  \
+​    --docker_cmd="/data/mnist_summary.py --learning_rate=0.002 --max_step=10" \
+​    --max_exec_time=6  \
+​    --data_ufile_path='<UFILE_DATA_PATH>'  \
+​    --output_ufile_path='<UFILE_OUTPUT_PATH>'
+​    --node_num=4
+​    --dist_ai_frame=tensorflow
 </code>

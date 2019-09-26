@@ -14,8 +14,7 @@ mnist\_summary.py#L44 使用uaitrain.arch.tensorflow.uflag中的定义的FLAGS.d
 <code>
 
   \# Import data
-  mnist = input_data.read_data_sets(FLAGS.data_dir,
-                                    one_hot=True)
+  mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=True)
 </code>
 
 ## 定义算法网络和summary 

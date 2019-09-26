@@ -21,6 +21,7 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output  uhub.
 我们使用事先下载的UFile工具，进入filemgr-linux64.elf文件夹，通过UFile平台的数据上传命令将/data/data下的数据上传至UFile中，并以/crnn\_poem/data/作为前缀，你可以自由地修改上传数据的前缀；
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/tfrecords/ --prefix /crnn_poem/data/tfrecords/
+
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/char_dict/ --prefix /crnn_poem/data/char_dict/
 </code>
 

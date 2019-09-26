@@ -16,6 +16,7 @@ sudo docker run -it -v /data/data:/data/data  uhub.service.ucloud.cn/uai-demo/ci
 其中download.py存放在本地/data/data文件夹下，download.py的代码如下：
 <code>
 import cifar10
+
 cifar10.maybe_download_and_extract()
 </code>
 如此我们可以在文件夹/data/data中得到cifar10数据集，将该数据集上传到你准备使用的UCloud数据存储平台--UFile或者UFS上。

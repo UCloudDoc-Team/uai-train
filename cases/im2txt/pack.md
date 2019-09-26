@@ -10,6 +10,7 @@
 
 <code>
 /data/im2txt/
+
 |_ code
 |  |_ checkpoint_dir
 |  |  |_ checkpoint

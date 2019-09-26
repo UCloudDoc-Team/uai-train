@@ -6,6 +6,7 @@
 使用该命令可以查询指定时间段内的全部任务的计费信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py bill --args
+
 python tf/tf_tool.py bill --args
 python caffe/caffe_tool.py bill --args
 python keras/keras_tool.py bill --args
@@ -33,8 +34,9 @@ JOB\_NAME: 任务名字; JOB\_ID: 任务ID; EXEC\_TIME: 执行时间（秒）; T
 ## 命令操作案例
 <code>
 python tf_tool.py bill --public_key='<PUB_KEY>' \
-    --private_key='<PRI_KEY>' \
-    --begin_time='<BEGIN_TIME>'
-    --end_time='<END_TIME>'
+
+​    --private_key='<PRI_KEY>' \
+​    --begin_time='<BEGIN_TIME>'
+​    --end_time='<END_TIME>'
 </code>
 

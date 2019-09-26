@@ -20,6 +20,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/slim_infer:latest
 我们使用Docker进行代码和模型的封装，需要准备如下数据文件：
 <code>
 |_ slim/
+
 |_ sliminfer.py
 |_ checkpoint_dir/
    |_ checkpoint 
@@ -36,21 +37,23 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/slim_infer:latest
 <code>
 {
         "http_server" : {
-                "exec" : {
-                        "main_class": "slimModel",
-                        "main_file": "sliminfer"
-                },
-                "tensorflow" : {
-                        "model_dir" : "/data/output"
-                }
-        },
-       "infor" : {
-          "preprocessing_name" : "None",
-          "model_name" : "vgg_19",
-          "eval_image_size" : "None"
-        }
+
+​                "exec" : {
+​                        "main_class": "slimModel",
+​                        "main_file": "sliminfer"
+​                },
+​                "tensorflow" : {
+​                        "model_dir" : "/data/output"
+​                }
+​        },
+​       "infor" : {
+​          "preprocessing_name" : "None",
+​          "model_name" : "vgg_19",
+​          "eval_image_size" : "None"
+​        }
 }
 </code>
+
   * 其中http\_server.exec.main\_file定义了入口python模块:sliminfer.py（注：这边需要将.py 删除，因为django会以模块的形式import sliminfer）
   * 其中http\_server.exec.main\_class定义了推理服务的对象类：slimModel 
   * 其中http\_server.tensorflow.model\_dir定义了模型的路径 

@@ -12,6 +12,7 @@
 从github下载https://github.com/tensorflow/models，在models/im2txt/im2txt/下面有im2txt案例的完整代码
 <code>
 $ cd ~/models/im2txt/im2txt/
+
 $ ls 
 BUILD  configuration.py  data/  evaluate.py  inference_utils/  inference_wrapper.py  ops/  run_inference.py  show_and_tell_model.py  show_and_tell_model_test.py  train.py
 </code>
@@ -26,17 +27,19 @@ train.py configuration.py show_and_tell_model.py ops/
 我们统一将训练相关的代码放入 /data/im2txt 目录下，为了训练能通过 python train.py 执行，我们需要对目录结构进行一些调整：
 <code>
 /data/im2txt/train.py
-                   im2txt/__init__.py
-                             configuration.py
-                             show_and_tell_model.py
-                             ops/__init__.py
-                                   image_embedding.py
-                                   image_processing.py
-                                   inputs.py
+
+​                   im2txt/__init__.py
+​                             configuration.py
+​                             show_and_tell_model.py
+​                             ops/__init__.py
+​                                   image_embedding.py
+​                                   image_processing.py
+​                                   inputs.py
 </code>
 我们根据train.py代码创建了im2txt目录，并在下面增加了\_\_init\_\_.py，并将ops目录移动至im2txt目录下，并同时添加\_\_init\_\_.py，此时train.py就可以通过
 <code>
 from im2txt import configuration
+
 from im2txt import show_and_tell_model
 </code>
 执行了。
@@ -59,7 +62,7 @@ from im2txt import show_and_tell_model
 from uaitrain.arch.tensorflow import uflag 
 </code>
 
-** 修改input、output和checkpoint路径**
+**修改input、output和checkpoint路径**
 由于uai-train对训练任务的代码路径、输入路径和输出路径有特殊规范，因此需要对代码进行微调。
 微调如下：
 

@@ -12,6 +12,6 @@ UAI Train平台使用UHub作为Docker镜像媒介来传递训练所使用的Dock
 详细操作指南可以参见UHub官方文档:  [[compute:uhub:guide]]
 
 ## UHub 地址使用 
-**如果使用ucloud 云主机进行Uhub操作可以使用uhub.service.ucloud.cn 的UHub地址**
+**如果使用UCloud 云主机进行Uhub操作可以使用uhub.service.ucloud.cn 的UHub地址**
 如果使用的是其他设备（例如本地开发机等）请使用uhub.ucloud.cn
 

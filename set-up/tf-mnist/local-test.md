@@ -4,6 +4,7 @@
 我们可以在云主机中测试Mnist镜像的正确性，当前的目录结构如下：
 <code>
 |_ /data/mnist
+
 |  |_ code
 |  |_ data
 </code>
@@ -11,6 +12,7 @@
 我们再创建一个output目录用来存储训练的输出：
 <code>
 |_ /data/mnist
+
 |  |_ code
 |  |_ data
 |  |_ output
@@ -29,3 +31,4 @@ sudo docker run -it -v /data/mnist/data:/data/data -v /data/mnist/output:/data/o
   * 我们通过 -v /data/mnist/data:/data/data 将数据从/data/mnist/data目录挂载到docker容器中的/data/data/目录下（注：AI训练平台也是挂载到/data/data/下)
   * 我们通过 -v /data/mnist/output:/data/output 将输出路径/data/mnist/output目录挂载到docker容器中的/data/output/目录下（注：AI训练平台也是挂载到/data/output/下) 
   * 在执行过程我们模拟添加了UAI Train系统会自动添加的参数： \-\-work\_dir=/data \-\-data\_dir=/data/data \-\-output\_dir=/data/output \-\-log\_dir=/data/output/log，用来测试代码的完备性
+

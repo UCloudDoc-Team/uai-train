@@ -21,6 +21,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-poem-infer:latest
 
 <code>
 |_ code/
+
 |_ data/
   |_ char_dict.json  
   |_ index_2_ord_map.json  
@@ -54,6 +55,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn-poem-infer:latest
 ### ocr.Dockerfile介绍
 <code>
 FROM uhub.service.ucloud.cn/uaishare/cpu_uaiservice_ubuntu-16.04_python-3.6.2_tensorflow-1.3.0:v1.2
+
 EXPOSE 8080
 ADD ./inference/ /ai-ucloud-client-django/
 ADD ./ocr.conf  /ai-ucloud-client-django/conf.json
@@ -111,28 +113,30 @@ def load_model(self):
 
 该函数从data获取batching的请求数据，并转化为numpy list；通过sess.run请求推理操作；将请求结果转化成string，并合并成ret（ret也是一个list，和data list是一一对应的关系）
 <code>
-    def execute(self, data, batch_size):    
-        sess = self.output['sess']
-        x = self.output['x']
-        y_ = self.output['y_']
-        decoder = data_utils.TextFeatureIO()
-        ret = []
-        for i in range(batch_size):
-            '''
-            1 load data 
-            '''
-            image = np.array(Image.open(data[i]))
-            image = cv2.cvtColor(np.asarray(image),cv2.COLOR_RGB2BGR)
-            image = cv2.resize(image, (100, 32))
-            image = np.expand_dims(image, axis=0).astype(np.float32)
-            '''
-            2 inference
-            '''
-            preds = sess.run(y_, feed_dict={x: image})
-            preds = decoder.writer.sparse_tensor_to_str(preds[0])[0]+'\n'
-            ret.append(preds)
-        return ret
+    def execute(self, data, batch_size):
+
+​        sess = self.output['sess']
+​        x = self.output['x']
+​        y_ = self.output['y_']
+​        decoder = data_utils.TextFeatureIO()
+​        ret = []
+​        for i in range(batch_size):
+​            '''
+​            1 load data 
+​            '''
+​            image = np.array(Image.open(data[i]))
+​            image = cv2.cvtColor(np.asarray(image),cv2.COLOR_RGB2BGR)
+​            image = cv2.resize(image, (100, 32))
+​            image = np.expand_dims(image, axis=0).astype(np.float32)
+​            '''
+​            2 inference
+​            '''
+​            preds = sess.run(y_, feed_dict={x: image})
+​            preds = decoder.writer.sparse_tensor_to_str(preds[0])[0]+'\n'
+​            ret.append(preds)
+​        return ret
 </code>
+
 ## 生成镜像
 准备好以上文件之后，我们可以通过ocr.Dockerfile生成Docker镜像。
 <code>

@@ -5,7 +5,7 @@
 
 ## 下载训练结果
 ### UFile操作界面下载
-我们可以在[[https://console.ucloud.cn/ufile/ufile/manage/normal]] 下载输出镜像，根据mnist/output/这个prefix来查询：\\
+我们可以在[[https://console.ucloud.cn/ufile/ufile/manage/normal]] 下载输出镜像，根据mnist/output/这个prefix来查询：
 {{:ai:uai-train:tutorial:tf-mnist:download.png?|}}
 
 然后在界面直接下载
@@ -14,6 +14,7 @@
 我们同样可以使用filemgr-linux64 来下载数据：
 <code>
 $ cd ~/filemgr-linux64
+
 $ ./filemgr-linux64 --action download --bucket uai-demo --key mnist/output/checkpoint --file /data/mnist/gpu-output/checkpoint
 $ ./filemgr-linux64 --action download --bucket uai-demo --key mnist/output/model.ckpt.data-00000-of-00001 --file /data/mnist/gpu-output/model.ckpt.data-00000-of-00001
 $ ./filemgr-linux64 --action download --bucket uai-demo --key mnist/output/model.ckpt.index --file /data/mnist/gpu-output/model.ckpt.index

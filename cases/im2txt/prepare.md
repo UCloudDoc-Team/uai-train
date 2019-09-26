@@ -12,7 +12,6 @@
 下载工具可直接使用wget工具。数据格式转换所用的脚本需要用到tensorflow, numpy和nltk工具包：
 
 	sudo pip install tensorflow
-	
 	sudo pip install -U nltk
 	python -m nltk.downloader punkt
 

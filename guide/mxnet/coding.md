@@ -10,6 +10,7 @@ git clone https://github.com/ucloud/uai-sdk.git
 ## MXNet 相关文件路径
 <code>
 uai-sdk/
+
   examples/
     mxnet/
        train/
@@ -25,7 +26,7 @@ uai-sdk/
 ## 简介
 
 ### uaitrain/arch/mxnet/uargs.py
-uaitrain/arch/mxnet/uargs.py 定义了UAI Train在运行MXNet训练任务时所需的参数定义，此类参数均为固定参数。
+uaitrain/arch/mxnet/uargs.py 定义了UAI-Train在运行MXNet训练任务时所需的参数定义，此类参数均为固定参数。
 
 #### 固定参数
 | 参数 | 默认值 | 说明 |

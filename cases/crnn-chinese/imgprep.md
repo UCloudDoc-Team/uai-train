@@ -36,6 +36,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn_gpu:latest
 Docker镜像build的时候会基于uhub.service.ucloud.cn/uaishare/cpu\_uaitrain\_ubuntu-16.04\_python-3.6.2\_tensorflow-1.3.0:v1.0的基础镜像，然后将code/下面的代码拷贝到docker镜像的/data/code/目录下，具体的crnn-cpu.Dockerfile文件的代码如下：
 <code>
 From uhub.service.ucloud.cn/uaishare/cpu_uaitrain_ubuntu-16.04_python-3.6.2_tensorflow-1.3.0:v1.0
+
 RUN pip install tqdm
 ENV LANG C.UTF-8
 ADD ./code/ /data/code/

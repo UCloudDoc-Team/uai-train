@@ -9,19 +9,20 @@ python base_tool.py pack --args
 </code>
 
 <code>
-sudo python base_tool.py pack [-h] 
-                        --code_path CODE_PATH 
-                        --mainfile_path MAINFILE_PATH
-                        --uhub_username UHUB_USERNAME
-                        --uhub_password UHUB_PASSWORD 
-                        --uhub_registry UHUB_REGISTRY
-                        --uhub_imagename UHUB_IMAGENAME
-                        [--uhub_imagetag UHUB_IMAGETAG]
-                        [--internal_uhub false/true]
-                        --test_data_path TEST_DATA_PATH
-                        --test_output_path TEST_OUTPUT_PATH
-                        --train_params TRAIN_PARAMS
-                        --self_img YOUR_SOURCE_INAGE
+sudo python base_tool.py pack [-h]
+
+​                        --code_path CODE_PATH 
+​                        --mainfile_path MAINFILE_PATH
+​                        --uhub_username UHUB_USERNAME
+​                        --uhub_password UHUB_PASSWORD 
+​                        --uhub_registry UHUB_REGISTRY
+​                        --uhub_imagename UHUB_IMAGENAME
+​                        [--uhub_imagetag UHUB_IMAGETAG]
+​                        [--internal_uhub false/true]
+​                        --test_data_path TEST_DATA_PATH
+​                        --test_output_path TEST_OUTPUT_PATH
+​                        --train_params TRAIN_PARAMS
+​                        --self_img YOUR_SOURCE_INAGE
 </code>
 
 | 参数 | 说明 | 是否必需 |
@@ -42,16 +43,17 @@ sudo python base_tool.py pack [-h]
 ## 命令范例
 <code>
 sudo python base_tool.py pack \
-			--code_path=./code/ \
-			--mainfile_path=mnist_summary.py \
-			--uhub_username=<YOUR_UHUB_USER_NAME> \
-			--uhub_password=<YOUR_UHUB_PASSWORD> \
-			--uhub_registry=<YOUR_UHUB_REFDISTRY> \
-			--uhub_imagename=<YOUR_UHUB_IMAGENAME> \
-                        --internal_uhub=true \
-			--test_data_path=/data/test/data \
-			--test_output_path=/data/test/output \
-			--train_params="--max_step=2000" \
-                        --self_img=<YOUR_BASE_IMAGE_NAME>
+
+​			--code_path=./code/ \
+​			--mainfile_path=mnist_summary.py \
+​			--uhub_username=<YOUR_UHUB_USER_NAME> \
+​			--uhub_password=<YOUR_UHUB_PASSWORD> \
+​			--uhub_registry=<YOUR_UHUB_REFDISTRY> \
+​			--uhub_imagename=<YOUR_UHUB_IMAGENAME> \
+​                        --internal_uhub=true \
+​			--test_data_path=/data/test/data \
+​			--test_output_path=/data/test/output \
+​			--train_params="--max_step=2000" \
+​                        --self_img=<YOUR_BASE_IMAGE_NAME>
 </code>
 
