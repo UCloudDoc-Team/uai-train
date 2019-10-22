@@ -72,7 +72,3 @@ uai/im2txt/output/checkpoint
 ...
 </code>
 
-
-更多关于在线训练的信息参阅：
-
-[[ai:uai-train:tutorial:tf-mnist:train|创建在线训练指南]]

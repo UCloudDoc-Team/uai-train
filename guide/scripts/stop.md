@@ -1,6 +1,6 @@
 {{indexmenu_n>3}}
 
-# 停止训练任务（Stop）
+# stop-停止训练任务
 使用该命令可以停止正在执行的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py stop --args

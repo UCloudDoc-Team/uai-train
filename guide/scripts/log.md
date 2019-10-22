@@ -1,6 +1,6 @@
 {{indexmenu_n>7}}
 
-# 实时日志输出（log）
+# log-实时日志输出
 使用该命令可以查询训练任务的详细信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py log --args

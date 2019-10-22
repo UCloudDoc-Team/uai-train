@@ -3,7 +3,7 @@
 # 打包镜像
 在线推理服务基于镜像。本节介绍如何将训练好的模型文件与代码一并打包为镜像。
 ## 转换训练生成模型的格式
-如果通过在线训练获得了识别模型，可以自行打包为镜像并上传至Uhub以启动在线推理。转至UFile并查找模型训练一节中记录的模型输出源（本例中为uai/object-train-output/），检查训练后的模型文件（以训练200000轮的模型文件为例）：
+如果通过在线训练获得了识别模型，可以自行打包为镜像并上传至UHub以启动在线推理。转至UFile并查找模型训练一节中记录的模型输出源（本例中为uai/object-train-output/），检查训练后的模型文件（以训练200000轮的模型文件为例）：
 
 <code>
 uai/object-train-output/model.ckpt-200000.data-00000-of-00001
@@ -39,7 +39,7 @@ uai/object-train-output/checkpoint
 
 ## 打包自定义模型在线服务镜像
 
-生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-train:tutorial:tf-mnist:coding|]]）。下载Object Detection推理代码包：
+生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-inference:tutorial:tf-mnist:coding|]]）。下载Object Detection推理代码包：
 
 [[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/object-detect|Object Detection - Tensorflow]]
 
@@ -79,7 +79,7 @@ sudo docker login uhub.ucloud.cn
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/object-detect-infer:test
 </code>
 
-等待上传完毕。镜像已经上传至镜像库，参阅[[ai:uai-train:case:obj-detect-tf:objinfer|启动在线推理服务]]使用该镜像进行推理。
+等待上传完毕。镜像已经上传至镜像库，参阅[[ai:uai-train:case:obj-detect-tf:obj-infer|启动在线推理服务]]使用该镜像进行推理。
 
 更多关于镜像打包的信息参阅[[ai:uai-train:set-up:tf-mnist:self-pack|使用自定义镜像打包]]
 

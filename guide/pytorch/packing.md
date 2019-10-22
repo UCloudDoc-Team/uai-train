@@ -128,7 +128,7 @@ CMD for CPU local test: sudo docker run -it -v /home/ubuntu/uai-sdk/examples/pyt
 CMD for GPU local test: sudo nvidia-docker run -it -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/data:/data/data -v /home/ubuntu/uai-sdk/examples/pytorch/train/mnist/output:/data/output uhub.service.ucloud.cn/fanrongtest/pytorch-mnist:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist.py  --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output"
 </code>
 
-  * **CMD Used for deploying**: 该输出的内容为创建训练任务时，**训练启动命令**框中需要填写的内容(参见[[ai:uai-train:set-up:how-to-use:create]])。可以直接复制黏贴到命令框中。
+  * **CMD Used for deploying**: 该输出的内容为创建训练任务时，**训练启动命令**框中需要填写的内容(参见[[ai:uai-train:guide:scripts:create]])。可以直接复制黏贴到命令框中。
   * **CMD for CPU local test**: 该输出的内容为本地通过CPU来测试训练能否正常执行。在本地没有GPU的情况下可以使用该命令测试训练代码能否正常执行。
   * **CMD for GPU local test**：该输出的内容为本地通过GPU来测试训练能否正常执行。在本地有GPU的情况下可以使用该命令测试训练代码能否正常执行。（注：在使用前请确认GPU驱动已经安装，并已经安装了nvidia-docker，详细安装方法请参见[[ai:uai-train:basic:docker]]）
 

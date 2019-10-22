@@ -1,7 +1,7 @@
 {{indexmenu_n>5}}
 
 # 模型训练
-我们使用[[ai:uai-train:case:crnn-chinese:imagepre|]]中生成的镜像进行模型训练。
+我们使用[[ai:uai-train:case:crnn-chinese:imgpre|]]中生成的镜像进行模型训练。
 
 ## 训练
 我们可以先在本地进行训练，测试训练能否正常进行，再在UAI-Train平台上进行训练。
@@ -35,7 +35,6 @@ http://uai-demo.ufile.ucloud.com.cn//crnn_poem/data/
 </code>
 
 **执行训练命令**
-
 
 训练的执行命令为：
 <code>

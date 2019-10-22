@@ -1,6 +1,6 @@
 {{indexmenu_n>9}}
 
-# TensorBoard URL（url）
+# url-查询TensorBoard URL
 使用该命令可以查询训练任务的详细信息（**仅针对tensorflow框架**），工具在uaitrain\_tool下面：
 <code>
 python tf/tf_tool.py url --args

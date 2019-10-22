@@ -1,6 +1,6 @@
 {{indexmenu_n>10}}
 
-# 更新记录
+# 产品更新记录
 
 ## UAI Train 交互式版本发布 - 2018.12.05
 新特性1：新增Jupyter Notebook交互式训练模式，提供开箱即用的AI开发环境 
@@ -33,7 +33,7 @@
 | 1 * 4P40    | 223                   |
 
 ## UAI Train 开放Docker镜像和Case Study - 2018.01.31
-UAI Train公开所支持的AI Docker镜像：[[ai:uai-train:general:dockers]] 
+UAI Train公开所支持的AI Docker镜像：[[ai:uai-train:basic:docker]] 
 UAI Train公开部分开源AI 算法Case Study：https://github.com/ucloud/uai-sdk/tree/master/examples 
 
 ## UAI Train版本更新 - 2017.11.28

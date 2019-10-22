@@ -13,7 +13,7 @@ sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 
 ## 基于UFS的数据存储
 
-你可以通过[[https://docs.ucloud.cn/storage_cdn/ufs/index|UFS产品文档]]了解UFS的使用。这里我们将[[ai:uai-train:case:slim:tfrecord|]]生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
+你可以通过[[https://docs.ucloud.cn/storage_cdn/ufs/index|UFS产品文档]]了解UFS的使用。这里我们将[[ai:uai-train:cases:slim:tfrecord|]]生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
 
 ## 基于UAI-Train平台的模型训练
 

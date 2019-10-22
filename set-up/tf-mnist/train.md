@@ -41,13 +41,14 @@ $ cd filemgr-linux64
 <code>
 $ vim config.cfg
 </code>
-将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在北京D机房，其他机房的配置可以参考[[ai:uai-train:basic:ufile:file]]的说明。
+将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在北京二可用区D，其他机房的配置可以参考[[ai:uai-train:basic:ufile]]的说明。
 
 之后我们就可以用如下命令上传数据
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/mnist/data/  --trimpath /data/ --threads 4
 </code>
 这里我们使用mput来上传数据：
+
   * ufile的目标bucket为 uai-demo
   * 需要上传的数据为 /data/mnist/data/目录下的数据
   * 我们利用trimpath 将上传数据的路径截断，即上传后数据的路径为uai-demo.cn-bj.ufileos.com/mnist/data/
@@ -77,5 +78,5 @@ $ vim config.cfg
 {{:ai:uai-train:tutorial:tf-mnist:train-ufile-step2.png?600|}}
 
 ### 发起训练任务
-我们点击确认按钮就可以发起训练。其他训练操作相关请参考[[ai:uai-train:set-up:how-to-use]]
+点击确认按钮就可以发起训练。
 

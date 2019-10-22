@@ -1,6 +1,6 @@
 {{indexmenu_n>2}}
 
-# 删除训练任务（Delete）
+# delete-删除训练任务
 使用该命令可以停止正在执行的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py delete --args

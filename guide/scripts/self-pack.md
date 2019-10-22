@@ -2,7 +2,7 @@
 
 
 
-# 自定义镜像打包（Pack）
+# pack-自定义镜像打包
 使用该命令可以创建新的训练任务，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py pack --args

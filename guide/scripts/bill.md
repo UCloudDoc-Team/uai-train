@@ -2,7 +2,7 @@
 
 
 
-# 计费信息（bill）
+# bill-计费信息
 使用该命令可以查询指定时间段内的全部任务的计费信息，所有工具都在uaitrain\_tool下面：
 <code>
 python base_tool.py bill --args

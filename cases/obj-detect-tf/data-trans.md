@@ -1,6 +1,6 @@
 {{indexmenu_n>4}}
 
-注意：本节需在本地主机使用Docker模块，请参照[[ai:uai-train:guide:prepare|]]在本地安装工作环境。
+注意：本节需在本地主机使用Docker模块，请参照[[ai:uai-train:set-up:tf-mnist:prepare|]]在本地安装工作环境。
 
 # 数据格式转换
 收集以上数据后，我们就可以运行脚本生成tfrecord文件。tfrecord记录了图片和事实数据集，并可作为训练的输入数据。在uhub共享镜像库我们提供了开源的Docker镜像进行转换：
