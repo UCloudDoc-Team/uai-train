@@ -1,4 +1,4 @@
-{{indexmenu_n>4}}
+
 
 # info-查询任务信息
 使用该命令可以查询训练任务的简单状态，所有工具都在uaitrain\_tool下面：

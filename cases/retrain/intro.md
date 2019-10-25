@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # 案例介绍
 {{ :ai:uai-train:case:retrain:daisies.jpg?nolink&600 |}}

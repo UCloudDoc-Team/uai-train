@@ -1,4 +1,4 @@
-{{indexmenu_n>4}}
+
 
 # MNIST开发案例
 本案例使用的MNIST模型的训练代码来自pytorch的MNIST案例的mnist.py。（https://github.com/pytorch/examples/tree/master/mnist）

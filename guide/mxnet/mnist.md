@@ -1,4 +1,4 @@
-{{indexmenu_n>7}}
+
 
 # MNIST开发案例
 本案例所使用的模型和代码基于MXNet 的MNIST案例，您可以在https://github.com/apache/incubator-mxnet/tree/master/example/image-classification 找到MXNet train\_mnist.py的原始的案例。您可以在您可以在https://github.com/ucloud/uai-sdk/tree/master/examples/mxnet/train/mnist/下面下载完整的代码和测试数据集。

@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # create-创建训练任务
 使用该命令可以创建新的训练任务，所有工具都在uaitrain\_tool下面：

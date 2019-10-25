@@ -1,4 +1,4 @@
-{{indexmenu_n>7}}
+
 
 # TF-Im2txt开发案例
 本案例所使用的模型和代码基于Tensorflow 的im2txt案例开发。

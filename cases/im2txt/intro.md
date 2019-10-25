@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # 案例介绍
 {{ :ai:uai-train:case:im2txt:man-swim-in-ocean-beside-tree.jpg?nolink&600 |}}

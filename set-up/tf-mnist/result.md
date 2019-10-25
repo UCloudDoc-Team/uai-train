@@ -1,4 +1,4 @@
-{{indexmenu_n>6}}
+
 
 # 获取结果
 训练完毕后系统会自动将/data/output/下的数据上传到Ufile指定的输出中，本案例的输出地址为：[[http://uai-demo.ufile.ucloud.com.cn/mnist/output/]]，你可以在训练任务**详细信息**->**概览**页面->**执行信息** 中找到相关信息。

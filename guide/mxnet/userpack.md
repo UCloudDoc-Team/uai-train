@@ -1,4 +1,4 @@
-{{indexmenu_n>5}}
+
 
 # 自定义打包镜像
 在安装自定义软件包之前请确认已经执行了pack操作，如何执行请参见[[ai:uai-train:guide:mxnet:packing]]

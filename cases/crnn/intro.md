@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # 案例介绍
 CRNN模型帮助我们将图片中的字符转换为文本格式。该模型通过将CNN和RNN模型结合起来，构建一个单行字符识别网络。我们可以在论文[[ http://arxiv.org/abs/1507.05717]]中查看模型结构的更多细节。我们可以在github的ucloud/uai-sdk/example/tensorflow/train/crnn和ucloud/uai-sdk/example/tensorflow/inference/crnn上查看相关案例代码和模型文件。

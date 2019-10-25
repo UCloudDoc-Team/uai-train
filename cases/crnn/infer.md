@@ -1,4 +1,4 @@
-{{indexmenu_n>6}}
+
 
 # 在线服务
 我们可以将[[ai:uai-train:cases:crnn:train|]]得到的CRNN模型部署为在线服务来帮助我们更加方便地使用英文字符识别功能。我们借助Docker镜像来完成在线服务的部署。

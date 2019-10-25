@@ -1,4 +1,4 @@
-{{indexmenu_n>4}}
+
 
 # 生成tfrecords文件
 我们借助[[ai:uai-train:cases:crnn-chinese:imgprep|]]中的镜像来生成tfrecords文件。

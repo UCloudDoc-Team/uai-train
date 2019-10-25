@@ -1,4 +1,4 @@
-{{indexmenu_n>2}}
+
 
 # delete-删除训练任务
 使用该命令可以停止正在执行的训练任务，所有工具都在uaitrain\_tool下面：

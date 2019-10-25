@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # 设计原理
 UAI Train平台使用GPU主机来提供AI训练的基础算力，平台利用Docker容器技术来封装训练任务，并可以对接UFIle和UFS作为后端数据存储。

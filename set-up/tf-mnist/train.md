@@ -1,4 +1,4 @@
-{{indexmenu_n>5}}
+
 
 # 平台训练
 现在我们可以使用UAI Train训练平台的GPU来训练Mnist模型了。

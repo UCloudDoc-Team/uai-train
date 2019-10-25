@@ -1,4 +1,4 @@
-{{indexmenu_n>7}}
+
 
 # MNIST开发案例
 本案例所使用的模型和代码基于Caffe 的MNIST案例，您可以在https://github.com/BVLC/caffe/tree/master/examples/mnist找到Caffe原始的案例。您可以在您可以在https://github.com/ucloud/uai-sdk/tree/master/examples/caffe/train/mnist/下面下载完整的代码。

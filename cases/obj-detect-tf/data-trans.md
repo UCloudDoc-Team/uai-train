@@ -1,4 +1,4 @@
-{{indexmenu_n>4}}
+
 
 注意：本节需在本地主机使用Docker模块，请参照[[ai:uai-train:set-up:tf-mnist:prepare|]]在本地安装工作环境。
 

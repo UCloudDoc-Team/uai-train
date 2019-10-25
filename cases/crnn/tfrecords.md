@@ -1,4 +1,4 @@
-{{indexmenu_n>4}}
+
 
 # 数据格式转换
 我们需要将数据转化为Tensorflow需要的tfrecords形式，在这里我们借助Docker镜像来生成tfrecords文件。

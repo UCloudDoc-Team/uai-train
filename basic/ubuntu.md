@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # UBuntu云主机申请
 

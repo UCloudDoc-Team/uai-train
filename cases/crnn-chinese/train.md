@@ -1,4 +1,4 @@
-{{indexmenu_n>5}}
+
 
 # 模型训练
 我们使用[[ai:uai-train:case:crnn-chinese:imgpre|]]中生成的镜像进行模型训练。

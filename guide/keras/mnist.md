@@ -1,4 +1,4 @@
-{{indexmenu_n>6}}
+
 
 # MNIST开发案例
 

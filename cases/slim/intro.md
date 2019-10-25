@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # TF-Slim介绍
 TF-Slim是TensorFlow的一个轻量级库，用于定义，训练和评估TensorFlow中的复杂模型。使用TF-Slim可以帮助我们减少样板代码的书写，从而增强代码的可读性和可维护性，同时TF-Slim的组件可以与本地tensorflow以及其他框架（如tf.contrib.learn）自由组合，具有很大的灵活性。

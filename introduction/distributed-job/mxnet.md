@@ -1,4 +1,4 @@
-{{indexmenu_n>3}}
+
 
 # MXNet分布式训练
 UAI Train MXNet的分布式训练环境实现基于 MXNet的分布式训练系统实现。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式参见[[ai:uai-train:introduction:distructive-job:intro]]。

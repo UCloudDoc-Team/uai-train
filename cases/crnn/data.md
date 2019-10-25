@@ -1,4 +1,4 @@
-{{indexmenu_n>2}}
+
 
 # 数据准备
 本章节介绍了你该如何使用Synthetic Word Dataset数据集进行模型训练。如果你要使用自己的数据进行训练，可以跳过此章节查看[[ai:uai-train:cases:crnn:data-ud|使用自己的数据集]]。

@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+
 
 # 分布式训练简介
 UCloud AI Train分布式训练采用Parameter Server和Worker Server混部的方法，所有计算节点均由GPU物理云主机组成。PS 仅使用CPU进行计算，Worker Server则同时使用GPU和CPU进行计算，PS 和 Worker的比例为1:1。
