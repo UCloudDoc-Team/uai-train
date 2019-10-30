@@ -4,16 +4,16 @@
         * [什么是AI训练服务](ai/uai-train/introduction/uaitrain)
         * [交互式训练](ai/uai-train/introduction/interactive-job)
         * 分布式训练
-            * [分布式训练简介](ai/uai-train/introduction/distructive-job/intro)
-            * [TensorFlow分布式训练](ai/uai-train/introduction/distructive-job/tensorflow)
-            * [MXNet分布式训练](ai/uai-train/introduction/distructive-job/mxnet)
+            * [分布式训练简介](ai/uai-train/introduction/distributed-job/intro)
+            * [TensorFlow分布式训练](ai/uai-train/introduction/distributed-job/tensorflow)
+            * [MXNet分布式训练](ai/uai-train/introduction/distributed-job/mxnet)
         * [产品优势](ai/uai-train/introduction/feature)
         * [产品更新记录](ai/uai-train/introduction/updates)
     * [产品定价](ai/uai-train/price)
     * 快速上手
-        * [开始使用UAI Train](ai/uai-train/set-up/start)
-        * [开通UAI Train服务](ai/uai-train/set-up/active)
-        * 快速上手（MNIST案例）
+        * [开始使用UAI-Train](ai/uai-train/set-up/start)
+        * [开通UAI-Train服务](ai/uai-train/set-up/active)
+        * 快速上手-MNIST案例
             * [MNIST 介绍](ai/uai-train/set-up/tf-mnist/intro)
             * [环境准备](ai/uai-train/set-up/tf-mnist/prepare)
             * [创建UHub镜像仓库](ai/uai-train/set-up/tf-mnist/uhub)
@@ -24,7 +24,7 @@
             * [自定义镜像打包](ai/uai-train/set-up/tf-mnist/self-pack)
             * [本地Mnist测试](ai/uai-train/set-up/tf-mnist/local-test)
     * 基础环境
-        * [ubuntu云主机申请](ai/uai-train/basic/ubuntu)
+        * [Ubuntu云主机申请](ai/uai-train/basic/ubuntu)
         * [Docker使用指南](ai/uai-train/basic/docker)
         * [UHub使用指南](ai/uai-train/basic/uhub)
         * UFile使用指南
@@ -79,11 +79,11 @@
             * [stop-停止训练任务](ai/uai-train/guide/scripts/stop)
             * [info-查询任务信息](ai/uai-train/guide/scripts/info)
             * [list-查询任务详细信息](ai/uai-train/guide/scripts/list)
-            * [日志topic（topic）](ai/uai-train/guide/scripts/topic)
-            * [实时日志输出（log）](ai/uai-train/guide/scripts/log)
+            * [topic-日志topic](ai/uai-train/guide/scripts/topic)
+            * [log-实时日志输出](ai/uai-train/guide/scripts/log)
             * [url-查询TensorBoard URL](ai/uai-train/guide/scripts/url)
-            * [计费信息（bill）](ai/uai-train/guide/scripts/bill)
-            * [获取任务配置（conf）](ai/uai-train/guide/scripts/conf)
+            * [bill-计费信息](ai/uai-train/guide/scripts/bill)
+            * [conf-获取任务配置](ai/uai-train/guide/scripts/conf)
             * [pack-自定义镜像打包](ai/uai-train/guide/scripts/self-pack)
         * 控制台界面操作指南
             * [创建任务](ai/uai-train/guide/console/create)
@@ -149,14 +149,14 @@
         * [开源案例](ai/uai-train/resource/example)
         * [学习视频](ai/uai-train/resource/video)
     * [FAQ](ai/uai-train/faq)
-        
+      
 
 
 
 
 
-    
-   
-   
-    
-        
+​    
+
+
+​    
+​        
