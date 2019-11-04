@@ -79,7 +79,7 @@ sudo docker login uhub.ucloud.cn
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/object-detect-infer:test
 </code>
 
-等待上传完毕。镜像已经上传至镜像库，参阅[[ai:uai-train:case:obj-detect-tf:obj-infer|启动在线推理服务]]使用该镜像进行推理。
+等待上传完毕。镜像已经上传至镜像库，参阅[启动在线推理服务](ai/uai-train/cases/obj-detect-tf/obj-infer)使用该镜像进行推理。
 
 更多关于镜像打包的信息参阅[[ai:uai-train:set-up:tf-mnist:self-pack|使用自定义镜像打包]]
 

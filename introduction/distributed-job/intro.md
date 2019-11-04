@@ -15,5 +15,5 @@ UCloud AI Train分布式训练采用Parameter Server和Worker Server混部的方
 您可以任意指定一个UFS盘作为output数据源，UAI Train平台在训练执行过程中会将对应的UFS数据映射到训练执行的每一个PS容器和Worker容器的 /data/output 目录下，并以共享的方式访问同一份数据。假设您的UFS盘为 ip:/yyy，您希望将训练输出数据保存在/output/目录下，则系统会自动将输出路径映射到执行的容器中，如 ip:/yyy/output -> /data/data/。同时，在训练过程您可以通过其他云主机实时访问训练保持的模型checkpoint。
 
 ## UAI Train 分布式训练代码
-您需要自己准备分布式训练的代码，目前UAI Train平台支持TensorFLow 和 MXNet 框架的分布式训练。您需要将PS的代码和Worker的代码实现在同一个代码入口中，在执行过程中，PS 和 Worker 将使用相同的Docker容器镜像和相同的python代码入口进行执行，系统将自动生成PS和Worker的env环境参数。详细说明请参考[[ai:uai-train:introduction:distructive-job:tensorflow]]和[[ai:uai-train:introduction:distructive-job:mxnet]]
+您需要自己准备分布式训练的代码，目前UAI Train平台支持TensorFLow 和 MXNet 框架的分布式训练。您需要将PS的代码和Worker的代码实现在同一个代码入口中，在执行过程中，PS 和 Worker 将使用相同的Docker容器镜像和相同的python代码入口进行执行，系统将自动生成PS和Worker的env环境参数。详细说明请参考[[ai:uai-train:introduction:distributed-job:tensorflow]]和[[ai:uai-train:introduction:distributed-job:mxnet]]
 

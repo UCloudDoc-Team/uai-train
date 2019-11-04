@@ -1,7 +1,7 @@
 
 
 # 模型训练
-我们使用[[ai:uai-train:case:crnn-chinese:imgpre|]]中生成的镜像进行模型训练。
+我们使用[](ai/uai-train/cases/crnn-chinese/imgprep)中生成的镜像进行模型训练。
 
 ## 训练
 我们可以先在本地进行训练，测试训练能否正常进行，再在UAI-Train平台上进行训练。
@@ -27,7 +27,7 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output  uhub.
 
 **填写数据输入路径**
 
-在UAI-Train平台上训练的具体操作步骤可以参考[[ai:uai-train:tutorial:tf-mnist:train|]]
+在UAI-Train平台上训练的具体操作步骤可以参考[](ai/uai-train/set-up/tf-mnist/train)
 
 如果你的数据存放在UFile平台的/crnn\_poem/data/下面，你的数据路径可以填写为
 <code>

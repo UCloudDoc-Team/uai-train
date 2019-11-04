@@ -1,7 +1,7 @@
 
 
 # TensorFlow分布式训练
-UAI Train Tensorflow的分布式训练环境实现基于TensorFlow 的分布式训练系统实现，采用默认的grpc协议进行数据交换。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式参见[[ai:uai-train:introduction:distructive-job:intro]]。
+UAI Train Tensorflow的分布式训练环境实现基于TensorFlow 的分布式训练系统实现，采用默认的grpc协议进行数据交换。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式参见[[ai:uai-train:introduction:distributed-job:intro]]。
 
 ## TensorFlow 分布式训练简介
 TensorFlow 分布式训练采用PS-Worker的分布式格式，并提供python的接口运行分布式训练。

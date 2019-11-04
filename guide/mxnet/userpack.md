@@ -115,4 +115,4 @@ UAI-Train平台目前仅接受GPU镜像训练，因此在上传镜像时我们�
 <code>
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/<YOUR_NEW_IMAGENAME>:<YOUR_NEW_IMG_TAG> 
 </code>
-之后就可以在[[ai:uai-train:set-up:how-to-use:create]]中使用该镜像了
+之后就可以使用该镜像了

@@ -6,7 +6,7 @@
 
 ## docker镜像上传
 
-我们需要将[[ai:uai-train:case:slim:tfrecord|]]中生成的docker镜像上传到UHub中：
+我们需要将[tfrecord](ai/uai-train/cases/slim/tfrecord)中生成的docker镜像上传到UHub中：
 <code>
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 </code>

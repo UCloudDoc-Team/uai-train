@@ -14,7 +14,7 @@ cd uai-sdk
 sudo python setup.py install
 </code>
 
-安装Docker的方法请参见：[[ai:uai-train:base:docker]]
+安装Docker的方法请参见：[[ai:uai-train:basic:docker]]
 
 ## Step1: 找到UAI-Train Caffe操作工具所在目录
 <code>
