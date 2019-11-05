@@ -4,7 +4,7 @@
 UFS 是面向UCloud云主机提供持久化存储空间的块设备硬盘。其具有独立的生命周期，基于网络分布式访问，为云主机提供的数据大容量、高可靠、可扩展、高易用、低成本的硬盘。您可以为UAI Train训练任务指定UDisk的文件路径作为数据输入源，也可以指定UDisk的文件路径作为数据的输出源。
 
 ## 申请UDisk存储
-在使用UDisk存储作为AI Train平台的数据源之前，您需要在UDisk的产品界面(https://console.ucloud.cn/uhost/udisk)申请UDisk存储,需要经过以下几个步骤：
+在使用UDisk存储作为AI Train平台的数据源之前，您需要在[UDisk的产品界面](https://console.ucloud.cn/uhost/udisk)申请UDisk存储,需要经过以下几个步骤：
 
 1. 创建云硬盘[[storage_cdn:udisk:userguide:create]] 
 

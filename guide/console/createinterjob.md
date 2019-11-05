@@ -45,5 +45,5 @@
 {{ :ai:uai-train:use:createinterjob4.png?nolink|}}
 
 3. 下一步
-       [[ai:uai-train:guide:console:jupyter|]]
+       [访问Jupyter](ai/uai-train/guide/console/jupyter)
 

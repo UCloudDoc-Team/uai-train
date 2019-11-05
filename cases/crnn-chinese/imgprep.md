@@ -15,7 +15,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/crnn_gpu:latest
 </code>
 
 ## 数据准备
-我们可以将数据按照如下文件结构进行放置。你可以在[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/crnn|ucloud/uai-sdk/example/tensorflow/train/crnn]]中找到下面的代码文件。
+我们可以将数据按照如下文件结构进行放置。你可以在[ucloud/uai-sdk/example/tensorflow/train/crnn](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/crnn)中找到下面的代码文件。
 
   * ./code中放置了相应的代码文件；
 <code>

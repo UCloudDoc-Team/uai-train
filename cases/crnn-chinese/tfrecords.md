@@ -1,7 +1,7 @@
 
 
 # 生成tfrecords文件
-我们借助[[ai:uai-train:cases:crnn-chinese:imgprep|]]中的镜像来生成tfrecords文件。
+我们借助[](ai/uai-train/cases/crnn-chinese/imgprep)中的镜像来生成tfrecords文件。
 ## 本地生成tfrecords文件
 我们可以将数据按照如下文件结构进行放置。
 

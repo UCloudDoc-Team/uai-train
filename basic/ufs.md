@@ -4,7 +4,7 @@
 UFS 是面向UCloud云主机提供简单、可扩展、高可靠、高性能的标准POSIX文件共享访问方式。UFS 同时可以作为UAI Train训练节点的输入、输出数据源。您可以为UAI Train训练任务指定UFS的文件路径作为数据输入源，也可以指定UFS的文件路径作为数据的输出源。
 
 ## 申请UFS存储
-在使用UFS存储作为AI Train平台的数据源之前，您需要在UFS的产品界面(https://console.ucloud.cn/ufs/ufs)申请UFS存储，详细操作方法请参见UFS[[storage_cdn:ufs:index]]。
+在使用UFS存储作为AI Train平台的数据源之前，您需要在[UFS的产品界面](https://console.ucloud.cn/ufs/ufs)申请UFS存储，详细操作方法请参见UFS[[storage_cdn:ufs:index]]。
 
 ## UFS 路径格式说明
 UAI Train中使用的UFS路径包括两部分：

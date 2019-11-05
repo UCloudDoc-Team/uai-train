@@ -105,5 +105,5 @@ uai/object-train-output/checkpoint
 
 这些为训练后的模型文件。更多关于在线训练的信息参阅：
 
-[[ai:uai-train:tutorial:tf-mnist:train|创建在线训练指南]]
+[创建在线训练指南](ai:uai-train:tutorial:tf-mnist:train)
 
