@@ -5,7 +5,7 @@
 ## 数据集介绍
 我们使用在[可公开下载](http://www.robots.ox.ac.uk/~vgg/data/text/)的Synthetic Word Dataset数据集进行模型的训练。将数据集解压后，我们就得到了训练数据图像。下图是一张数据图像示例。注意，文件夹中的图像为英文字符图像，且每张图像中只有一行字符串。
 
-{{:ai:uai-train:case:crnn:test_01.jpg?nolink&300|}}
+![](/ai/uai-train/images/case/crnn/test_01.jpg)
 
 ## 数据标签介绍
 我们需要形成两个sample.txt文件，分别存放于Test和Train文件夹中。Train/sample.txt和Test/sample.txt文件中给出了需要用于训练和测试的图片的相对路径以及图片的对应标签。下面给出了sample.txt的文件内容示例。

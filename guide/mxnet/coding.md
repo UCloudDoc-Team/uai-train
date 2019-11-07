@@ -2,7 +2,7 @@
 
 # API代码
 ## 获取方法
-[[https://github.com/ucloud/uai-sdk]]
+[地址](https://github.com/ucloud/uai-sdk)
 <code>
 git clone https://github.com/ucloud/uai-sdk.git
 </code>
@@ -40,5 +40,5 @@ uaitrain/arch/mxnet/uargs.py 定义了UAI-Train在运行MXNet训练任务时所�
 固定参数为系统自动生成，用户不需要做特殊设置。
 
 ### uaitrain_tool/mxnet/mxnet_tool.py
-mxnet\_tool.py 工具支持镜像打包功能，详细使用方法可参见[[ai:uai-train:guide:mxnet:packing]]
+mxnet\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](ai/uai-train/guide/mxnet/packing)
 

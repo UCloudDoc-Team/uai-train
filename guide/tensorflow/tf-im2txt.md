@@ -5,7 +5,7 @@
 详细案例可以访问 https://github.com/tensorflow/models/tree/master/im2txt
 
 ## 准备工作
-请根据 开发指南>Tensorflow开发指南>Tensorflow 本地安装部署开发环境[[ai:uai-train:guide:tensorflow:local]]完成所有安装步骤，即完成了基本环境的部署。
+请根据[Tensorflow 本地安装部署开发环境](ai/uai-train/guide/tensorflow/local)完成所有安装步骤，即完成了基本环境的部署。
 数据集采用MSCOCO的数据集，具体获取方法可以参照https://github.com/tensorflow/models/tree/master/im2txt
 
 ## 编写Im2txt案例
@@ -102,7 +102,7 @@ train.py --input_file_pattern=/train-?????-of-00256 --inception_checkpoint_file=
 </code>
 
 **打包Docker镜像**
-详细的训练镜像打包说明请参见：[[ai:uai-train:guide:tensorflow:packing]]
+详细的训练镜像打包说明请参见：[](ai/uai-train/guide/tensorflow/packing)
 <code>
 sudo python tf_deploy.py pack --public_key=<YOUR_PUB_KEY> --private_key=<YOUR_PRIVATE_KEY> --code_path=im2txt/ --mainfile_path=train.py --uhub_username=<YOUR_UCLOUD_ACCOUNT> --uhub_password=<YOUR_UCLOUD_ACCOUNT_PASSWORD> --uhub_registry=<YOUR_UHUB_REGISTRY> --uhub_imagename=im2txt --ai_arch_v=tensorflow-1.1.0 --test_data_path=/data/im2txt_data/ --test_output_path=/data/im2txt_out/ --train_params="--input_file_pattern=/train-?????-of-00256 --inception_checkpoint_file=/inception_v3.ckpt --train_inception=false --number_of_steps=1000000"
 </code>

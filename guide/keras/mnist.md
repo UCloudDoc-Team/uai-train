@@ -5,7 +5,7 @@
 本案例所使用的模型和代码基于Keras 的MNIST案例，您可以在https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py找到Keras原始的案例。您可以在您可以在https://github.com/ucloud/uai-sdk/tree/master/examples/keras/train/mnist/下面下载完整的代码和测试数据集。
 
 ## 准备工作
-请根据 开发指南>Keras开发指南>Keras 本地安装部署开发环境[[ai:uai-train:guide:keras:local]]完成所有安装步骤，即完成了基本环境的部署 
+请根据[Keras 本地安装部署开发环境](ai/uai-train/guide/keras/local)完成所有安装步骤，即完成了基本环境的部署 
 从https://github.com/ucloud/uai-sdk/tree/master/examples/keras/train/mnist下载完整的案例，包括：
 
   * code/ 训练代码，包括mnist_cnn.py mnist_datasets.py
@@ -93,7 +93,7 @@ model.fit(x_train, y_train,
 
 ## 使用Docker镜像进行测试
 因为UAI Train 平台使用Docker运行训练，因此可以使用Docker对训练代码进行测试。
-UAI Train平台提供开源的Docker 打包工具，打包方法见[[ai:uai-train:guide:keras:packing]] 
+UAI Train平台提供开源的Docker 打包工具，打包方法见[](ai/uai-train/guide/keras/packing) 
 打包完成后打包工具会自动生成GPU的镜像和CPU的镜像，命名如下：
 
   * **CPU镜像** uhub.ucloud.cn/<uhub-bucket>/<user-def-name>-cpu:<usr-def-tag>
@@ -106,3 +106,4 @@ UAI Train平台提供开源的Docker 打包工具，打包方法见[[ai:uai-trai
 #### 使用GPU Docker 测试
 打包工具会自动生成GPU Docker的运行代码，可以在**标准输出**或**uaitrain\_cmd.txt**中找到命令（CMD for GPU local test: <docker run cmd> ）
 直接执行命令即可
+

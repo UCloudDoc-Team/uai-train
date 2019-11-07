@@ -2,7 +2,7 @@
 
 #  API代码
 ## 获取方法
-[[https://github.com/ucloud/uai-sdk]]
+[地址](https://github.com/ucloud/uai-sdk)
 <code>
 git clone https://github.com/ucloud/uai-sdk.git
 </code>
@@ -31,7 +31,7 @@ uaitrain/arch/pytorch/uargs.py 定义了UAI Train在运行PyTorch训练任务时
 #### 固定参数
 | 参数 | 默认值 | 说明 |
 | ---- | ------ | ---- |
-| \-\-work\_dir    | /data         | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[[ai:uai-train:guide:mxnet:mnist]]  |
+| \-\-work\_dir    | /data         | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[](ai/uai-train/guide/mxnet/mnist) |
 | \-\-data\_dir    | /data/data    | 默认input数据存放路径，UAI Train会将UFile中的input数据下载到该路径下                                  |
 | \-\-output\_dir  | /data/output  | 默认输出路径，checkpoint和模型文件需要输出到该路径下，UAI Train会在训练完成后将该目录上传                          |
 | \-\-log\_dir     | /data/output  |                                                                                 |
@@ -40,5 +40,5 @@ uaitrain/arch/pytorch/uargs.py 定义了UAI Train在运行PyTorch训练任务时
 固定参数为系统自动生成，用户不需要做特殊设置。
 
 ### uaitrain_tool/pytorch/pytorch_tool.py
-pytorch\_tool.py 工具支持镜像打包功能，详细使用方法可参见[[ai:uai-train:guide:pytorch:packing]]
+pytorch\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](ai/uai-train/guide/pytorch/packing)
 

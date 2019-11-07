@@ -1,9 +1,9 @@
 * AI训练服务 UAI-Train
     * [概览](ai/uai-train/overview)
-    * 产品简介
+    * [产品简介](ai/uai-train/introduction)
         * [什么是AI训练服务](ai/uai-train/introduction/uaitrain)
         * [交互式训练](ai/uai-train/introduction/interactive-job)
-        * 分布式训练
+        * [分布式训练](ai/uai-train/introduction/distributed-job)
             * [分布式训练简介](ai/uai-train/introduction/distributed-job/intro)
             * [TensorFlow分布式训练](ai/uai-train/introduction/distributed-job/tensorflow)
             * [MXNet分布式训练](ai/uai-train/introduction/distributed-job/mxnet)
@@ -160,3 +160,4 @@
 
 ​    
 ​        
+

@@ -10,7 +10,5 @@ UAI-Train平台提供了TensorFlow和MXNet分布式训练一站式托管服务�
 
 UAI-Train平台可以满足图像识别、自然语言处理等多个AI领域的算法训练任务。
 
-**目录**
-
 
 

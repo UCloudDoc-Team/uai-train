@@ -41,14 +41,14 @@ sudo docker run -it -v /data/data:/data/data -v data/output:/data/output uhub.se
 
 首先填写训练任务名称等基本信息：
 公私钥信息获取请参考：[[ai:uai-train:basic:key|]]
-{{:ai:uai-train:case:cifar:a.png?nolink&400|}}
+![](/ai/uai-train/images/case/cifar/a.png)
 
   * 选择我们上传的cifar\_gpu\_train\_simple:latest镜像；
   * 填写**数据集准备**步骤中设置的数据路径；
   * 设置结果输出路径
   * 填写训练启动命令
 
-{{:ai:uai-train:case:cifar:h.png?nolink&400|}}
+![](/ai/uai-train/images/case/cifar/h.png)
 
 训练启动命令为：
 <code>
@@ -56,3 +56,4 @@ sudo docker run -it -v /data/data:/data/data -v data/output:/data/output uhub.se
 </code>
 
 训练结束后，可以在设置的结果输出路径查看输出的模型结果。
+

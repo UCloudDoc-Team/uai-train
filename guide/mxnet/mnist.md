@@ -108,3 +108,4 @@ UAI Train平台提供开源的Docker 打包工具，打包方法见[[ai:uai-trai
 ### 使用GPU Docker 测试
 打包工具会自动生成GPU Docker的运行代码，可以在**标准输出**或**uaitrain\_cmd.txt**中找到命令（CMD for GPU local test: <docker run cmd> ）
 直接执行命令即可
+

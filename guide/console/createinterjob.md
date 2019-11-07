@@ -5,20 +5,20 @@
 ## Step1: 进入UAI-Train产品页面
 
 1. 登录UCloud官网，点击右上角“控制台”选项，进入控制台页面。控制台页面显示账户的基本信息，点击左上角“产品与服务”选项，获取UCloud产品列表。选择“人工智能”列表下的“AI训练服务 UAI-Train”选项，进入UAI-Train产品页面。 
-{{:ai:uai-train:set-up:how-to-use:ai产品.jpg|}}
+![](ai/uai-train/images/set-up/ai产品.jpg)
 
 ----
 
 ## Step2: 创建AI交互式训练任务
 
 1. 点击“创建交互式训练任务”选项。
-{{ :ai:uai-train:use:createinterjob0.png?nolink|}}
+![](ai/uai-train/images/set-up/createinterjob0.png)
 
 2. 设置任务基本信息。
-{{ :ai:uai-train:use:createinterjob1.png?nolink|}}
+![](ai/uai-train/images/set-up/createinterjob1.png)
 
 3. 如果用户有自己保存的镜像或云端数据源，可进一步填写执行信息（可选） 
-{{ :ai:uai-train:use:createinterjob2.png?nolink|}} 
+![](ai/uai-train/images/set-up/createinterjob2.png) 
 填写说明：
 	* 代码镜像路径：默认为系统默认镜像。如果用户使用了“保存镜像”功能在默认镜像基础上制作了自定义镜像，可选择此项。 
 	* 代码加载路径：默认为空，使用镜像内部存储。如用户选择云端存储方式，将直接挂在到Jupyter启动根路径下。此种情况，在Jupyter中修改内容将直接保存到用户选择云端存储上，保存镜像按钮无法将内容打包到镜像内。 
@@ -33,7 +33,7 @@
 ## Step3: 创建后查看任务信息
 
 1. 完成创建后，在列表页面查看任务状态 
-{{ :ai:uai-train:use:createinterjob3.png?nolink|}}
+![](ai/uai-train/images/set-up/createinterjob3.png)
 任务状态说明：
 	* 训练任务处于“待执行”状态时，点击任务状态旁边的放大镜图标可以查看训练任务的排队信息。  
 	* 训练任务处于“启动中”状态时，点击任务状态旁边的放大镜图标可以查看训练任务的启动日志。  
@@ -42,7 +42,7 @@
 	* 训练任务处于“任务中止”“任务完成”状态时，可以点击操作栏“启动”按钮再次启动交互式任务。 
 
 2. 点击“详情”可查看具体任务信息 
-{{ :ai:uai-train:use:createinterjob4.png?nolink|}}
+![](ai/uai-train/images/set-up/createinterjob4.png)
 
 3. 下一步
        [访问Jupyter](ai/uai-train/guide/console/jupyter)

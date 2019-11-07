@@ -11,9 +11,9 @@
   * 图片中不建议出现大量无关背景，文本部分应该为图片的主要内容；
 下面为图片示例：
 
-{{:ai:uai-train:case:crnn:eaxmple.png?nolink&200|}}
+![](/ai/uai-train/images/case/crnn/example.png)
 
-{{:ai:uai-train:case:crnn:tensor.png?nolink&200|}}
+![](/ai/uai-train/images/case/crnn/tensor.png)
 
 这两张图片对应的标签为“1 import numpy”，“tensorflow”.
 

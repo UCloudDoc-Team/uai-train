@@ -23,7 +23,7 @@
 
 例如：
 
-{{:ai:uai-train:case:im2txt:boy-play-football.jpg?nolink&500|}}
+![](/ai/uai-train/images/case/im2txt/boy-play-football.jpg)
 
 a boy play football on green grass .
 

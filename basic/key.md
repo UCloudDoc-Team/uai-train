@@ -13,9 +13,9 @@
   * 进入UCloud console界面：https://console.ucloud.cn/dashboard
   * 点击“操作管理”，找到“API产品”，点击进入，选择右侧“API密钥” 。
 
-{{:ai:uai-train:base:uai-service密钥.jpg?600|}} 
+![](/ai/uai-train/images/basic/uai-service密钥.jpg) 
 
   * 点击显示密钥，根据提示操作即可
 
-{{:ai:uai-train:base:uai-service密钥1.jpg?600|}}
+![](/ai/uai-train/images/basic/uai-service密钥1.jpg)
 

@@ -8,7 +8,7 @@
   * data/ 测试数据集
 
 ## 准备工作
-请根据 本地安装部署开发环境[[ai:uai-train:guide:pytorch:local]]完成所有安装步骤，即完成了基本环境的部署 
+请根据 本地安装部署开发环境[](ai/uai-train/guide/pytorch/local)完成所有安装步骤，即完成了基本环境的部署 
 
 ## 编写MNIST案例
 本案例使用的MNIST模型的训练代码来自MXNet的MNIST案例的**mnist.py**, 并做如下修改 
@@ -63,7 +63,7 @@ torch.save(model.state_dict(), args.output_dir + '/mnist-param.pkl')
 
 ## 使用Docker镜像进行测试
 因为UAI Train 平台使用Docker运行训练，因此可以使用Docker对训练代码进行测试。
-UAI Train平台提供开源的Docker 打包工具，打包方法见[[ai:uai-train:guide:pytorch:packing]] 
+UAI Train平台提供开源的Docker 打包工具，打包方法见[](ai/uai-train/guide/pytorch/packing) 
 打包完成后打包工具会自动生成GPU的镜像和CPU的镜像，命名如下：
 
   * **CPU镜像** uhub.ucloud.cn/<uhub-bucket>/<user-def-name>-cpu:<usr-def-tag>
@@ -76,3 +76,4 @@ UAI Train平台提供开源的Docker 打包工具，打包方法见[[ai:uai-trai
 ### 使用GPU Docker 测试
 打包工具会自动生成GPU Docker的运行代码，可以在**标准输出**或**uaitrain\_cmd.txt**中找到命令（CMD for GPU local test: <docker run cmd> ）
 直接执行命令即可
+
