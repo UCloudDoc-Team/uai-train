@@ -10,7 +10,7 @@
 本Tutorial将以UCloud 普通云主机为范例操作（你也可以使用自己的主机或其他系统）
 
 ## 创建云主机
-我们根据[[ai:uai-train:basic:ubuntu]]操作申请一台2核4G的CPU云主机作为操作平台。
+我们根据[](ai/uai-train/basic/ubuntu)操作申请一台2核4G的CPU云主机作为操作平台。
 
 ### 安装docker
 1.设置官方docker软件包源
@@ -62,7 +62,7 @@ $ mkdir mnist/
 </code>
 
 ### 下载数据
-我们可以从[[http://yann.lecun.com/exdb/mnist/]]下载Mnist的训练数据和测试数据，你也可以从[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1/data]]获取，我们将数据放入/data/mnist/data/路径：
+我们可以[下载](http://yann.lecun.com/exdb/mnist/)Mnist的训练数据和测试数据，你也可以从[这里](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1/data)获取，我们将数据放入/data/mnist/data/路径：
 
 <code>
 $ mkdir /data/mnist/data/
@@ -77,7 +77,7 @@ train-images-idx3-ubyte.gz  train-labels-idx1-ubyte.gz  t10k-images-idx3-ubyte.g
 </code>
 
 ### 下载代码
-我们可以直接从[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1]]获取代码，并放入/data/mnist/code/路径。由于之前我们已经从github下载的uai-sdk，我们只需要去examples下面拷贝 tensorflow mnist例子的代码至/data/mnist下面即可：
+我们可以直接从[这里](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1)获取代码，并放入/data/mnist/code/路径。由于之前我们已经从github下载的uai-sdk，我们只需要去examples下面拷贝 tensorflow mnist例子的代码至/data/mnist下面即可：
 <code>
 $ cp -fr ~/uai-sdk/examples/tensorflow/train/mnist_summary_1.1/code/ /data/mnist/
 </code>

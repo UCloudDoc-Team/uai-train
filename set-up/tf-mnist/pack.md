@@ -21,7 +21,7 @@ $ cp ~/uai-sdk/uaitrain_tool/tf/tf_tool.py ./
 </code>
 
 ## 打包Mnist镜像
-我们使用tf\_tool.py 打包mnist镜像，具体的参数说明在[[ai:uai-train:guide:tensorflow:packing]]。
+我们使用tf\_tool.py 打包mnist镜像，具体的参数说明在[](ai/uai-train/guide/tensorflow/packing)。
 <code>
 $ sudo python tf_tool.py pack \
 
@@ -41,7 +41,7 @@ $ sudo python tf_tool.py pack \
 </code>
 
 ### public_key & private_key
-这里的公私钥是UCloud用户账号的唯一标识，可以依据[[ai:uai-train:basic:key]]的方法获取你账号的公私钥参数
+这里的公私钥是UCloud用户账号的唯一标识，可以依据[](ai/uai-train/basic/key)的方法获取你账号的公私钥参数
 
 ### code_path
 代码所在的路径，我们需要将该路径下的所有代码都拷贝至docker镜像中，通过 \-\-code\_path参数指定，本案例中参数为 \-\-code\_path=./code/
@@ -59,7 +59,7 @@ uhub的用户名密码为UCloud console图形界面登录时所用的邮箱和�
 如果是使用ucloud云主机操作打包工具，则选择true，如果是使用公网执行打包操作，则选择false
 
 ### ai_arch_v 
-训练框架的版本，这里我们选择tensorflow-1.1.0，这样就可以以tensorflow-1.1.0为基础镜像打包mnist的训练镜像。其他TensorFlow 基础镜像选择方法请参见[[ai:uai-train:guide:tensorflow:packing]]
+训练框架的版本，这里我们选择tensorflow-1.1.0，这样就可以以tensorflow-1.1.0为基础镜像打包mnist的训练镜像。其他TensorFlow 基础镜像选择方法请参见[](ai/uai-train/guide/tensorflow/packing)
 
 ### test_data_path
 本地测试数据路径，本案例中我们填写 /data/mnist/data/
@@ -105,7 +105,7 @@ CMD for GPU local test:
 sudo nvidia-docker run -it -v /data/mnist/data:/data/data -v /data/mnist/output:/data/output uhub.service.ucloud.cn/uai_demo/tf-mnist-train:uaitrain /bin/bash -c "cd /data && /usr/bin/python /data/mnist_summary.py --max_step=2000 --work_dir=/data --data_dir=/data/data --output_dir=/data/output --log_dir=/data/output/log"
 </code>
 
-  * **CMD Used for deploying**: 该输出的内容为创建训练任务时，**训练启动命令**框中需要填写的内容(参见[[ai:uai-train:guide:scripts:create]])。可以直接复制黏贴到命令框中。
+  * **CMD Used for deploying**: 该输出的内容为创建训练任务时，**训练启动命令**框中需要填写的内容(参见[](ai/uai-train/guide/scripts/create)。可以直接复制黏贴到命令框中。
   * **CMD for CPU local test**: 该输出的内容为本地通过CPU来测试训练能否正常执行。在本地没有GPU的情况下可以使用该命令测试训练代码能否正常执行。
   * **CMD for GPU local test**：该输出的内容为本地通过GPU来测试训练能否正常执行。在本地有GPU的情况下可以使用该命令测试训练代码能否正常执行。本案例中我们的使用的是CPU镜像，因此无法进行GPU测试）
 

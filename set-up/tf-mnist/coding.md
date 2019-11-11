@@ -1,7 +1,7 @@
 
 
 # 训练代码简介
-本代码基于TensorFlow 1.1 的mnist with summaries例子实现[[https://github.com/tensorflow/tensorflow/blob/v1.1.0/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py]]，并做了部分改动。
+本代码基于TensorFlow 1.1 的mnist with summaries[例子实现](https://github.com/tensorflow/tensorflow/blob/v1.1.0/tensorflow/examples/tutorials/mnist/mnist_with_summaries.py)，并做了部分改动。
 
 ## 引入 UAI Train相关参数 
 mnist\_summary.py#L34 import uaitrain官方flags
@@ -40,5 +40,5 @@ mnist\_summary.py#L180 使用uaitrain.arch.tensorflow.uflag中的定义的FLAGS.
   print("Model saved in file: %s" % save_path)
 </code>
 
-完整代码请参见[[https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/mnist_summary_1.1/code/mnist_summary.py]]
+完整代码请[参见](https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/mnist_summary_1.1/code/mnist_summary.py)
 

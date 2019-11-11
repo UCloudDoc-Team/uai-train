@@ -12,7 +12,6 @@
     * [产品定价](ai/uai-train/price)
     * 快速上手
         * [开始使用UAI-Train](ai/uai-train/set-up/start)
-        * [开通UAI-Train服务](ai/uai-train/set-up/active)
         * 快速上手-MNIST案例
             * [MNIST 介绍](ai/uai-train/set-up/tf-mnist/intro)
             * [环境准备](ai/uai-train/set-up/tf-mnist/prepare)

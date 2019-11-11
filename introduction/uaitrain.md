@@ -8,7 +8,7 @@ UAI Train服务目前包括两种任务类型
 
 ### 1. AI训练任务
 
-{{:ai:uai-train:intro:ai训练任务操作流程.png}}
+![](ai/uai-train/images/intro/ai训练任务操作流程.png)
 
 AI训练任务过程一共分三大部分，一共七个步骤：
 #### 训练准备
@@ -26,7 +26,7 @@ AI训练任务过程一共分三大部分，一共七个步骤：
 
 ### 2. AI交互式训练任务
 
-{{:ai:uai-train:intro:ai交互式训练任务操作流程.png|}} 
+![](ai/uai-train/images/intro/ai交互式训练任务操作流程.png)
 
 AI交互式训练任务过程一共分三大部分，一共九个步骤：
 ####  训练准备
@@ -45,7 +45,7 @@ AI交互式训练任务过程一共分三大部分，一共九个步骤：
         * 使用控制台页面或SDK工具从云存储产品（如UFile，UFS）获取训练结果
 
 ## UAI Train架构示意图
-{{:ai:uai-train:intro:system.png?600|}}
+![](ai/uai-train/images/intro/system.png)
 
 ## 主要模块
 UAI-Train 包括两个模块：
