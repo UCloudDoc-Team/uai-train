@@ -3,9 +3,9 @@
 # 模型训练
 转换后的数据将被用于训练模型，以赋予模型给模型添加文字标注的能力。
 
-我们提供了可以在AI Train平台上训练目标检测算法的基础镜像：uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test，可以直接用该镜像进行训练（如果已申请UCloud云主机，可以通过uhub.service.ucloud.cn/uai\_demo/im2txt-train-gpu:test下载该镜像）
+我们提供了可以在AI Train平台上训练目标检测算法的基础镜像：uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test，可以直接用该镜像进行训练。如果已申请UCloud云主机，可以通过uhub.service.ucloud.cn/uai\_demo/im2txt-train-gpu:test下载该镜像。
 
-将准备好的tfrecord文件和inception模型文件上传至UFile，并保留路径格式。将uai-sdk中的字典文件[[https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/word_counts.txt|uai-sdk字典文件]]放在相同路径下。例如保存在uai/im2txt/data路径下：
+将准备好的tfrecord文件和inception模型文件上传至UFile，并保留路径格式。将uai-sdk中的[字典文件](https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/word_counts.txt)放在相同路径下。例如保存在uai/im2txt/data路径下：
 
 	# uai/im2txt/data/
 	  inception_v3.ckpt
@@ -19,9 +19,7 @@
 数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/im2txt/data），并确认模型、数据和字典文件均在此根目录下。
 
   - 获取uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REP>/im2txt-train-gpu:test， 并提交至uhub。
-  - 进入UAI-Train控制台，创建新训练任务。
-
-	[[https://console.ucloud.cn/uaitrain/manage|UCloud - UAI训练]]
+  - 进入UAI-Train控制台，创建[新训练任务](https://console.ucloud.cn/uaitrain/)。
 
   - 填写以下信息：
     *   训练任务名称：im2txt-train
@@ -32,7 +30,7 @@
     *   数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/im2txt/output/
   - 训练启动命令：
 
-公私钥信息获取请参考：[[ai:uai-train:basic:key|]] 
+公私钥信息获取请[参考](ai/uai-train/basic/key) 
 
 <code>
 /data/train.py --input_file_pattern=/data/data/train-?????-of-00256 --inception_checkpoint_file=/data/data/inception_v3.ckpt --train_dir=/data/output/ --number_of_steps=1000000

@@ -1,6 +1,6 @@
 
 # 模型训练
-我们使用Tensorflow\_hub提供的重训练Python脚本训练模型（参阅：[[https://github.com/tensorflow/hub/blob/master/examples/image_retraining/retrain.py|Tensorflow_hub - retrain.py]]）。我们已经将脚本打包为可在UAI-Train上运行的容器镜像，并保存在镜像库中：
+我们使用Tensorflow\_hub提供的重训练Python脚本训练模型[Tensorflow_hub - retrain.py](https://github.com/tensorflow/hub/blob/master/examples/image_retraining/retrain.py)。我们已经将脚本打包为可在UAI-Train上运行的容器镜像，并保存在镜像库中：
 
 	uhub.ucloud.cn/uai_demo/retrain-train-v2:test
 
@@ -26,9 +26,7 @@
 文件准备好后，进入UAI-Train控制台。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/retrain/data/，即数据准备一节中记录的数据保存路径），并确认模型、数据和配置文件均在此根目录下。记录数据输出源（此处为uai/retrain/output/），用于之后的在线服务。
 
   - 获取uhub.ucloud.cn/uai_demo/retrain-train-v2:test镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/retrain-train-v2:test， 并提交至uhub。
-  - 进入UAI-Train控制台，创建新训练任务。
-
-	[[https://console.ucloud.cn/uaitrain/manage|UCloud - UAI训练]]
+  - 进入[UAI-Train控制台](https://console.ucloud.cn/uaitrain/manage)，创建新训练任务。
 
   - 填写以下信息：
     *   训练任务名称：retrain-train
@@ -54,4 +52,5 @@
 
 以增加训练轮数，提高准确度，默认为4000轮。请注意轮数更大并不一定意味着模型预测更准确。
 
-你也可以自行打包训练代码和镜像，参阅[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/retrain|Github - uai-sdk - retraining]]。
+你也可以自行打包训练代码和镜像，参阅[Github - uai-sdk - retraining](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/retrain)。
+

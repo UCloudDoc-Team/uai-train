@@ -1,7 +1,7 @@
 
 
 # 在线服务
-我们可以将[[ai:uai-train:cases:crnn:train|]]得到的CRNN模型部署为在线服务来帮助我们更加方便地使用英文字符识别功能。我们借助Docker镜像来完成在线服务的部署。
+我们可以将[UAI-Train案例](ai/uai-train/cases/crnn/train)得到的CRNN模型部署为在线服务来帮助我们更加方便地使用英文字符识别功能。我们借助Docker镜像来完成在线服务的部署。
 
 我们提供了一个封装好的Docker镜像，可以通过如下命令拉取:
 <code>
@@ -16,7 +16,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr-infer-cpu:v1.0
 我们需要建立如下的文件结构：
   * CRNN\_Tensorflow/中放置了CRNN的模型代码文件；
   * inference/中放置了模型推理文件ocr\_inference.py
-  * inference/checkpoint\_dir/中放置了[[ai:uai-train:cases:crnn:train|]]得到的模型文件；
+  * inference/checkpoint\_dir/中放置了[UAI-Train案例](ai/uai-train/cases/crnn/train)得到的模型文件；
 
 <code>
 |_ CRNN_Tensorflow/
@@ -147,7 +147,7 @@ curl -X POST http://localhost:8080/service -T test_02.jpg
 </code>
 命令行输出该图像中的文本，则测试成功。
 ## UAI-Inference平台测试
-可以在[[ai:uai-inference:tutorial:tf-mnist:inference|]]上查看部署在线服务的具体操作步骤。
+可以查看部署在线服务的[具体操作步骤](ai/uai-inference/tutorial/tf-mnist/inference)。
 当部署完毕之后，我们可以在详细页面获取CRNN在线服务的URL地址。
 
 进入放置了测试图像的文件夹，我们可以通过如下命令来测试，这里的URL即为这个在线服务的URL地址：

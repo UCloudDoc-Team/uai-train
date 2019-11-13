@@ -4,7 +4,7 @@
 
   - 注册UCloud公司账号，具体注册方法可联系销售：400-018-8113
   - 在UCloud平台申请一台普通Ubuntu 14.04云主机
-	  - 访问https://www.ucloud.cn/进入UCloud官网首页，然后点击页面右上方的登陆按钮。
+	  - 访问[UCloud官网首页](https://www.ucloud.cn/)，然后点击页面右上方的登陆按钮。
 
 ![](/ai/uai-train/images/basic/登录.jpg)
 

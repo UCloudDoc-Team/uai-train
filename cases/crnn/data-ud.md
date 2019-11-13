@@ -1,7 +1,7 @@
 
 
 # 自定义数据
-该章节讲述如何构建自己的训练数据集。如果你使用[[ai:uai-train:cases:crnn:data|原始数据准备]]中的数据集，则可以跳过该章节。
+该章节讲述如何构建自己的训练数据集。如果你使用[原始数据准备](ai/uai-train/cases/crnn/data)中的数据集，则可以跳过该章节。
 
 ## 数据图片格式
 
@@ -45,7 +45,7 @@
 ## 建立字典文件
 我们需要建立两个字典文件char\_dict.json和ord\_map.json，用于对网络输入和输出的字符进行编码和解码。
 
-在[[ai:uai-train:cases:crnn:intro|]]提供的github地址中已经给出了两个建立好的字典文件。
+在[UAI-Train案例](ai/uai-train/cases/crnn/intro)提供的github地址中已经给出了两个建立好的字典文件。
 **注意：** 根据提供的字典文件对应可以识别的字符列表如下：
 
 | 可识别字符                                                |

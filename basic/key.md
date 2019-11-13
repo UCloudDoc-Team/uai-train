@@ -10,7 +10,7 @@
 
 # 获取用户公钥、私钥的方式
 
-  * 进入UCloud console界面：https://console.ucloud.cn/dashboard
+  * 进入UCloud Console界面：https://console.ucloud.cn/dashboard
   * 点击“操作管理”，找到“API产品”，点击进入，选择右侧“API密钥” 。
 
 ![](/ai/uai-train/images/basic/uai-service密钥.jpg) 

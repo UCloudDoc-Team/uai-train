@@ -23,7 +23,7 @@ cifar10.maybe_download_and_extract()
 
 ### 上传数据
 
-如果要将数据上传到UFile上，可以通过UFile操作工具进行数据的上传,UFile操作工具的下载参考[[ai:uai-train:set-up:tf-mnist:train|]]
+如果要将数据上传到UFile上，可以通过UFile操作工具进行数据的上传,UFile操作工具的下载[参考](ai/uai-train/set-up/tf-mnist/train)
 
 上传命令（这里假设cifar10数据集放置在本地/data/data中，要上传到UFile的 uai-demo bucket的cifar\_simple/train/ 中，在你自己实验时请替换uai-demo bucket为你自己的UFIle bucket）：
 <code>
@@ -37,10 +37,10 @@ sudo docker run -it -v /data/data:/data/data -v data/output:/data/output uhub.se
 </code>
 
 ## 平台训练
-在UAI-Train平台上进行模型训练的具体步骤可以参考[[ai:uai-train:set-up:tf-mnist:train|]]
+在UAI-Train平台上进行模型训练的具体步骤可以[参考](ai/uai-train/set-up/tf-mnist/train)
 
 首先填写训练任务名称等基本信息：
-公私钥信息获取请参考：[[ai:uai-train:basic:key|]]
+公私钥信息获取请[参考](ai/uai-train/basic/key)
 ![](/ai/uai-train/images/case/cifar/a.png)
 
   * 选择我们上传的cifar\_gpu\_train\_simple:latest镜像；

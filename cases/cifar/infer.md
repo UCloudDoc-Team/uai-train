@@ -27,7 +27,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/cifar_infer_simple:latest
 |_ cifar.conf
 |_ cifar_infer.Dockerfile
 </code>
-其中checkpoint_dir保存了[[ai:uai-train:cases:cifar:train|]]中得到模型文件。
+其中checkpoint_dir保存了[UAI-Train案例](ai/uai-train/cases/cifar/train)中得到模型文件。
 
 #### cifar.conf介绍
 
@@ -141,7 +141,7 @@ curl -X POST http://localhost:8080/service -T deer.png
 命令行输出该图像中的物体类别deer，则测试成功。
 
 ### UAI-Inference平台测试
-可以在[[ai:uai-inference:tutorial:tf-mnist:inference|]]上查看部署在线服务的具体操作步骤。
+可以查看部署在线服务的[具体操作步骤](ai/uai-inference/tutorial/tf-mnist/inference)。
 当部署完毕之后，我们可以在详细页面获取CNN在线服务的URL地址。
 
 进入放置了测试图像的文件夹，我们可以通过如下命令来测试，这里的URL即为这个在线服务的URL地址：

@@ -2,11 +2,9 @@
 
 # 打包镜像
 
-训练获得模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-train:set-up:tf-mnist:coding|]]）。下载Im2txt推理代码包：
+训练获得模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务。在线推理服务的代码结构[参阅](ai/uai-train/set-up/tf-mnist/coding)。下载[Im2txt推理代码包](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/im2txt)
 
-[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/im2txt|Im2txt - Tensorflow]]
-
-并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将训练后的模型文件和word\_counts.txt（见：[[ai:uai-train:cases:im2txt:train|模型训练]]）保存在其子路径：/data/im2txt/code/checkpoint_dir/中。本地路径中保存的所有文件为：
+并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将训练后的模型文件和word\_counts.txt（见[模型训练](ai/uai-train/cases/im2txt/train)）保存在其子路径：/data/im2txt/code/checkpoint_dir/中。本地路径中保存的所有文件为：
 
 <code>
 /data/im2txt/
@@ -49,6 +47,7 @@ sudo docker login uhub.ucloud.cn
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/im2txt-infer:test
 </code>
 
-等待上传完毕。镜像已经上传至镜像库，参阅[[ai:uai-train:cases:retrain:infer|启动在线服务]]使用该镜像进行推理。
+等待上传完毕。镜像已经上传至镜像库，参阅[启动在线服务](ai/uai-train/cases/retrain/infer)使用该镜像进行推理。
 
-更多关于镜像打包的信息参阅[[ai:uai-train:set-up:tf-mnist:self-pack|使用自定义镜像打包]]
+更多关于镜像打包的信息参阅[使用自定义镜像打包](ai/uai-train/set-up/tf-mnist/self-pack)
+

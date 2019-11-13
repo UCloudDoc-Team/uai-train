@@ -2,7 +2,7 @@
 
 # 自定义数据
 
-如使用本例中[[ai:uai-train:cases:obj-detect-tf:data|原始数据准备]]提供的图片数据集，则无需进行本节内容。以下流程将介绍如何使用自己的图片和数据构建数据集。
+如使用本例中[原始数据准备](ai/uai-train/cases/obj-detect-tf/data)提供的图片数据集，则无需进行本节内容。以下流程将介绍如何使用自己的图片和数据构建数据集。
 ## 数据收集和记录
 认定需要识别的物体种类后，为每个种类获取若干图片。图片应仅包含一个清晰可见的物体，不包含其他种类的物体。
 物体所占区域面积至少应为50像素*50像素。图片面积较大、数量足够多，物体较清晰时，模型识别能力较强。
@@ -18,19 +18,19 @@
 ​		<depth>3</depth>
 ​	</size>
 ​	<segmented>0</segmented>
-	<object>
-		<name>cat</name>
-		<pose>Frontal</pose>
-		<truncated>0</truncated>
-		<occluded>0</occluded>
-		<bndbox>
-			<xmin>333</xmin>
-			<ymin>72</ymin>
-			<xmax>425</xmax>
-			<ymax>158</ymax>
-		</bndbox>
-		<difficult>0</difficult>
-	</object>
+​	<object>
+​		<name>cat</name>
+​		<pose>Frontal</pose>
+​		<truncated>0</truncated>
+​		<occluded>0</occluded>
+​		<bndbox>
+​			<xmin>333</xmin>
+​			<ymin>72</ymin>
+​			<xmax>425</xmax>
+​			<ymax>158</ymax>
+​		</bndbox>
+​		<difficult>0</difficult>
+​	</object>
 </annotation>
 </code>
 
@@ -83,4 +83,5 @@ item {
 /object-prep/images/basset_hound_1.jpg
 </code>
 
-转至[[ai:uai-train:cases:obj-detect-tf:data-trans|数据格式转换]]进行文件预处理。
+转至[数据格式转换](ai/uai-train/cases/obj-detect-tf/data-trans)进行文件预处理。
+

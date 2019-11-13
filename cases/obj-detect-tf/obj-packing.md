@@ -17,9 +17,7 @@ uai/object-train-output/checkpoint
 这些是训练后的模型文件，我们用这些文件导出推理使用的pb格式的模型文件。Uhub中保存了用于导出模型文件的镜像，我们继续用在线训练服务导出模型。创建训练服务时，将以上模型存储的根目录作为输入源（此处为uai/object-train-output），并记录模型导出输出源以进行镜像打包。
 
   * 获取uhub.ucloud.cn/uai_demo/object-detect-export-model:latest镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如：uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/object-detect-export-model:latest， 并提交至uhub。
-  * 进入UAI-Train控制台，创建新训练任务。
-
-	[[https://console.ucloud.cn/uaitrain/manage|UAI - Train]]
+  * 进入UAI-Train控制台，[创建新训练任务](https://console.ucloud.cn/uaitrain/manage)。
 
   * 填写以下信息：
     - 训练任务名称：object-detect-export-model
@@ -33,17 +31,13 @@ uai/object-train-output/checkpoint
 
 导出完成后，转至UFile库中搜索输出源前缀（此处为uai/object-export-output/）：<YOUR\_UFILE\_PATH>/uai/object-export-output/，找到frozen\_inference\_graph.pb文件并下载，即为导出的模型。
 
-如想在本地通过脚本导出模型文件，参阅：
-
-[[https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md|Object Detection - Exporting Models]]
+如想在本地通过脚本导出模型文件，参阅[Object Detection - Exporting Models](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md)
 
 ## 打包自定义模型在线服务镜像
 
-生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构参阅[[ai:uai-inference:tutorial:tf-mnist:coding|]]）。下载Object Detection推理代码包：
+生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构[参阅](ai/uai-inference/tutorial/tf-mnist/coding)）。下载[Object Detection推理代码包](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/object-detect)
 
-[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/object-detect|Object Detection - Tensorflow]]
-
-并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将frozen\_inference\_graph.pb文件和label\_map.pbtxt（见：[[ai:uai-train:cases:obj-detect-tf:data|原始数据准备]]）保存在其子路径：/data/object-detect/code/checkpoint_dir/中。本地路径中保存的所有文件为：
+并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将frozen\_inference\_graph.pb文件和label\_map.pbtxt（见[原始数据准备](ai/uai-train/cases/obj-detect-tf/data)）保存在其子路径：/data/object-detect/code/checkpoint_dir/中。本地路径中保存的所有文件为：
 
 <code>
 /data/object-detect/[路径]
@@ -81,5 +75,5 @@ sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/object-detect-infer:test
 
 等待上传完毕。镜像已经上传至镜像库，参阅[启动在线推理服务](ai/uai-train/cases/obj-detect-tf/obj-infer)使用该镜像进行推理。
 
-更多关于镜像打包的信息参阅[[ai:uai-train:set-up:tf-mnist:self-pack|使用自定义镜像打包]]
+更多关于镜像打包的信息参阅[使用自定义镜像打包](ai/uai-train/set-up/tf-mnist/self-pack)
 

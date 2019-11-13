@@ -23,4 +23,4 @@
 </code>
 注意其中文件夹名为训练及推理时所用的类别名（Abyssinian, Persian等）。以上为准备好进行训练的图片数据。
 
-本例中图片来自[[http://www.robots.ox.ac.uk/%7Evgg/data/pets/|Oxford IIIT Pets Dataset]]，你可以下载此图片集，并按以上条目为各类宠物创建文件夹，将图片分别放入。
+本例中图片来自[Oxford IIIT Pets Dataset](http://www.robots.ox.ac.uk/%7Evgg/data/pets/)，你可以下载此图片集，并按以上条目为各类宠物创建文件夹，将图片分别放入。

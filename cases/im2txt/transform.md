@@ -2,7 +2,7 @@
 
 # 文件格式转换
 
-模型训练接收tf-record格式的图片数据作为输入，因此我们需将准备好的图片文字数据转换为tfrecord格式。此前我们已经安装了tensorflow, numpy, nltk工具，并下载或自行准备了图片文字数据。从uai-sdk工具包中获取文件转脚本[[https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/build_mscoco_data.py|github - uaisdk 文件转换工具]]，并放在数据目录下：
+模型训练接收tf-record格式的图片数据作为输入，因此我们需将准备好的图片文字数据转换为tfrecord格式。此前我们已经安装了tensorflow, numpy, nltk工具，并下载或自行准备了图片文字数据。从[uai-sdk工具包](https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/build_mscoco_data.py)中获取文件转脚本，并放在数据目录下：
 
 
 	# /data/im2txt/data
@@ -13,7 +13,7 @@
 	|  |_ captions_train2014.json
 	|  |_ captions_val2014.json
 
-注意此处的文件名为下载的数据的默认路径和文件名，如果使用自定义图片和文字数据作为输入则名字可能有所不同，参见[[ai:uai-train:cases:im2txt:prep-ud|准备自定义数据]]。在数据路径中，运行脚本以生成tfrecord文件：
+注意此处的文件名为下载的数据的默认路径和文件名，如果使用自定义图片和文字数据作为输入则名字可能有所不同，参见[准备自定义数据](ai/uai-train/cases/im2txt/prep-ud)。在数据路径中，运行脚本以生成tfrecord文件：
 
 <code>
 python build_mscoco_data.py --train_image_dir /data/im2txt/data/train2014 --val_image_dir /data/im2txt/data/val2014 --train_captions_file /data/im2txt/data/captions_train2014.json --val_captions_file /data/im2txt/captions_val2014.json --output_dir /data/im2txt/data/

@@ -18,9 +18,7 @@ storage.googleapis.com/download.tensorflow.org/models/object\_detection/faster\_
 
 放入UFile中tf-record文件的同一路径下，本例中为: uai/object-prep-output/
 
-模型训练需要配置文件设定配置。下载所用配置文件：
-
-[[https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/faster_rcnn_resnet101_pets.config|宠物模型训练配置文件, faster_rcnn_resnet101.config]]
+模型训练需要配置文件设定配置。下载所用配置文件[faster_rcnn_resnet101.config](https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/faster_rcnn_resnet101_pets.config)
 
 重命名为faster\_rcnn\_resnet101.config并保存。此配置文件中有几处需要修改以适配我们的文件命名，否则无法正确读取图片数据：
 
@@ -50,7 +48,7 @@ num_classes = 37 -> 自定义种类数量
 num_steps = 200000 -> 自定义训练轮数
 </code>
 
-调整好参数后，将此文件连同类别标签文件label_map.pbtxt（见：[[ai:uai-train:cases:obj-detect-tf:data|]]）保存在UFile同一路径下。此时UFile中已准备好的训练数据有：
+调整好参数后，将此文件连同类别标签文件label_map.pbtxt（[参见](ai:uai-train:cases:obj-detect-tf:data)）保存在UFile同一路径下。此时UFile中已准备好的训练数据有：
 
 <code>
 uai/object-prep-output/[路径]
@@ -76,9 +74,7 @@ uai/object-prep-output/faster_rcnn_resnet101.config
 数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/object-prep-output/，即数据转换一节中记录的数据输出源），并确认模型、数据和配置文件均在此根目录下。记录数据输出源（此处为uai/object-train-output/）以进行在线服务。
 
   - 获取uhub.ucloud.cn/uai\_demo/tf-objdetect-train-gpu-tf16:latest镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/tf-objdetect-train-gpu-tf16:latest， 并提交至uhub。
-  - 进入UAI-Train控制台，创建新训练任务。
-
-	[[https://console.ucloud.cn/uaitrain/manage|UCloud - UAI训练]]
+  - 进入[UAI-Train控制台](https://console.ucloud.cn/uaitrain/manage)，创建新训练任务。
 
   - 填写以下信息：
     *   训练任务名称：object-detect-train

@@ -31,7 +31,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/slim_infer:latest
 |_ slim_infer.Dockerfile
 |_ sliminfer.py
 </code>
-其中checkpoint_dir保存了[[ai:uai-train:cases:slim:train|]]中得到模型文件以及[[ai:uai-train:cases:slim:tfrecord|]]中得到的info.json和labels.txt。
+其中checkpoint_dir保存了[UAI-Train案例](ai/uai-train/cases/slim/train)中得到模型文件以及[tftrecord](ai/uai-train/cases/slim/tfrecord)中得到的info.json和labels.txt。
 
 **slim.conf介绍**
 <code>
@@ -98,7 +98,7 @@ curl -X POST http://localhost:8080/service -T /data/fer/pic/angry/00000_1.jpg
 命令行中会输出该图像的表情类别。
 
 ## UAI-Inference平台测试
-可以在[[ai:uai-inference:tutorial:tf-mnist:inference|]]上查看部署在线服务的具体操作步骤。
+可以查看部署在线服务的[具体操作步骤](ai/uai-inference/tutorial/tf-mnist/inference)。
 当部署完毕之后，我们可以在详细页面获取在线服务的URL地址。
 
 我们可以通过如下命令来测试，这里的URL即为这个在线服务的URL地址：

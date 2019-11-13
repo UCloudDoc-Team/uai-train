@@ -30,11 +30,11 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/slim:latest
 sudo docker tag uhub.service.ucloud.cn/uai_demo/slim:latest uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/slim
 </code>
 
-** - 1 TF-Slim代码准备** 
+** 1. TF-Slim代码准备** 
 
-我们可以在[[https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/slim|UCloud-github]]中获得所需代码。
+我们可以在[UCloud-github](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/slim)中获得所需代码。
 
-**  - 2 Dockerfile文件准备**
+**  2. Dockerfile文件准备**
 
 我们使用tensorflow 1.5（tf-models 1.8.0）作为基础镜像，将slim文件夹添加到镜像的/data/文件夹下。Dockerfile文件如下：
 <code>
@@ -43,7 +43,7 @@ FROM uhub.service.ucloud.cn/uaishare/gpu_uaitrain_ubuntu-16.04_python-2.7.6_tens
 COPY ./slim/ /data/
 </code>
 
-**  - 3 生成docker镜像**
+**  3. 生成docker镜像**
 
 经过以上准备，我们本地的文件结构应该为如下格式：
 <code>
