@@ -2,12 +2,8 @@
 
 # 创建UFile空间
 
-  * 通过UCloud主页进入UFile产品页面（在左上角 “产品” 栏点击 “存储&CDN” 中的“对象存储UFile”）
+  * 在UCloud控制台，选择 “全部产品” -“存储” -“对象存储UFile”，进入UFile产品管理页
 
-![](/ai/uai-train/images/basic/ufile/ufile.jpg) 
-
-----
-  * 点击立即使用，进入产品console页面
 
 ![](/ai/uai-train/images/basic/ufile/ufile2.jpg) 
 
