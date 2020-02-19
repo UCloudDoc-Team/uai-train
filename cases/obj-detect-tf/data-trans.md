@@ -5,7 +5,7 @@
 # 数据格式转换
 收集以上数据后，我们就可以运行脚本生成tfrecord文件。tfrecord记录了图片和事实数据集，并可作为训练的输入数据。在uhub共享镜像库我们提供了开源的Docker镜像进行转换：
 uhub.ucloud.cn/uai\_demo/object-detect-preprocess:latest 
-UCloud云主机可以通过[该地址](uhub.service.ucloud.cn/uai\_demo/object-detect-preprocess:latest)下载。
+UCloud云主机可以通过[该地址](uhub.service.ucloud.cn/uai_demo/object-detect-preprocess:latest)下载。
 
 ## 上传数据集
 
@@ -59,7 +59,7 @@ uai/object-prep-output/obj_val.record-00009-of-00010
 
 其中obj\_train.record和obj\_val.record分别用于训练中的训练阶段和评估阶段，分别占原始数据的70%和30%。预处理时图片被随机分配，因此每次训练后模型的参数可能略有差异，但不影响准确度。
 
-更多关于在线训练的信息参阅[创建在线训练指南](ai/uai-train/tutorial/tf-mnist/train)
+更多关于在线训练的信息参阅[创建在线训练指南](ai/uai-train/set-up/tf-mnist/train)
 
 如希望在本地主机进行，可参考[Pet Model Training]([https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_pets.md)进行类型转换。
 

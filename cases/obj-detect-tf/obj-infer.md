@@ -8,7 +8,7 @@
 ## 启动推理服务
 
   - 获取uhub.ucloud.cn/uai\_demo/tf-object-detect-infer-cpu:latest镜像，并重新docker tag成你自己uhub 镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/tf-object-detect-infer-cpu:latest， 并提交至uhub。
-  - 进入UCloud控制台，[创建新的在线服务](ai/uai-inference/use​/new/​console)
+  - 进入UCloud控制台，创建新的在线服务
   - 选取弹性服务，设置服务名称为：object-detect，选取8核8G机型，点击确定
   - 进入该服务条目，点击部署，选择镜像库中的：tf-object-detect-infer-cpu:latest，点击确定
   - 等待部署完毕，点击开启。此时在线服务已经开启

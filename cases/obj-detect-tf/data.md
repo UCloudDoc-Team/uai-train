@@ -45,5 +45,5 @@ object-prep目录下包括了label\_map.pbtxt（物体类别标签文件），an
 
 接下来转至[数据格式转换](ai/uai-train/cases/obj-detect-tf/data-trans)进行数据预处理。
 
-**关于使用自选图片和物体种类作为识别对象，[参见]([[ai/uai-train/cases/obj-detect-tf/data-ud)**
+**关于使用自选图片和物体种类作为识别对象，[参见](ai/uai-train/cases/obj-detect-tf/data-ud)**
 
