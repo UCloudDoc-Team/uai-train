@@ -48,7 +48,7 @@ num_classes = 37 -> 自定义种类数量
 num_steps = 200000 -> 自定义训练轮数
 </code>
 
-调整好参数后，将此文件连同类别标签文件label_map.pbtxt（[参见](ai:uai-train:cases:obj-detect-tf:data)）保存在UFile同一路径下。此时UFile中已准备好的训练数据有：
+调整好参数后，将此文件连同类别标签文件label_map.pbtxt（[参见](/uai-train/cases/obj-detect-tf/data)）保存在UFile同一路径下。此时UFile中已准备好的训练数据有：
 
 <code>
 uai/object-prep-output/[路径]
@@ -101,5 +101,5 @@ uai/object-train-output/checkpoint
 
 这些为训练后的模型文件。更多关于在线训练的信息参阅：
 
-[创建在线训练指南](ai:uai-train:tutorial:tf-mnist:train)
+[创建在线训练指南](/uai-train/tutorial/tf-mnist/train)
 

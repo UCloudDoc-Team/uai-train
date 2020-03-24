@@ -32,7 +32,7 @@ uaitrain/arch/tensorflow/uflag.py 定义了UAI Train在运行TensorFlow训练任
 
 | 参数 | 默认值 | 说明 |
 | ---- | ------ | ---- |
-|\-\-work\_dir    | /data | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[](ai/uai-train/guide/tensorflow/tf-mnist), [](ai/uai-train/guide/tensorflow/tf-im2txt) |
+|\-\-work\_dir    | /data | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[](uai-train/guide/tensorflow/tf-mnist), [](uai-train/guide/tensorflow/tf-im2txt) |
 |\-\-data\_dir    | /data/data  | 默认input数据存放路径，UAI Train会将UFile中的input数据下载到该路径下 |
 |\-\-output\_dir   | /data/output | 默认输出路径，checkpoint和模型文件需要输出到该路径下，UAI Train会在训练完成后将该目录上传 |
 |\-\-log\_dir   | /data/output | 默认的tensorboard文件存放路径，UAI Train会在训练完成后将该目录上传 |
@@ -44,5 +44,5 @@ uaitrain/arch/tensorflow/uflag.py 定义了UAI Train在运行TensorFlow训练任
 |\-\-max_step | 0 | 训练最大Step数，UAI Train系统可以识别该参数，后续将提供训练进度功能（目前不支持）|
 
 ### uaitrain_tool/tf/tf_tool.py
-tf\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](ai/uai-train/guide/tensorflow/packing)
+tf\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](uai-train/guide/tensorflow/packing)
 

@@ -4,7 +4,7 @@
 
 ## 1.本地安装Docker
 由于UCloud AI SDK依赖Docker环境来打包用户代码到UHub产品中，因此需要先安装Docker环境。
-根据[](ai/uai-train/basic/docker)的说明在本地准备Docker环境。
+根据[](uai-train/basic/docker)的说明在本地准备Docker环境。
 如果是CPU机器只需要安装普通Docker，如果是GPU机器需要安装NVidia-docker。
 
 ## 2.安装UFile SDK

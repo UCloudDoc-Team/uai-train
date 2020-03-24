@@ -5,7 +5,7 @@
 本案例所使用的模型和代码基于Tensorflow 教程MNIST案例（https://www.tensorflow.org/tutorials/mnist/beginners/），您可以在https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1下面下载完整的代码
 
 ## 准备工作
-请根据[Tensorflow 本地安装部署开发环境](ai/uai-train/guide/tensorflow/local)完成所有安装步骤，即完成了基本环境的部署 
+请根据[Tensorflow 本地安装部署开发环境](uai-train/guide/tensorflow/local)完成所有安装步骤，即完成了基本环境的部署 
 从https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/train/mnist_summary_1.1下载完整的案例，包括：
 
   * code/mnist_summary.py 训练代码
@@ -104,7 +104,7 @@ python mnist_summary.py --max_step=100 --work_dir=/data --data_dir=/data/data --
 
 ## 使用Docker镜像进行测试
 因为UAI Train 平台使用Docker运行训练，因此可以使用Docker对训练代码进行测试。
-UAI Train平台提供开源的Docker 打包工具，打包方法见[](ai/uai-train/guide/tensorflow/packing) 
+UAI Train平台提供开源的Docker 打包工具，打包方法见[](uai-train/guide/tensorflow/packing) 
 打包完成后打包工具会自动生成GPU的镜像和CPU的镜像，命名如下：
 
   * **CPU镜像** uhub.ucloud.cn/<uhub-bucket>/<user-def-name>-cpu:<usr-def-tag>

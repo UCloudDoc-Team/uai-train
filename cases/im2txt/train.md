@@ -30,7 +30,7 @@
     *   数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/im2txt/output/
   - 训练启动命令：
 
-公私钥信息获取请[参考](ai/uai-train/basic/key) 
+公私钥信息获取请[参考](uai-train/basic/key) 
 
 <code>
 /data/train.py --input_file_pattern=/data/data/train-?????-of-00256 --inception_checkpoint_file=/data/data/inception_v3.ckpt --train_dir=/data/output/ --number_of_steps=1000000

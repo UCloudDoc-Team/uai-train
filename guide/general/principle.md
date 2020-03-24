@@ -5,11 +5,11 @@ UAI Train平台使用GPU主机来提供AI训练的基础算力，平台利用Doc
 ![](/ai/uai-train/guide/ai_train综述.png)
 
 其所涉及到的技术和产品包括包括：
-  - **Docker** 容器技术 [](/ai/uai-train/basic/docker)
-  - **UHub** UCloud Docker Hub [](/ai/uai-train/basic/uhub)
-  - **UFile**  UCloud 对象存储系统 [](/ai/uai-train/basic/ufile)
-  - **UFS**   UCloud 分布式存储系统 [](/ai/uai-train/basic/ufs)
-  - **UDisk**   UCloud 块存储系统 [](/ai/uai-train/basic/udisk)
+  - **Docker** 容器技术 [](uai-train/basic/docker)
+  - **UHub** UCloud Docker Hub [](uai-train/basic/uhub)
+  - **UFile**  UCloud 对象存储系统 [](uai-train/basic/ufile)
+  - **UFS**   UCloud 分布式存储系统 [](uai-train/basic/ufs)
+  - **UDisk**   UCloud 块存储系统 [](uai-train/basic/udisk)
 
 ## UAI Train执行的概念图
 UAI Train平台在执行训练任务时，是通过将外部存储（UFile、UFS、UDisk）的数据映射到Docker容器中访问。整个执行逻辑如下：

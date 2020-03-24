@@ -36,7 +36,7 @@
 | 1 * 4P40    | 223                   |
 
 ## UAI Train 开放Docker镜像和Case Study - 2018.01.31
-UAI Train公开所支持的AI Docker镜像：[链接](ai/uai-train/resource/docker) 
+UAI Train公开所支持的AI Docker镜像：[链接](uai-train/resource/docker) 
 
 UAI Train公开部分开源AI算法Case Study：[链接](https://github.com/ucloud/uai-sdk/tree/master/examples)
 

@@ -1,7 +1,7 @@
 
 
 # 数据准备
-本章节介绍了你该如何使用Synthetic Word Dataset数据集进行模型训练。如果你要使用自己的数据进行训练，可以跳过此章节查看[使用自己的数据集](ai/uai-train/cases/crnn/data-ud)。
+本章节介绍了你该如何使用Synthetic Word Dataset数据集进行模型训练。如果你要使用自己的数据进行训练，可以跳过此章节查看[使用自己的数据集](uai-train/cases/crnn/data-ud)。
 ## 数据集介绍
 我们使用在[可公开下载](http://www.robots.ox.ac.uk/~vgg/data/text/)的Synthetic Word Dataset数据集进行模型的训练。将数据集解压后，我们就得到了训练数据图像。下图是一张数据图像示例。注意，文件夹中的图像为英文字符图像，且每张图像中只有一行字符串。
 

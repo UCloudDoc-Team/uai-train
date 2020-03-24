@@ -45,5 +45,5 @@
 ![](ai/uai-train/images/set-up/createinterjob4.png)
 
 3. 下一步
-       [访问Jupyter](ai/uai-train/guide/console/jupyter)
+       [访问Jupyter](uai-train/guide/console/jupyter)
 

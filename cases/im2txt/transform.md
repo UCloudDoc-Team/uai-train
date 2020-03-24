@@ -13,7 +13,7 @@
 	|  |_ captions_train2014.json
 	|  |_ captions_val2014.json
 
-注意此处的文件名为下载的数据的默认路径和文件名，如果使用自定义图片和文字数据作为输入则名字可能有所不同，参见[准备自定义数据](ai/uai-train/cases/im2txt/prep-ud)。在数据路径中，运行脚本以生成tfrecord文件：
+注意此处的文件名为下载的数据的默认路径和文件名，如果使用自定义图片和文字数据作为输入则名字可能有所不同，参见[准备自定义数据](uai-train/cases/im2txt/prep-ud)。在数据路径中，运行脚本以生成tfrecord文件：
 
 <code>
 python build_mscoco_data.py --train_image_dir /data/im2txt/data/train2014 --val_image_dir /data/im2txt/data/val2014 --train_captions_file /data/im2txt/data/captions_train2014.json --val_captions_file /data/im2txt/captions_val2014.json --output_dir /data/im2txt/data/

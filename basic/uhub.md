@@ -9,7 +9,7 @@ UHub为UCloud开发的Docker镜像系统
 UAI Train平台使用UHub作为Docker镜像媒介来传递训练所使用的Docker镜像
 
 ## UHub使用指南
-详细操作指南可以参见[UHub官方文档](compute/uhub/guide)
+详细操作指南可以参见[UHub官方文档](uhub/guide)
 
 ## UHub 地址使用 
 **如果使用UCloud 云主机进行Uhub操作可以使用uhub.service.ucloud.cn 的UHub地址**

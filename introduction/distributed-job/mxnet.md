@@ -1,7 +1,7 @@
 
 
 # MXNet分布式训练
-UAI Train MXNet的分布式训练环境实现基于 MXNet的分布式训练系统实现。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式[参见](ai/uai-train/introduction/distributed-job/intro)。
+UAI Train MXNet的分布式训练环境实现基于 MXNet的分布式训练系统实现。PS和Worker采用混合部署的方式部署，PS使用纯CPU计算，Worker使用GPU+CPU计算。部署方式[参见](uai-train/introduction/distributed-job/intro)。
 
 ## MXNet 分布式训练简介
 MXNet 分布式训练基于DMLC分布式机器学习框架来运行实现。在参数中指定kv_store为分布式形式(dist_sync或dist_async)后，MXNet系统会自动选择DMLC进行分布式训练。DMLC 执行分布式训练时包括三个部分：

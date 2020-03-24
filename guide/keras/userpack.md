@@ -1,7 +1,7 @@
 
 
 # 自定义打包镜像
-在安装自定义软件包之前请确认已经执行了pack操作，如何执行请参见[](ai/uai-train/guide/keras/packing)
+在安装自定义软件包之前请确认已经执行了pack操作，如何执行请参见[](uai-train/guide/keras/packing)
 
 ## Step0: 获取dockerfile
 在完成pack操作后，系统会生成两个Dockerfile:
@@ -78,7 +78,7 @@ sudo docker build -t test-cpu:uaitrain -f uaitrain-cpu.Dockerfile .
 </code>
 
 ## Step3: 本地测试Docker镜像
-我们可以使用[](ai/uai-train/guide/keras/packing) 《Step4: 输出说明》中的类似案例运行本地测试。
+我们可以使用[](uai-train/guide/keras/packing) 《Step4: 输出说明》中的类似案例运行本地测试。
 测试时需要讲docker镜像的名字做修改：
 
 ### GPU测试

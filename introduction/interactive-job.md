@@ -35,7 +35,7 @@ AI交互式训练任务过程一共分三大部分，一共九个步骤：
 	* 可以是来自不同的数据源，此种存储容量大、易扩展。
 	* 外部存储不能被打包到镜像中，但是可以每次启动是通过挂载相同外部存储数据源地址做到数据更新。
 	* 一般用来存储用户的训练数据、训练结果等。
-	* 目前UAI Train仅支持UFS作为数据的存储。您可以在[](ai/uai-train/basic/ufs)了解UFS的简单使用方法。
+	* 目前UAI Train仅支持UFS作为数据的存储。您可以在[](uai-train/basic/ufs)了解UFS的简单使用方法。
 
 ### Code 数据存储
 您可以任意指定一个UFS盘作为Code数据源，UAI Train平台在训练执行过程中会将对应的UFS数据映射到训练执行的Jupyter容器的 /data 目录下（Jupyter网页中的/目录），假设您的UFS盘为 ip:/xxx，您需要使用里面/data/imagenet/tf/ 下的数据作为训练的输入数据，则系统会自动将数据映射到执行的容器中，如 ip:/xxx/data/imagenet/tf -> /data（Jupyter网页中的/目录）
@@ -50,15 +50,15 @@ AI交互式训练任务过程一共分三大部分，一共九个步骤：
 初次启动采用系统默认镜像，可在此基础上完成升级更新后，通过“保存镜像”功能保存自己定制的Jupyter镜像版本。
 
 ## UAI Train 交互式训练常见操作
-[](ai/uai-train/guide/console/createinterjob)
+[](/uai-train/guide/console/createinterjob)
 
-[](ai/uai-train/guide/console/jupyter)
+[](/uai-train/guide/console/jupyter)
 
-[](ai/uai-train/guide/console/saveinterjobimg)
+[](/uai-train/guide/console/saveinterjobimg)
 
-[](ai/uai-train/guide/console/stopinterjob)
+[](/uai-train/guide/console/stopinterjob)
 
-[](ai/uai-train/guide/console/startinterjob)
+[](/uai-train/guide/console/startinterjob)
 
-[](ai/uai-train/guide/console/deleteinterjob)
+[](/uai-train/guide/console/deleteinterjob)
 

@@ -4,6 +4,6 @@
 
 **目录**
 
-* [创建UFile空间](ai/uai-train/basic/ufile/create)
-* [以网盘方式访问UFile](ai/uai-train/basic/ufile/ufuse)
+* [创建UFile空间](uai-train/basic/ufile/create)
+* [以网盘方式访问UFile](uai-train/basic/ufile/ufuse)
 

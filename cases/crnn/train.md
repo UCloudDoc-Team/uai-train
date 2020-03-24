@@ -17,7 +17,7 @@ sudo docker pull uhub.service.ucloud.cn/uai_demo/ocr_cpu_train:v1.0
 ## 生成Docker镜像
 首先我们将训练所需数据和训练代码按照如下文件结构进行放置：
 
-  * train\_feature.tfrecords、test\_feature.tfrecords、validation\_feature.tfrecords是我们在[UAI-Train案例](ai/uai-train/cases/crnn/tfrecords)中生成的文件；
+  * train\_feature.tfrecords、test\_feature.tfrecords、validation\_feature.tfrecords是我们在[UAI-Train案例](uai-train/cases/crnn/tfrecords)中生成的文件；
   * char\_dict.json和ord\_map.json需要放置在data/data/文件夹下；
   * code中放置了相应的训练代码；
 
@@ -76,11 +76,11 @@ sudo docker run -it -v /data/data:/data/data /data/output:/data/output  uhub.ser
 ### 平台训练
 **上传训练数据**
 
-我们需要将/data/data下的文件上传到UFile或者UFS中，在[UAI-Train案例](ai/uai-train/cases/crnn/tfrecords)中我们已经介绍了UFile平台的数据上传方法。
+我们需要将/data/data下的文件上传到UFile或者UFS中，在[UAI-Train案例](uai-train/cases/crnn/tfrecords)中我们已经介绍了UFile平台的数据上传方法。
 
 **执行训练命令**
 
-在UAI-Train平台上训练的具体操作步骤可以[参考](ai/uai-train/set-up/tf-mnist/train)
+在UAI-Train平台上训练的具体操作步骤可以[参考](uai-train/set-up/tf-mnist/train)
 
 训练的执行命令为：
 <code>

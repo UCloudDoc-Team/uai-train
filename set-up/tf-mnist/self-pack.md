@@ -25,7 +25,7 @@ $ cp ~/uai-sdk/uaitrain_tool/base_tool.py ./
 
 ### 打包Mnist镜像
 
-我们使用base\_tool.py 打包mnist镜像，具体的参数说明在[](ai/uai-train/guide/scripts/self-pack)。
+我们使用base\_tool.py 打包mnist镜像，具体的参数说明在[](uai-train/guide/scripts/self-pack)。
 <code>
 $ sudo python base_tool.py pack \
 
@@ -42,7 +42,7 @@ $ sudo python base_tool.py pack \
 ​			--self_img <YOUR_SOURCE_INAGE>
 </code>
 
-基本参数同[](ai/uai-train/set-up/tf-mnist/pack)中的一致，除了**ai\_arch\_v**参数（这里也不需要使用\-\-os 和\-\-python\_version参数）改为了**self\_img** 。
+基本参数同[](uai-train/set-up/tf-mnist/pack)中的一致，除了**ai\_arch\_v**参数（这里也不需要使用\-\-os 和\-\-python\_version参数）改为了**self\_img** 。
 我们通过**self\_img**参数来指定基础docker镜像，并基于该镜像打包自己的mnist训练镜像。
 
 ### 打包CPU Mnist训练镜像

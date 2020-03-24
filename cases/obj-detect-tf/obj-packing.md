@@ -35,9 +35,9 @@ uai/object-train-output/checkpoint
 
 ## 打包自定义模型在线服务镜像
 
-生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构[参阅](ai/uai-inference/tutorial/tf-mnist/coding)）。下载[Object Detection推理代码包](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/object-detect)
+生成pb格式的模型文件后，需与代码一同打包为镜像，通过镜像启动在线推理服务（关于在线推理服务的代码结构[参阅](uai-inference/tutorial/tf-mnist/coding)）。下载[Object Detection推理代码包](https://github.com/ucloud/uai-sdk/tree/master/examples/tensorflow/inference/object-detect)
 
-并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将frozen\_inference\_graph.pb文件和label\_map.pbtxt（见[原始数据准备](ai/uai-train/cases/obj-detect-tf/data)）保存在其子路径：/data/object-detect/code/checkpoint_dir/中。本地路径中保存的所有文件为：
+并将路径及其所有子路径和文件保存在本地（此处默认保存在/data/目录下）。将frozen\_inference\_graph.pb文件和label\_map.pbtxt（见[原始数据准备](uai-train/cases/obj-detect-tf/data)）保存在其子路径：/data/object-detect/code/checkpoint_dir/中。本地路径中保存的所有文件为：
 
 <code>
 /data/object-detect/[路径]
@@ -73,7 +73,7 @@ sudo docker login uhub.ucloud.cn
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/object-detect-infer:test
 </code>
 
-等待上传完毕。镜像已经上传至镜像库，参阅[启动在线推理服务](ai/uai-train/cases/obj-detect-tf/obj-infer)使用该镜像进行推理。
+等待上传完毕。镜像已经上传至镜像库，参阅[启动在线推理服务](uai-train/cases/obj-detect-tf/obj-infer)使用该镜像进行推理。
 
-更多关于镜像打包的信息参阅[使用自定义镜像打包](ai/uai-train/set-up/tf-mnist/self-pack)
+更多关于镜像打包的信息参阅[使用自定义镜像打包](uai-train/set-up/tf-mnist/self-pack)
 

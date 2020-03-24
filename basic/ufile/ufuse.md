@@ -51,7 +51,7 @@ brew install s3fs
 </code>
 
 ## 2. 配置密钥文件
-从UCloud控制台界面获取公钥、私钥，具体参见[](ai/uai-train/basic/key) 
+从UCloud控制台界面获取公钥、私钥，具体参见[](uai-train/basic/key) 
 <code bash>
 echo 公钥:私钥 > ${HOME}/.passwd-s3fs
 
@@ -62,11 +62,11 @@ chmod 600 ${HOME}/.passwd-s3fs
 
 1. 建立UFile挂载文件路径${LocalMountPath} 
 
-2. 获取[](ai/uai-train/basic/ufile/create)中创建的存储空间名称${UFileBucketName}。
+2. 获取[](uai-train/basic/ufile/create)中创建的存储空间名称${UFileBucketName}。
 
   **注意**：空间名称不带域名后缀，如UFile空间名称显示为bbh.cn-bj.ufileos.com，则${UFileBucketName}=bbh
 
-3. 根据UFile存储空间所在区域、本地服务器是否在UCloud内网，从[](storage_cdn/ufile/s3)中获取${UFileS3URL}地址 
+3. 根据UFile存储空间所在区域、本地服务器是否在UCloud内网，从[](ufile/s3)中获取${UFileS3URL}地址 
 
 4. 密钥文件地址${HOME}/.passwd-s3fs与步骤“2. 配置密钥文件”中匹配 
 

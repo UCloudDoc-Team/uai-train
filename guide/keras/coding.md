@@ -49,5 +49,5 @@ uaitrain/arch/tensorflow/uflag.py 定义了UAI Train在运行Keras训练任务�
 |\-\-max_step | 0 | 训练最大Step数，UAI Train系统可以识别该参数，后续将提供训练进度功能（目前不支持）|
 
 ## uaitrain_tool/keras/keras_tool.py
-keras\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](/ai/uai-train/guide/keras/packing)
+keras\_tool.py 工具支持镜像打包功能，详细使用方法可参见[](uai-train/guide/keras/packing)
 

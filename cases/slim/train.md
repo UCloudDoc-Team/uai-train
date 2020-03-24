@@ -6,14 +6,14 @@
 
 ## docker镜像上传
 
-我们需要将[tfrecord](ai/uai-train/cases/slim/tfrecord)中生成的docker镜像上传到UHub中：
+我们需要将[tfrecord](uai-train/cases/slim/tfrecord)中生成的docker镜像上传到UHub中：
 <code>
 sudo docker push uhub.ucloud.cn/<YOUR_UHUB_REGISTRY>/slim
 </code>
 
 ## 基于UFS的数据存储
 
-可以通过[UFS产品文档](https://docs.ucloud.cn/storage_cdn/ufs/index)了解UFS的使用。这里我们将[UAI-Train案例](ai/uai-train/cases/slim/tfrecord)生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
+可以通过[UFS产品文档](https://docs.ucloud.cn/ufs/README)了解UFS的使用。这里我们将[UAI-Train案例](uai-train/cases/slim/tfrecord)生成的tfrecord文件保存在/mnt/slim/fer/tfrecord/下，在UAI-Train平台上，数据输入路径相应填写/slim/fer/tfrecord/ 数据输出路径我们设置为/slim/fer/checkpoint(该路径对应本地的/ufs/slim/fer/checkpoint)
 
 ## 基于UAI-Train平台的模型训练
 

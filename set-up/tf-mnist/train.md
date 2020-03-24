@@ -13,7 +13,7 @@
   * 下载UFile 操作工具
   * 上传数据
 
-其他UFIle操作请查看[](ai/uai-train/basic/ufile)
+其他UFIle操作请查看[](uai-train/basic/ufile)
 
 ### 创建UFile Bucket
 我们访问[控制台](https://console.ucloud.cn/ufile/ufile)，点击创建存储空间：
@@ -23,7 +23,7 @@
 ![](ai/uai-train/images/tutorial/tf-mnist/ufile-create2.png)
 
 ### 下载UFile操作工具
-我们直接下载Linux的[操作工具](http://tools.ufile.ucloud.com.cn/filemgr-linux64.tar.gz)，其他工具可以在[](ai/uai-train/basic/ufile)查看
+我们直接下载Linux的[操作工具](http://tools.ufile.ucloud.com.cn/filemgr-linux64.tar.gz)，其他工具可以在[](uai-train/basic/ufile)查看
 
 <code>
 $ cd ~
@@ -39,7 +39,7 @@ $ cd filemgr-linux64
 <code>
 $ vim config.cfg
 </code>
-将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在北京二可用区D，其他机房的配置可以参考[](ai/uai-train/basic/ufile)的说明。
+将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在北京二可用区D，其他机房的配置可以参考[](uai-train/basic/ufile)的说明。
 
 之后我们就可以用如下命令上传数据
 <code>
@@ -55,7 +55,7 @@ $ vim config.cfg
 我们可以在https://console.ucloud.cn/uaitrain/manage界面创建训练任务：
 ![](ai/uai-train/images/tutorial/tf-mnist/train-step1.png)
 
-我们首先选择训练节点（1* P40），然后填写好公私钥（用于数据访问授权），具体请参考[](ai/uai-train/basic/key)。
+我们首先选择训练节点（1* P40），然后填写好公私钥（用于数据访问授权），具体请参考[](uai-train/basic/key)。
 ![](ai/uai-train/images/tutorial/tf-mnist/train-step2.png)
 
 之后选择训练相关的参数：
