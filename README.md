@@ -1,6 +1,6 @@
 # 概览
 
-* [产品简介](/uai-train/introduction)
+* [产品简介.](/uai-train/introduction)
     * [什么是AI训练服务](/uai-train/introduction/uaitrain)
     * [交互式训练](/uai-train/introduction/interactive-job)
     * [分布式训练](/uai-train/introduction/distributed-job)
