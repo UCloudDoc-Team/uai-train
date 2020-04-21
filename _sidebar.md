@@ -150,5 +150,3 @@
     * [学习视频](/uai-train/resource/video)
 * [FAQ](/uai-train/faq)
       
-
-
