@@ -5,7 +5,7 @@
   * 在UCloud控制台，选择 “全部产品” -“存储” -“对象存储UFile”，进入UFile产品管理页
 
 
-![](/ai/uai-train/images/basic/ufile/ufile2.jpg) 
+![](/images/basic/ufile/ufile2.jpg) 
 
 ----
   * 点击“创建存储空间”
