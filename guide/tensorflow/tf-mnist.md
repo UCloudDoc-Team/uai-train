@@ -72,7 +72,7 @@ save_path = saver.save(sess, FLAGS.output_dir + "/model.ckpt")
 案例中修改代码如下\(L144, L145\)
 <code>
 
-# Merge all the summaries and write them out to /tmp/tensorflow/mnist/logs/mnist_with_summaries (by default)
+ // Merge all the summaries and write them out to /tmp/tensorflow/mnist/logs/mnist_with_summaries (by default)
   merged = tf.summary.merge_all()
   train_writer = tf.summary.FileWriter(FLAGS.log_dir + '/train', sess.graph)
   test_writer = tf.summary.FileWriter(FLAGS.log_dir + '/test')
