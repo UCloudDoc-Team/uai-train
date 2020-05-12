@@ -38,14 +38,14 @@ mnist = input_data.read_data_sets(FLAGS.data_dir,
 </code>
 
 案例中修改代码如下\(L44\)：
-<code>
+```
 def train():
   \# Import data
   mnist = input_data.read_data_sets(FLAGS.data_dir,
                                     one_hot=True)
 
   sess = tf.InteractiveSession()
-</code>
+```
 
 ### 使用 output_dir 作为输出路径 ###
 通过使用 FLAGS.output\_dir 指定输出路径
