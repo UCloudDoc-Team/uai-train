@@ -8,7 +8,7 @@
 ![](/images/basic/ufile/ufile2.jpg) 
 
 ----
-  * 点击“创建存储空间”。
+  * 点击“创建存储空间”
 
 
 ![](/images/basic/ufile/创建ufile.jpg) 
