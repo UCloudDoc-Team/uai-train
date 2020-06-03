@@ -50,15 +50,15 @@ AI交互式训练任务过程一共分三大部分，一共九个步骤：
 初次启动采用系统默认镜像，可在此基础上完成升级更新后，通过“保存镜像”功能保存自己定制的Jupyter镜像版本。
 
 ## UAI Train 交互式训练常见操作
-[](/uai-train/guide/console/createinterjob)
+[createinterjob](uai-train/guide/console/createinterjob)
 
-[](/uai-train/guide/console/jupyter)
+[jupyter](uai-train/guide/console/jupyter)
 
-[](/uai-train/guide/console/saveinterjobimg)
+[saveinterjobimg](uai-train/guide/console/saveinterjobimg)
 
-[](/uai-train/guide/console/stopinterjob)
+[stopinterjob](uai-train/guide/console/stopinterjob)
 
-[](/uai-train/guide/console/startinterjob)
+[startinterjob](uai-train/guide/console/startinterjob)
 
-[](/uai-train/guide/console/deleteinterjob)
+[deleteinterjob](uai-train/guide/console/deleteinterjob)
 

@@ -8,7 +8,7 @@
 **为什么需要获取公钥私钥？ ** 
 在使用UAI Service SDK操作时需要使用公私钥通过后端系统的账户认证，如果仅使用console界面来管理任务则不需要。
 
-# 获取用户公钥、私钥的方式
+## 获取用户公钥、私钥的方式
 
   * 进入UCloud Console界面：https://console.ucloud.cn/dashboard
   * 点击“操作管理”，找到“API产品”，点击进入，选择右侧“API密钥” 。
