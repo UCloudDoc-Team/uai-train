@@ -5,7 +5,7 @@
 # 数据格式转换
 收集以上数据后，我们就可以运行脚本生成tfrecord文件。tfrecord记录了图片和事实数据集，并可作为训练的输入数据。在uhub共享镜像库我们提供了开源的Docker镜像进行转换：
 uhub.ucloud.cn/uai\_demo/object-detect-preprocess:latest 
-UCloud云主机可以通过[该地址](uhub.service.ucloud.cn/uai_demo/object-detect-preprocess:latest)下载。
+UCloud云主机可以通过 uhub.service.ucloud.cn/uai_demo/object-detect-preprocess:latest 下载。
 
 ## 上传数据集
 
