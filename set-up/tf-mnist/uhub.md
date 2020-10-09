@@ -5,7 +5,7 @@
   - 1 我们首先需要创建一个私有的UHub镜像仓库来存放自己的docker镜像。
 
 
-  - 2 我们登录[[https://console.ucloud.cn/uhub/uhub/user_image]]界面，点击创建创建镜像库：
+  - 2 我们登录[界面](https://console.ucloud.cn/uhub/uhub/user_image)，点击创建创建镜像库：
 ![](ai/uai-train/images/tutorial/tf-mnist/uhub-create.png)
 
 
