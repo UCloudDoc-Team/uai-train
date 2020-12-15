@@ -9,9 +9,9 @@ UCloud云主机可以通过 uhub.service.ucloud.cn/uai_demo/object-detect-prepro
 
 ## 上传数据集
 
-  - 登录UCloud控制台，创建[UFile存储空间](https://console.ucloud.cn/ufile/ufile)，将以上数据保存在UFile库中，注意设置UFile路径前缀。
+  - 登录UCloud控制台，创建[US3存储空间](https://console.ucloud.cn/ufile/ufile)，将以上数据保存在US3库中，注意设置US3路径前缀。
 
-例如以如下目录设置前缀并上传记录的根目录中的文件，则UFile根目录为uai/object-prep/，每个文件的前缀为此根目录加路径：
+例如以如下目录设置前缀并上传记录的根目录中的文件，则US3根目录为uai/object-prep/，每个文件的前缀为此根目录加路径：
 <code>
 
 uai/object-prep/label_map.pbtxt
@@ -26,7 +26,7 @@ uai/object-prep/images/basset_hound_01.jpg
 
 例如，对于trainval.txt，则前缀为uai/object-prep/annotations。
 ## 使用UAI-Train平台实现数据转换
-UAI-Train在线平台可以在UFile平台上读取和写入数据，可运行Uhub中的代码镜像。我们用Uhub镜像库中的数据转换镜像进行数据转换。注意创建任务时数据输入源应为上传文件至UFile时的UFile根目录，例如之前所用的：uai/object-prep/。数据输出源不可与输入源相同，请记录数据输出源用于模型训练，此处为uai/object-prep-output/。
+UAI-Train在线平台可以在US3平台上读取和写入数据，可运行Uhub中的代码镜像。我们用Uhub镜像库中的数据转换镜像进行数据转换。注意创建任务时数据输入源应为上传文件至US3时的US3根目录，例如之前所用的：uai/object-prep/。数据输出源不可与输入源相同，请记录数据输出源用于模型训练，此处为uai/object-prep-output/。
 
   - 获取uhub.ucloud.cn/uai\_demo/object-detect-preprocess:latest镜像，并重新docker tag成你自己uhub 镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/object-detect-preprocess:latest， 并提交至uhub。
   - 进入UAI-Train控制台，创建[新训练任务](https://console.ucloud.cn/uaitrain/manage)。
@@ -36,13 +36,13 @@ UAI-Train在线平台可以在UFile平台上读取和写入数据，可运行Uhu
     * 节点类型：单点式单卡
     * 代码镜像：object-detect-preprocess:latest
     * 公私钥：您的UCloud账号公私钥
-    * 数据输入源：UFile：<YOUR\_UFILE\_PATH>/uai/object-prep/
-    * 数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/object-prep-output/
+    * 数据输入源：US3：<YOUR\_UFILE\_PATH>/uai/object-prep/
+    * 数据输出源：US3：<YOUR\_UFILE\_PATH>/uai/object-prep-output/
     * 训练启动命令：create\_tf\_record.py
 
   - 点击确定，等待数据转换完成。
 
-转换完毕后，tf-record将被保存在UFile库的输出源（此处为uai/object-prep-output/）中。一共有20个记录文件：
+转换完毕后，tf-record将被保存在US3库的输出源（此处为uai/object-prep-output/）中。一共有20个记录文件：
 
 <code>
 uai/object-prep-output/[路径]

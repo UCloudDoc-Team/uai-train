@@ -8,7 +8,7 @@ UAI Train使用的所有UCloud产品都应该与UAI Train在**相同的项目、
 操作指南： [](uai-train/basic/uhub)
 
 ### 2. 建立UCloud云端存储（存放训练数据、结果数据）
-1.采用UFile做存储 [](uai-train/basic/ufile)
+1.采用US3做存储 [](uai-train/basic/ufile)
 
 2.采用UFS做存储 [](uai-train/basic/ufs)
 3.采用UDisk做存储 [](uai-train/basic/udisk) 

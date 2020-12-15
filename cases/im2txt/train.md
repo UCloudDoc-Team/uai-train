@@ -5,7 +5,7 @@
 
 我们提供了可以在AI Train平台上训练目标检测算法的基础镜像：uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test，可以直接用该镜像进行训练。如果已申请UCloud云主机，可以通过uhub.service.ucloud.cn/uai\_demo/im2txt-train-gpu:test下载该镜像。
 
-将准备好的tfrecord文件和inception模型文件上传至UFile，并保留路径格式。将uai-sdk中的[字典文件](https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/word_counts.txt)放在相同路径下。例如保存在uai/im2txt/data路径下：
+将准备好的tfrecord文件和inception模型文件上传至US3，并保留路径格式。将uai-sdk中的[字典文件](https://github.com/ucloud/uai-sdk/blob/master/examples/tensorflow/train/im2txt/word_counts.txt)放在相同路径下。例如保存在uai/im2txt/data路径下：
 
 	# uai/im2txt/data/
 	  inception_v3.ckpt
@@ -17,7 +17,7 @@
 共计270个文件。
 
 # 使用AI Train平台训练
-数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/im2txt/data），并确认模型、数据和字典文件均在此根目录下。
+数据和模型已准备好进行训练。创建训练任务时，请确认数据输入源为保存数据的US3根目录（此处为uai/im2txt/data），并确认模型、数据和字典文件均在此根目录下。
 
   - 获取uhub.ucloud.cn/uai\_demo/im2txt-train-gpu:test镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REP>/im2txt-train-gpu:test， 并提交至uhub。
   - 进入UAI-Train控制台，创建[新训练任务](https://console.ucloud.cn/uaitrain/)。
@@ -27,8 +27,8 @@
     *   节点类型：单点式单卡
     *   公私钥：你的UCloud账号公私钥
     *   代码镜像路径：im2txt-train-gpu:test
-    *   数据输入源：UFile：<YOUR\_UFILE\_PATH>/uai/im2txt/data/
-    *   数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/im2txt/output/
+    *   数据输入源：US3：<YOUR\_UFILE\_PATH>/uai/im2txt/data/
+    *   数据输出源：US3：<YOUR\_UFILE\_PATH>/uai/im2txt/output/
   - 训练启动命令：
 
 公私钥信息获取请[参考](uai-train/basic/key) 
@@ -39,7 +39,7 @@
 
   - 点击确定，等待训练完成。
 
-训练完成后，可在UFile输出目录（此处为uai/object-train-output/）找到训练完毕的模型：
+训练完成后，可在US3输出目录（此处为uai/object-train-output/）找到训练完毕的模型：
 <code>
 uai/im2txt/output/[路径]
 uai/im2txt/output/model.ckpt-1000000.data-00000-of-00001
@@ -59,7 +59,7 @@ uai/im2txt/output/checkpoint
 </code>
 
 
-注意其中训练步数参数被设置为3000000，训练inception参数被设置为True。第二轮训练将对整个模型的参数进行联动微调以更好的给出文字标注结果。注意本轮训练由于被训练的参数较多且轮数较大（第一轮为1000000轮，第二轮在其基础上训练额外2000000轮至3000000轮），耗时更久。训练结束后，可在UFile中获取新的模型文件：
+注意其中训练步数参数被设置为3000000，训练inception参数被设置为True。第二轮训练将对整个模型的参数进行联动微调以更好的给出文字标注结果。注意本轮训练由于被训练的参数较多且轮数较大（第一轮为1000000轮，第二轮在其基础上训练额外2000000轮至3000000轮），耗时更久。训练结束后，可在US3中获取新的模型文件：
 
 <code>
 uai/im2txt/output/[路径]

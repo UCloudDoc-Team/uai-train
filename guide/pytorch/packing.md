@@ -147,5 +147,5 @@ uhub.ucloud.cn/<YOUR_UHUB_REFDISTRY>/pytorch-mnist	uaitrain	xxxxxx		xxxx ago	xxx
 
 ### Step5: 自定义软件包安装
 如果训练代码依赖特殊的软件包，例如nltk 等，可以通过Docker命令将软件包放至Docker容器中，然后通过docker commit将其保存为镜像即可。
-**注：输入数据无需存储在容器中，可上传至UFile**
+**注：输入数据无需存储在容器中，可上传至US3**
 

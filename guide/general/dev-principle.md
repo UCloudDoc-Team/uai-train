@@ -7,7 +7,7 @@
   - **训练的代码请封装在Docker镜像中**
   - **训练代码的入口必须为python程序，系统会默认以/usr/bin/python 执行python程序，默认python 执行路径为/data/**
   - 训练默认会增加如下参数： \-\-num\_gpus=<num> \-\-data\_dir=/data/data \-\-output\_dir=/data/output/ \-\-work\_dir=/data/
-  - 数据后端存储会使用UCloud的公共存储服务（UFile、UFS）等
+  - 数据后端存储会使用UCloud的公共存储服务（US3、UFS）等
   - **输入数据默认会下载到Docker 容器中的/data/data/ 目录下，目录结构保存**
   - **输出数据需要默认放在Docker 容器的/data/output/ 目录下，数据会在训练完成后自动上传**
   - 训练使用的节点**无外网访问能力**

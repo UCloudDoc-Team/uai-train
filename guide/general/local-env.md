@@ -7,8 +7,8 @@
 根据[](uai-train/basic/docker)的说明在本地准备Docker环境。
 如果是CPU机器只需要安装普通Docker，如果是GPU机器需要安装NVidia-docker。
 
-## 2.安装UFile SDK
-由于UCloud AI SDK依赖UFile SDK来传输用户本地数据到UFile产品中，因此需要先安装UFile SDK 
+## 2.安装US3 SDK
+由于UCloud AI SDK依赖US3 SDK来传输用户本地数据到US3产品中，因此需要先安装US3 SDK 
 <code>
 wget http://sdk.ufile.ucloud.com.cn/python_sdk.tar.gz
 

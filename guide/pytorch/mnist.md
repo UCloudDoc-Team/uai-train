@@ -51,7 +51,7 @@ test_loader = torch.utils.data.DataLoader(
 </code>
 
 ### 3.使用 output_dir 作为输出路径
-通过使用 args.output\_dir 指定输出路径 用于保存训练过程中的模型文件。 对于在训练平台上运行的任务，该目录下的文件会上传至ufile中保存。
+通过使用 args.output\_dir 指定输出路径 用于保存训练过程中的模型文件。 对于在训练平台上运行的任务，该目录下的文件会上传至US3中保存。
 所以输出路径需要以 args.output\_dir为前缀。
 模型输出的修改如下:
 (L122)
@@ -59,7 +59,7 @@ test_loader = torch.utils.data.DataLoader(
 torch.save(model.state_dict(), args.output_dir + '/mnist-param.pkl')
 </code>
 只要在代码中需要使用目录的地方，均按此方式修改，即可能够将其移植至uai-train平台。
-最终在平台上运行时，data\_dir目录对应的是创建任务时填入的ufile输入路径，output\_dir对应的则是填入的ufile输出路径。
+最终在平台上运行时，data\_dir目录对应的是创建任务时填入的US3输入路径，output\_dir对应的则是填入的US3输出路径。
 
 ## 使用Docker镜像进行测试
 因为UAI Train 平台使用Docker运行训练，因此可以使用Docker对训练代码进行测试。

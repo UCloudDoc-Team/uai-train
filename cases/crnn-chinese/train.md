@@ -17,8 +17,8 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output  uhub.
 ### 平台训练
 **上传训练数据**
 
-我们需要将/data/data下的文件上传到UFile或者UFS中，这里我们以UFile平台为例。
-我们使用事先下载的UFile工具，进入filemgr-linux64.elf文件夹，通过UFile平台的数据上传命令将/data/data下的数据上传至UFile中，并以/crnn\_poem/data/作为前缀，你可以自由地修改上传数据的前缀；
+我们需要将/data/data下的文件上传到US3或者UFS中，这里我们以US3平台为例。
+我们使用事先下载的US3工具，进入filemgr-linux64.elf文件夹，通过US3平台的数据上传命令将/data/data下的数据上传至US3中，并以/crnn\_poem/data/作为前缀，你可以自由地修改上传数据的前缀；
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/tfrecords/ --prefix /crnn_poem/data/tfrecords/
 
@@ -29,7 +29,7 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output  uhub.
 
 在UAI-Train平台上训练的具体操作步骤可以参考[](uai-train/set-up/tf-mnist/train)
 
-如果你的数据存放在UFile平台的/crnn\_poem/data/下面，你的数据路径可以填写为
+如果你的数据存放在US3平台的/crnn\_poem/data/下面，你的数据路径可以填写为
 <code>
 http://uai-demo.ufile.ucloud.com.cn//crnn_poem/data/
 </code>

@@ -28,18 +28,18 @@ mnist_test_lmdb/data.mdb: http://uai-train-image.cn-bj.ufileos.com/caffe/mnist/d
 UAI-Train平台在训练过程中，随Docker镜像打包（打包方法请见[[ai:uai-train:guide:caffe:packing]]）进训练镜像的代码在/data/目录下，数据则会指定下载到/data/data目录下。指定的网络文件可以有两种存放路径：
 
   - /data/, 此时网络定义文件lenet\_train\_test.prototxt需要同train.py 一同打包进/data 目录下。
-  - /data/data/，此时此时网络定义文件lenet\_train\_test.prototxt需要和数据一同上传至UFIle存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重新打包Docker镜像的基础上，动态修改网络定义的文件**
+  - /data/data/，此时此时网络定义文件lenet\_train\_test.prototxt需要和数据一同上传至US3存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重新打包Docker镜像的基础上，动态修改网络定义的文件**
 
 案例中，我们采用了第一种方案，将**net**指定的网络定义文件的路径改为了**/data/lenet\_train\_test.prototxt**。（注：需要将lenet\_train\_test.prototxt同train.py放在同一个目录下打包进训练用的docker镜像中）
 <code>
 net: "examples/mnist/lenet_train_test.prototxt"  -> net: "/data/lenet_train_test.prototxt"
 </code>
 
-用户也可以使用第二种方案，将**net**指定的网络定义文件路径改为**/data/data/lenet\_train\_test.prototxt**, 并将lenet\_train\_test.prototxt同数据一同上传UFile
+用户也可以使用第二种方案，将**net**指定的网络定义文件路径改为**/data/data/lenet\_train\_test.prototxt**, 并将lenet\_train\_test.prototxt同数据一同上传US3
 
 #### 指定snapshot 文件的路径
 
-UAI Train平台在训练结束后会主动将/data/output目录下的数据上传到用户指定的UFIle路径下，因此**我们需要修改snapshot 文件的路路径至/data/output/路径下**
+UAI Train平台在训练结束后会主动将/data/output目录下的数据上传到用户指定的US3路径下，因此**我们需要修改snapshot 文件的路路径至/data/output/路径下**
 案例中，我们做了如下修改：
 <code>
 snapshot_prefix: "examples/mnist/lenet"  -> snapshot_prefix: "/data/output/"
@@ -47,7 +47,7 @@ snapshot_prefix: "examples/mnist/lenet"  -> snapshot_prefix: "/data/output/"
 
 ### lenet_train_test.prototxt
 
-UAI Train平台在训练过程中，会将UFile中的数据指定下载到/data/data目录下，因此我们需要对lenet\_train\_test.prototxt 做针对性的修改，主要修改的是data\_param的source路径， 包括Train数据集和Test数据集：
+UAI Train平台在训练过程中，会将US3中的数据指定下载到/data/data目录下，因此我们需要对lenet\_train\_test.prototxt 做针对性的修改，主要修改的是data\_param的source路径， 包括Train数据集和Test数据集：
 <code>
 name: "LeNet"
 

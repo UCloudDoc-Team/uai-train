@@ -32,7 +32,7 @@ uaitrain/arch/pytorch/uargs.py 定义了UAI Train在运行PyTorch训练任务时
 | 参数 | 默认值 | 说明 |
 | ---- | ------ | ---- |
 | \-\-work\_dir    | /data         | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[](uai-train/guide/mxnet/mnist) |
-| \-\-data\_dir    | /data/data    | 默认input数据存放路径，UAI Train会将UFile中的input数据下载到该路径下                                  |
+| \-\-data\_dir    | /data/data    | 默认input数据存放路径，UAI Train会将US3中的input数据下载到该路径下                               |
 | \-\-output\_dir  | /data/output  | 默认输出路径，checkpoint和模型文件需要输出到该路径下，UAI Train会在训练完成后将该目录上传                          |
 | \-\-log\_dir     | /data/output  |                                                                                 |
 | \-\-num\_gpus    | <#num\_gpus>  | GPU数量，UAI Train会根据训练节点实际的GPU数量生成该参数，GPU编号为递增0，1，2，3...                          |

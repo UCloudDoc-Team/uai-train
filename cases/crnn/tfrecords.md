@@ -66,9 +66,9 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output uhub.s
 </code>
 然后我们可以在本地/data/output中找到生成的tfrecords文件。
 ### UAI-Train平台生成tfrecords文件
-1. 首先我们需要把生成tfrecords文件所需的/data/data下的数据上传至UFile或是UFS平台上，这里我们以UFile平台为例。
+1. 首先我们需要把生成tfrecords文件所需的/data/data下的数据上传至US3或是UFS平台上，这里我们以US3平台为例。
 
-我们使用事先下载的UFile工具，进入filemgr-linux64.elf文件夹，通过UFile平台的数据上传命令将/data/data下的数据上传至UFile中，并以/crnn/train\_data/作为前缀，你可以自由地修改上传数据的前缀；
+我们使用事先下载的US3工具，进入filemgr-linux64.elf文件夹，通过US3平台的数据上传命令将/data/data下的数据上传至US3中，并以/crnn/train\_data/作为前缀，你可以自由地修改上传数据的前缀；
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/ --prefix /crnn/train_data/ 
 </code>
@@ -83,14 +83,14 @@ sudo docker run -it -v /data/data:/data/data -v /data/output:/data/output uhub.s
 进入UAI-Train训练平台，选择训练相关的参数：
 
   * 训练镜像 uhub.service.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/crnn-generate-tfrecords:v1.0（界面会自动关联你的uhub镜像库）；
-  * 输入数据源（UFile）
-  * 输出数据源（UFile）
+  * 输入数据源（US3）
+  * 输出数据源（US3）
 
 训练的执行命令如下：
 <code>
 /data/code/tools/write_text_features.py --dataset_dir /data/data/ --save_dir /data/output/
 </code>
-我们可以在事先设置好的UFile输出数据地址中查看生成的tfrecords文件。
+我们可以在事先设置好的US3输出数据地址中查看生成的tfrecords文件。
 
 
 

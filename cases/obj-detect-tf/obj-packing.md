@@ -3,7 +3,7 @@
 # 打包镜像
 在线推理服务基于镜像。本节介绍如何将训练好的模型文件与代码一并打包为镜像。
 ## 转换训练生成模型的格式
-如果通过在线训练获得了识别模型，可以自行打包为镜像并上传至UHub以启动在线推理。转至UFile并查找模型训练一节中记录的模型输出源（本例中为uai/object-train-output/），检查训练后的模型文件（以训练200000轮的模型文件为例）：
+如果通过在线训练获得了识别模型，可以自行打包为镜像并上传至UHub以启动在线推理。转至US3并查找模型训练一节中记录的模型输出源（本例中为uai/object-train-output/），检查训练后的模型文件（以训练200000轮的模型文件为例）：
 
 <code>
 uai/object-train-output/model.ckpt-200000.data-00000-of-00001
@@ -24,12 +24,12 @@ uai/object-train-output/checkpoint
     - 节点类型：单点式单卡
     - 公私钥：你的UCloud账号公私钥
     - 代码镜像路径：object-detect-export-model:latest
-    - 数据输入源：UFile：<YOUR\_UFILE\_PATH>/uai/object-train-output/
-    - 数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/object-export-output/
+    - 数据输入源：US3：<YOUR\_UFILE\_PATH>/uai/object-train-output/
+    - 数据输出源：US3：<YOUR\_UFILE\_PATH>/uai/object-export-output/
     - 训练启动命令：/data/object\_detection/export\_inference\_graph.py \--input\_type image\_tensor \--pipeline\_config\_path /data/data/pipeline.config \--trained\_checkpoint\_prefix /data/data/model.ckpt-200000 \--output\_directory /data/output/
     - 点击确定，等待模型导出完成。
 
-导出完成后，转至UFile库中搜索输出源前缀（此处为uai/object-export-output/）：<YOUR\_UFILE\_PATH>/uai/object-export-output/，找到frozen\_inference\_graph.pb文件并下载，即为导出的模型。
+导出完成后，转至US3库中搜索输出源前缀（此处为uai/object-export-output/）：<YOUR\_UFILE\_PATH>/uai/object-export-output/，找到frozen\_inference\_graph.pb文件并下载，即为导出的模型。
 
 如想在本地通过脚本导出模型文件，参阅[Object Detection - Exporting Models](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/exporting_models.md)
 

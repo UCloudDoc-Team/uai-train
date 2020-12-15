@@ -76,7 +76,7 @@ sudo docker run -it -v /data/data:/data/data /data/output:/data/output  uhub.ser
 ### 平台训练
 **上传训练数据**
 
-我们需要将/data/data下的文件上传到UFile或者UFS中，在[UAI-Train案例](uai-train/cases/crnn/tfrecords)中我们已经介绍了UFile平台的数据上传方法。
+我们需要将/data/data下的文件上传到US3或者UFS中，在[UAI-Train案例](uai-train/cases/crnn/tfrecords)中我们已经介绍了US3平台的数据上传方法。
 
 **执行训练命令**
 

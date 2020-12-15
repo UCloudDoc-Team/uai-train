@@ -6,7 +6,7 @@
 ## 数据集准备
 如果在本地进行模型训练，则不需要提前准备数据。
 
-如果在UAI-Train平台进行模型训练，则需要提前把数据上传到你准备使用的UCloud数据存储平台--UFile或者UFS上。
+如果在UAI-Train平台进行模型训练，则需要提前把数据上传到你准备使用的UCloud数据存储平台--US3或者UFS上。
 
 如果在进行平台训练之前，你已经在本地进行了模型训练，则可以在文件夹/data/data中得到cifar10数据集。
 如果你没有在本地进行模型训练，可以通过如下命令在本地/data/data得到cifar10数据集：
@@ -19,13 +19,13 @@ import cifar10
 
 cifar10.maybe_download_and_extract()
 </code>
-如此我们可以在文件夹/data/data中得到cifar10数据集，将该数据集上传到你准备使用的UCloud数据存储平台--UFile或者UFS上。
+如此我们可以在文件夹/data/data中得到cifar10数据集，将该数据集上传到你准备使用的UCloud数据存储平台--US3或者UFS上。
 
 ### 上传数据
 
-如果要将数据上传到UFile上，可以通过UFile操作工具进行数据的上传,UFile操作工具的下载[参考](uai-train/set-up/tf-mnist/train)
+如果要将数据上传到US3上，可以通过US3操作工具进行数据的上传,US3操作工具的下载[参考](uai-train/set-up/tf-mnist/train)
 
-上传命令（这里假设cifar10数据集放置在本地/data/data中，要上传到UFile的 uai-demo bucket的cifar\_simple/train/ 中，在你自己实验时请替换uai-demo bucket为你自己的UFIle bucket）：
+上传命令（这里假设cifar10数据集放置在本地/data/data中，要上传到US3的 uai-demo bucket的cifar\_simple/train/ 中，在你自己实验时请替换uai-demo bucket为你自己的US3 bucket）：
 <code>
 ./filemgr-linux64 --action mput --bucket uai-demo --dir /data/data/  --prefix cifar_simple/train/
 </code>

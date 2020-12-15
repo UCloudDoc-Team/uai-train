@@ -93,7 +93,7 @@ sudo python caffe_tool.py pack [-h] --public_key PUBLIC_KEY
 
 **solver指定了Solver proto的路径，打包工具会自动生成\-\-solver=<solver>的语句**, 通常有两种填写方法：
   - /data/xxx，此时solver proto文件需要和train.py 一同打包进/data/ 目录下
-  - /data/data/xxx，此时solver proto文件需要和数据一同上传至UFIle存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重上传Docker镜像的基础上，动态修改solver proto 文件**
+  - /data/data/xxx，此时solver proto文件需要和数据一同上传至US3存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重上传Docker镜像的基础上，动态修改solver proto 文件**
 
 ### 可以选镜像及相关命令组合
 

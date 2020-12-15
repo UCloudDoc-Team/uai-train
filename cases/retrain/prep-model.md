@@ -4,7 +4,7 @@
 
 重训练基于已经训练好的物体识别模型。具体理论和分析参阅[Tensorflow Retraining](https://www.tensorflow.org/tutorials/image_retraining)，本例中我们使用以上链接中Tensorflow提供的物体识别模型。
 
-UAI-Train训练平台无互联网权限，因此模型需保存并上传至UFile。我们使用Tensorflow\_hub模块自带的下载组件缓存模型[Tensorflow Retraining: Models](https://www.tensorflow.org/hub/modules/image)。Tensorflow\_hub模组中的代码在加载在线获取的模型时会将模型缓存在本地默认目录下，我们可以修改此目录以将模型保存在我们想要的路径下。
+UAI-Train训练平台无互联网权限，因此模型需保存并上传至US3。我们使用Tensorflow\_hub模块自带的下载组件缓存模型[Tensorflow Retraining: Models](https://www.tensorflow.org/hub/modules/image)。Tensorflow\_hub模组中的代码在加载在线获取的模型时会将模型缓存在本地默认目录下，我们可以修改此目录以将模型保存在我们想要的路径下。
 
   - 在本地主机安装Tensorflow\_hub：
 

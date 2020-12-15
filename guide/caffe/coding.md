@@ -38,13 +38,13 @@ train.py 有如下参数：
 
 **可变参数中\-\-solver是必填项，指定了Solver proto的路径**, 通常有两种填写方法：
   - /data/xxx，此时solver proto文件需要和train.py 一同打包进/data/ 目录下，详细说明请参见[[ai:uai-train:guide:caffe:packing]]
-  - /data/data/xxx，此时solver proto文件需要和数据一同上传至UFIle存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重上传Docker镜像的基础上，动态修改solver proto 文件**
+  - /data/data/xxx，此时solver proto文件需要和数据一同上传至US3存储中，训练过程文件将下载至/data/data/目录下。**用户可以通过该方案，在不重上传Docker镜像的基础上，动态修改solver proto 文件**
 
 #### 固定参数
 | 参数 | 默认值 | 说明 |
 | ---- | ------ | ---- |
 |\-\-work\_dir    | /data | 默认的执行路径，UAI Train打包工具会默认将用户指定的训练代码放入该路径下，详细可见[[ai:uai-train:guide:caffe:mnist]] |
-|\-\-data\_dir    | /data/data  | 默认input数据存放路径，UAI Train会将UFile中的input数据下载到该路径下 |
+|\-\-data\_dir    | /data/data  | 默认input数据存放路径，UAI Train会将US3中的input数据下载到该路径下 |
 |\-\-output\_dir   | /data/output | 默认输出路径，checkpoint和模型文件需要输出到该路径下，UAI Train会在训练完成后将该目录上传 |
 |\-\-num\_gpus   | <#num\_gpus> | GPU数量，UAI Train会根据训练节点实际的GPU数量生成该参数 |
 

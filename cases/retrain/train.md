@@ -4,7 +4,7 @@
 
 	uhub.ucloud.cn/uai_demo/retrain-train-v2:test
 
-将准备好的图片集和模型文件上传至UFile准备进行重训练。根据上一节中的保存路径，在UFile中保存在统一根目录下。你可以自定义根路径，并记录此路径用于启动训练。此处我们以“uai/retrain/data”为根路径：
+将准备好的图片集和模型文件上传至US3准备进行重训练。根据上一节中的保存路径，在US3中保存在统一根目录下。你可以自定义根路径，并记录此路径用于启动训练。此处我们以“uai/retrain/data”为根路径：
 
 <code>
 |_ uai/retrain/data
@@ -23,7 +23,7 @@
 |  |  |_ tfhub_module.pb
 </code>
 
-文件准备好后，进入UAI-Train控制台。创建训练任务时，请确认数据输入源为保存数据的UFile根目录（此处为uai/retrain/data/，即数据准备一节中记录的数据保存路径），并确认模型、数据和配置文件均在此根目录下。记录数据输出源（此处为uai/retrain/output/），用于之后的在线服务。
+文件准备好后，进入UAI-Train控制台。创建训练任务时，请确认数据输入源为保存数据的US3根目录（此处为uai/retrain/data/，即数据准备一节中记录的数据保存路径），并确认模型、数据和配置文件均在此根目录下。记录数据输出源（此处为uai/retrain/output/），用于之后的在线服务。
 
   - 获取uhub.ucloud.cn/uai_demo/retrain-train-v2:test镜像，并重新docker tag成你自己uhub镜像库中的镜像，例如uhub.ucloud.cn/<YOUR\_UHUB\_REGISTRY>/retrain-train-v2:test， 并提交至uhub。
   - 进入[UAI-Train控制台](https://console.ucloud.cn/uaitrain/manage)，创建新训练任务。
@@ -33,8 +33,8 @@
     *   节点类型：单点式单卡
     *   公私钥：你的UCloud账号公私钥
     *   代码镜像路径：retrain-train-v2:test
-    *   数据输入源：UFile：<YOUR\_UFILE\_PATH>/uai/retrain/data/
-    *   数据输出源：UFile：<YOUR\_UFILE\_PATH>/uai/retrain/output/
+    *   数据输入源：US3：<YOUR\_UFILE\_PATH>/uai/retrain/data/
+    *   数据输出源：US3：<YOUR\_UFILE\_PATH>/uai/retrain/output/
 
   - 训练启动命令：
 

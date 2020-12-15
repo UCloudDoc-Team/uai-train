@@ -22,8 +22,8 @@ python pytorch/pytorch_tool.py create --args
 | code\_uhub\_path     | Docker镜像路径，可以从uhub产品处获取                     | 是      |  无           |
 | docker\_cmd          | Python执行命令，注：请用 ”” 将命令包括起来                  | 是      |  无           |
 | max\_exec\_time      | 最大执行时间，小时为单位，必须>6                           | 是      |  无           |
-| data\_ufile\_path    | 输入数据在UFile/UFS的路径                           | 是      |  无           |
-| output\_ufile\_path  | 输出数据在UFile/UFS的路径                           | 是      |  无           |
+| data\_ufile\_path    | 输入数据在US3/UFS的路径                        | 是      |  无           |
+| output\_ufile\_path  | 输出数据在US3/UFS的路径                        | 是      |  无           |
 | node\_num            | 用于分布式训练。分布式训练任务所需的节点数量                      | 否      |  无           |
 | dist\_ai\_frame      | 用于分布式训练。分布式训练任务使用的AI框架（支持tensorflow、mxnet）  | 否      |  无           |
 | project\_id          | 项目组id                                       | 否      |  用户默认项目组     |
