@@ -1,4 +1,3 @@
-<div class="sidebar_title icon__uaitrain"> AI训练服务 UAI-Train</div>
 
 * [概览](/uai-train/README)
 * [产品简介](/uai-train/introduction)
