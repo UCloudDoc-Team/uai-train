@@ -98,7 +98,7 @@ curl -X POST http://localhost:8080/service -T /data/fer/pic/angry/00000_1.jpg
 命令行中会输出该图像的表情类别。
 
 ## UAI-Inference平台测试
-可以查看部署在线服务的[具体操作步骤](uai-inference/tutorial/tf-mnist/inference)。
+可以查看部署在线服务的[具体操作步骤](uai-inference/tutorial/tf-mnist/gpu-inference)。
 当部署完毕之后，我们可以在详细页面获取在线服务的URL地址。
 
 我们可以通过如下命令来测试，这里的URL即为这个在线服务的URL地址：
