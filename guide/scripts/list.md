@@ -21,7 +21,7 @@ python pytorch/pytorch_tool.py list --args
 | limit                   | 最大显示训练任务数量                               | 否              |      0，默认返回所有任务信息      |
 | offset                   | 首条任务信息的相对偏移量，在limit非0时有效                           | 否              |      0     |
 | project\_id         | 项目组id                                                  | 否               |        用户默认项目组   |
-| region               | 训练任务执行所在地域                                 | 否               |        默认地域（北京二）   |
+| region               | 训练任务执行所在地域                                 | 否               |        默认地域（华北（北京））   |
 | zone                 | 训练任务所在可用区                                    | 否              |        默认可用区   |
 
 ### 查询单个任务信息

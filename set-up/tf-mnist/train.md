@@ -39,7 +39,7 @@ $ cd filemgr-linux64
 <code>
 $ vim config.cfg
 </code>
-将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在北京二可用区D，其他机房的配置可以参考[文档](uai-train/basic/ufile)的说明。
+将**public\_key**和**private\_key**修改成你自己账号的公私钥，然后将**proxy\_host**改为www.ufile.cn-north-04.ucloud.cn，因为我们的云主机在华北（北京）可用区D，其他机房的配置可以参考[文档](uai-train/basic/ufile)的说明。
 
 之后我们就可以用如下命令上传数据
 <code>

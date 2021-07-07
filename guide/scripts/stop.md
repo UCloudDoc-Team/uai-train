@@ -20,7 +20,7 @@ python pytorch/pytorch_tool.py stop --args
 | private\_key        | 用户的私钥                                              | 是              |        无     |
 | job\_id                | 任务ID（Create 命令的返回值）                 | 是              |      无      |
 | project\_id         | 项目组id                                                  | 否               |        用户默认项目组   |
-| region               | 训练任务执行所在地域                                 | 否               |        默认地域（北京二）   |
+| region               | 训练任务执行所在地域                                 | 否               |        默认地域（华北（北京））   |
 | zone                 | 训练任务所在可用区                                    | 否              |        默认可用区  |
 
 ## 返回值说明

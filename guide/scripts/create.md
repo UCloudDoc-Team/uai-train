@@ -27,7 +27,7 @@ python pytorch/pytorch_tool.py create --args
 | node\_num            | 用于分布式训练。分布式训练任务所需的节点数量                      | 否      |  无           |
 | dist\_ai\_frame      | 用于分布式训练。分布式训练任务使用的AI框架（支持tensorflow、mxnet）  | 否      |  无           |
 | project\_id          | 项目组id                                       | 否      |  用户默认项目组     |
-| region               | 训练任务执行所在地域                                  | 否      |  默认地域（北京二）   |
+| region               | 训练任务执行所在地域                                  | 否      |  默认地域（华北（北京））   |
 | zone                 | 训练任务所在可用区                                   | 否      |  默认可用区  |
 | job\_memo            | 任务说明                                        | 否      |  空           |
 | business\_group      | 业务组（如果填写，该业务组必须存在）                          | 否      |  空           |

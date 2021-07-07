@@ -24,7 +24,7 @@ python pytorch/pytorch_tool.py bill --args
 | limit		| 返回计费信息条数		  | 否  | 0，返回所有信息 |
 | offset 	| 首条计费信息的相对偏移量，limit非0时有效         | 否 | 0，无偏移 |
 | project\_id   | 项目组id                      | 否      | 用户默认项目组     |
-| region        | 训练任务执行所在地域                 | 否      | 默认地域（北京二）   |
+| region        | 训练任务执行所在地域                 | 否      | 默认地域（华北（北京））   |
 | zone          | 训练任务所在可用区                  | 否      | 默认可用区  |
 
 ## 返回值说明
